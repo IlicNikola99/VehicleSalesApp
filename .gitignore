@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/ProdajaVozila/FileContentIndex/74d1c1ab-1641-4e21-801a-3f8eea492640.vsidx
+*.vsidx
+*.Up2Date

@@ -23,7 +23,7 @@ namespace Server
 
         public void Start()
         {
-            // IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 9999);
+             
             IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse(ConfigurationManager.AppSettings["ip"]), int.Parse(ConfigurationManager.AppSettings["port"]));
 
             socket.Bind(endPoint);

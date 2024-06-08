@@ -24,7 +24,7 @@ namespace Server
             server = new Server();
             btnStart.Enabled = false;
             btnStop.Enabled = true;
-            txtServer.Text = "Server je pokrenut!";
+            txtServer.Text = "Server started!";
             server.Start();
         }
 
@@ -32,7 +32,7 @@ namespace Server
         {
             btnStart.Enabled = true;
             btnStop.Enabled = false;
-            txtServer.Text = "Server je zaustavljen!";
+            txtServer.Text = "Server stopped!";
             server.Stop();
         }
 
