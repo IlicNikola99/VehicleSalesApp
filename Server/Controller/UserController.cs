@@ -10,20 +10,20 @@ using System.Threading.Tasks;
 
 namespace Server
 {
-    public class Controller
+    public class UserController
     {
         private Broker broker;
 
-        private static Controller instance;
-        public static Controller Instance
+        private static UserController instance;
+        public static UserController Instance
         {
             get
             {
-                if(instance == null) instance = new Controller();
+                if(instance == null) instance = new UserController();
                 return instance;
             }
         }
-        private Controller() { broker = new Broker(); }
+        private UserController() { broker = new Broker(); }
 
         public User Login(User user)
         {
@@ -39,18 +39,24 @@ namespace Server
             addPerson.ExecuteTemplate();
         }
 
-        internal List<City> GetAllCity()
+        internal void AddUser(User argument)
         {
-            try
-            {
-                broker.OpenConnection();
-                return broker.GetAllCity();
-            }
-            finally
-            {
-                broker.CloseConnection();
-
-            }
+            AddUserSO addUser = new AddUserSO(argument);
+            addUser.ExecuteTemplate();
         }
+
+        //internal List<City> GetAllCity()
+        //{
+        //    try
+        //    {
+        //        broker.OpenConnection();
+        //        return broker.GetAllCity();
+        //    }
+        //    finally
+        //    {
+        //        broker.CloseConnection();
+
+        //    }
+        //}
     }
 }

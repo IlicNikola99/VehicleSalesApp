@@ -46,3 +46,18 @@ C:\Users\student2\Desktop\vezbe09sreda (4)\vezbe09sreda\Server\obj\Debug\Server.
 C:\Users\student2\Desktop\vezbe09sreda (4)\vezbe09sreda\Server\obj\Debug\Server.csproj.CopyComplete
 C:\Users\student2\Desktop\vezbe09sreda (4)\vezbe09sreda\Server\obj\Debug\Server.exe
 C:\Users\student2\Desktop\vezbe09sreda (4)\vezbe09sreda\Server\obj\Debug\Server.pdb
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Server\bin\Debug\Server.exe.config
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Server\bin\Debug\Server.exe
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Server\bin\Debug\Server.pdb
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Server\bin\Debug\Common.dll
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Server\bin\Debug\DBBroker.dll
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Server\bin\Debug\Common.pdb
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Server\bin\Debug\DBBroker.pdb
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Server\obj\Debug\Server.FrmServer.resources
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Server\obj\Debug\Server.Properties.Resources.resources
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Server\obj\Debug\Server.csproj.GenerateResource.cache
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Server\obj\Debug\Server.csproj.Up2Date
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Server\obj\Debug\Server.exe
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Server\obj\Debug\Server.pdb

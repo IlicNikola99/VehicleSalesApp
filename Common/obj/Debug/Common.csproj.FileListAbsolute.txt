@@ -16,3 +16,9 @@ C:\Users\student2\Desktop\vezbe09sreda (4)\vezbe09sreda\Common\obj\Debug\Common.
 C:\Users\student2\Desktop\vezbe09sreda (4)\vezbe09sreda\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 C:\Users\student2\Desktop\vezbe09sreda (4)\vezbe09sreda\Common\obj\Debug\Common.dll
 C:\Users\student2\Desktop\vezbe09sreda (4)\vezbe09sreda\Common\obj\Debug\Common.pdb
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Common\bin\Debug\Common.dll
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Common\bin\Debug\Common.pdb
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Common\obj\Debug\Common.dll
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Common\obj\Debug\Common.pdb

@@ -41,14 +41,18 @@ namespace Server
                 switch (req.Operation)
                 {
                     case Operation.CreatePerson:
-                        Controller.Instance.AddPerson((Person)req.Argument);
+                        UserController.Instance.AddPerson((Person)req.Argument);
+                        r.Result = req.Argument;
+                        break;
+                    case Operation.Register:
+                        UserController.Instance.AddUser((User)req.Argument);
                         r.Result = req.Argument;
                         break;
                     case Operation.Login:
-                        r.Result = Controller.Instance.Login((User)req.Argument);
+                        r.Result = UserController.Instance.Login((User)req.Argument);
                         break;
                     case Operation.GetAllCity:
-                        r.Result = Controller.Instance.GetAllCity();
+                        //r.Result = Controller.Instance.GetAllCity();
                         break;
                 }
             }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Client
@@ -31,6 +32,7 @@ namespace Client
 
         public void Connect()
         {
+            Thread.Sleep(3000);
             socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             socket.Connect("127.0.0.1", 9999);
             sender = new Sender(socket);
@@ -45,6 +47,17 @@ namespace Client
                 Operation = Operation.Login
             };
             sender.Send(req);
+            Response response = (Response)receiver.Receive();
+            return response;
+        }
+        internal Response Register(User user)
+        {
+            Request request = new Request
+            {
+                Argument = user,
+                Operation = Operation.Register
+            };
+            sender.Send(request);
             Response response = (Response)receiver.Receive();
             return response;
         }

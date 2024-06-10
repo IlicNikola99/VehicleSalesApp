@@ -25,12 +25,12 @@ namespace DBBroker
             SqlDataReader reader = command.ExecuteReader();
             try
             {
-               
+
                 if (reader.Read())
                 {
                     user.LastName = (string)reader["lastname"];
                     user.FirstName = (string)reader["firstname"];
-                    user.Id = (int)reader["userid"];
+                    // user.Id = (int)reader["userid"];
                     return user;
                 }
             }
@@ -48,20 +48,12 @@ namespace DBBroker
 
         public void Commit()
         {
-            connection.Commit();   
+            connection.Commit();
         }
 
         public void BeginTransaction()
         {
             connection.BeginTransaction();
-        }
-
-        public void Add(IEntity obj)
-        {
-            SqlCommand cmd = connection.CreateCommand();
-            cmd.CommandText = $"insert into {obj.TableName} values({obj.Values} )";
-            cmd.ExecuteNonQuery();
-            cmd.Dispose();
         }
 
         public void CloseConnection()
@@ -72,6 +64,31 @@ namespace DBBroker
         public void OpenConnection()
         {
             connection.OpenConnection();
+        }
+        public void Add(IEntity obj)
+        {
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandText = $"insert into {obj.TableName} values({obj.Values} )";
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+        }
+        public void AddUser(User user)
+        {
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = $"insert into user values (@id, @user, @pass, @fn, @ln, @add, @city, @ph, @cron)";
+            command.Parameters.Clear();
+            command.Parameters.AddWithValue("@id", user.Id);
+            command.Parameters.AddWithValue("@user", user.Username);
+            command.Parameters.AddWithValue("@pass", user.Password);
+            command.Parameters.AddWithValue("@fn", user.FirstName);
+            command.Parameters.AddWithValue("@ln", user.LastName);
+            command.Parameters.AddWithValue("@add", user.Address);
+            command.Parameters.AddWithValue("@city", user.City);
+            command.Parameters.AddWithValue("@ph", user.PhoneNumber);
+            command.Parameters.AddWithValue("@cron", user.CreatedOn);
+
+            command.ExecuteNonQuery();
+            command.Dispose();
         }
 
         public void AddPerson(Person person)

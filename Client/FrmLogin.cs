@@ -1,5 +1,6 @@
 ﻿using Client.GuiController;
 using Common.Communication;
+using Common.Domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace Client
         {
             InitializeComponent();
             btnLogin.Click += LoginGuiController.Instance.Login;
+            button1.Click += LoginGuiController.Instance.AddUserTest;
         }
     }
 }

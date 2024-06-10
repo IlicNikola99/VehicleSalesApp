@@ -6,3 +6,5 @@
 *.vsidx
 *.Up2Date
 /.vs/ProdajaVozila/v17/.suo
+/ApplicationLogic/obj/Debug
+/ApplicationLogic/Properties

@@ -58,5 +58,30 @@ namespace Client.GuiController
                 MessageBox.Show(">>>" + response.Exception.ToString());
             }
         }
+
+        public void AddUserTest(object sender, EventArgs e)
+        {
+            User newUser = new User()
+            {
+
+                Username = "testUsername",
+                Password = "testPassword",
+                FirstName = "Nikola",
+                LastName = "Ilic",
+                Address = "Vidikovacki venac 79",
+                City = "Beograd",
+                PhoneNumber = "+381695378778"
+            };
+            Response response = Communication.Instance.Register(newUser);
+            if (response.Exception == null)
+            {
+                MessageBox.Show("Success");
+
+            }
+            else
+            {
+                MessageBox.Show(">>>" + response.Exception.ToString());
+            }
+        }
     }
 }

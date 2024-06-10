@@ -15,7 +15,10 @@ namespace DBBroker
 
         public DbConnection()
         {
-            connection = new SqlConnection(ConfigurationManager.ConnectionStrings[ConfigurationManager.AppSettings["connectionString"]].ConnectionString);
+            //string connectionString = ConfigurationManager.ConnectionStrings["VehicleSalesDBConnectionString"].ConnectionString;
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=VehicleSalesDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;";
+
+            connection = new SqlConnection(connectionString);
         }
 
         public void OpenConnection()

@@ -10,6 +10,7 @@ namespace Common.Communication
     {
         CreatePerson,
         Login,
-        GetAllCity
+        Register,
+        GetAllCity,
     }
 }
