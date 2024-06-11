@@ -59,23 +59,26 @@ namespace Client.GuiController
             }
         }
 
-        public void AddUserTest(object sender, EventArgs e)
+        public void RegisterUser(object sender, EventArgs e)
         {
-            User newUser = new User()
+            User newUser;
+            using (var frmRegister = new FrmRegister())
             {
+                var result = frmRegister.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    newUser = frmRegister.NewUser;
+                }
+                else
+                {
+                    return;
+                }
+            }
 
-                Username = "testUsername",
-                Password = "testPassword",
-                FirstName = "Nikola",
-                LastName = "Ilic",
-                Address = "Vidikovacki venac 79",
-                City = "Beograd",
-                PhoneNumber = "+381695378778"
-            };
             Response response = Communication.Instance.Register(newUser);
             if (response.Exception == null)
             {
-                MessageBox.Show("Success");
+                MessageBox.Show("Registration successfull, you can login now!");
 
             }
             else

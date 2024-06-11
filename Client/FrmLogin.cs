@@ -21,8 +21,10 @@ namespace Client
             txtUsername.Text = "testUsername";
             txtPassword.Text = "testPassword";
             btnLogin.Click += LoginGuiController.Instance.Login;
-            button1.Click += LoginGuiController.Instance.AddUserTest;
+            registerButton.Click += LoginGuiController.Instance.RegisterUser;
             FormClosed += LoginGuiController.Instance.FormClosed;
         }
+
+
     }
 }

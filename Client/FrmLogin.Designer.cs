@@ -35,8 +35,9 @@ namespace Client
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.registerButton = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -81,22 +82,32 @@ namespace Client
             this.txtPassword.Size = new System.Drawing.Size(244, 26);
             this.txtPassword.TabIndex = 4;
             // 
-            // button1
+            // registerButton
             // 
-            this.button1.Location = new System.Drawing.Point(98, 285);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 35);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.registerButton.Location = new System.Drawing.Point(416, 345);
+            this.registerButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(112, 35);
+            this.registerButton.TabIndex = 5;
+            this.registerButton.Text = "Register";
+            this.registerButton.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(222, 352);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(174, 20);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Dont have an account?";
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(690, 394);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.registerButton);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label2);
@@ -116,8 +127,9 @@ namespace Client
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
-        private Button button1;
+        private Button registerButton;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Label label3;
 
         public Button BtnLogin { get => btnLogin; set => btnLogin = value; }
         public Label Label1 { get => label1; set => label1 = value; }

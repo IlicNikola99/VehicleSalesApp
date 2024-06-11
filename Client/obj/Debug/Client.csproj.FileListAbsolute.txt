@@ -77,3 +77,4 @@ C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\bin\Debug\Cl
 C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\bin\Debug\Common.dll
 C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\bin\Debug\Common.pdb
 C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\obj\Debug\Client.csproj.Up2Date
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\obj\Debug\Client.FrmRegister.resources
