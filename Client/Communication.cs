@@ -38,6 +38,20 @@ namespace Client
             sender = new Sender(socket);
             receiver = new Receiver(socket);
         }
+        public void Disconnect()
+        {
+            Request req = new Request
+            {
+                Argument = null,
+                Operation = Operation.DisconnectClient
+            };
+            sender.Send(req);
+
+            socket.Shutdown(SocketShutdown.Both);
+            socket = null;
+            sender = null;
+            receiver = null; 
+        }
 
         internal Response Login(User user)
         {

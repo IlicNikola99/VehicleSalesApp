@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Server
@@ -15,21 +16,26 @@ namespace Server
         private Sender sender;
         private Receiver receiver;
         private Socket socket;
+        bool end;
 
         public ClientHandler(Socket socket)
         {
             this.socket = socket;
             sender = new Sender(socket);
             receiver = new Receiver(socket);
+            end = false;
         }
 
         public void HandleRequest()
         {
-            while (true)
+            while (!end)
             {
                 Request req = (Request)receiver.Receive();
                 Response r = ProcessRequest(req);
-                sender.Send(r);
+                if (!end)
+                {
+                    sender.Send(r);
+                }
             }
         }
 
@@ -50,6 +56,9 @@ namespace Server
                         break;
                     case Operation.Login:
                         r.Result = UserController.Instance.Login((User)req.Argument);
+                        break;
+                    case Operation.DisconnectClient:
+                        end = true;
                         break;
                     case Operation.GetAllCity:
                         //r.Result = Controller.Instance.GetAllCity();

@@ -83,5 +83,10 @@ namespace Client.GuiController
                 MessageBox.Show(">>>" + response.Exception.ToString());
             }
         }
+
+        internal void FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Communication.Instance.Disconnect();
+        }
     }
 }

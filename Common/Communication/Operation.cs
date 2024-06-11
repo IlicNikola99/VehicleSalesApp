@@ -12,5 +12,6 @@ namespace Common.Communication
         Login,
         Register,
         GetAllCity,
+        DisconnectClient
     }
 }

@@ -18,8 +18,11 @@ namespace Client
         public FrmLogin()
         {
             InitializeComponent();
+            txtUsername.Text = "testUsername";
+            txtPassword.Text = "testPassword";
             btnLogin.Click += LoginGuiController.Instance.Login;
             button1.Click += LoginGuiController.Instance.AddUserTest;
+            FormClosed += LoginGuiController.Instance.FormClosed;
         }
     }
 }
