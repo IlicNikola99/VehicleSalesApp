@@ -48,10 +48,12 @@
     <Compile Include="Communication\Sender.cs" />
     <Compile Include="Domain\BaseEntity.cs" />
     <Compile Include="Domain\City.cs" />
-    <Compile Include="Domain\Gender.cs" />
+    <Compile Include="Domain\BodyType.cs" />
+    <Compile Include="Domain\FuelType.cs" />
     <Compile Include="Domain\IEntity.cs" />
     <Compile Include="Domain\Person.cs" />
     <Compile Include="Domain\User.cs" />
+    <Compile Include="Domain\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

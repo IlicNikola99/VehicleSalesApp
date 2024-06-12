@@ -19,9 +19,6 @@ namespace Client.UserControls
         public UCAddPerson()
         {
             InitializeComponent();
-            cmbGender.DataSource = Enum.GetValues(typeof(Gender));
-            BindingList<City> cities = new BindingList<City>((List<City>)Communication.Instance.GetAllCity());
-            cmbCity.DataSource = cities;
             cmbCity.DisplayMember = "Name";
         }
     }

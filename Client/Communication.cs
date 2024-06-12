@@ -88,16 +88,16 @@ namespace Client
             return response;
         }
 
-        internal object GetAllCity()
+        internal Response CreateVehicle(Vehicle vehicle)
         {
             Request request = new Request
             {
-                Operation = Operation.GetAllCity
+                Argument = vehicle,
+                Operation = Operation.CreateVehicle
             };
             sender.Send(request);
             Response response = (Response)receiver.Receive();
-            return response.Result;
-
+            return response;
         }
     }
 }

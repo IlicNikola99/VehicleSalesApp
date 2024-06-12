@@ -24,11 +24,11 @@ namespace Client.GuiController
 
         private MainCoordinator()
         {
-            personGuiController = new PersonGuiController();
+            advertisementGuiController = new AdvertisementGuiController();
         }
 
         private FrmMain frmMain;
-        private PersonGuiController personGuiController;
+        private AdvertisementGuiController advertisementGuiController;
 
         internal void ShowFrmMain()
         {
@@ -37,9 +37,9 @@ namespace Client.GuiController
             frmMain.ShowDialog();
         }
 
-        internal void ShowAddPersonPanel()
+        internal void ShowAddAdvertisementPanel()
         {
-            frmMain.ChangePanel(personGuiController.CreateAddPerson());
+            frmMain.ChangePanel(advertisementGuiController.CreateAddAdvertisement());
         }
 
 

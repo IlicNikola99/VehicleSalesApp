@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,19 +27,28 @@ namespace DBBroker
             try
             {
 
-                if (reader.Read())
+                if (reader.Read() && reader.HasRows)
                 {
-                    user.LastName = (string)reader["lastname"];
-                    user.FirstName = (string)reader["firstname"];
-                    // user.Id = (int)reader["userid"];
-                    return user;
+                    User foundUser = new User
+                    {
+                        Id = (Guid)reader["id"],
+                        Username = (string)reader["username"],
+                        Password = (string)reader["password"],
+                        FirstName = (string)reader["firstname"],
+                        LastName = (string)reader["lastname"],
+                        Address = (string)reader["address"],
+                        City = (string)reader["city"],
+                        PhoneNumber = (string)reader["phonenumber"],
+                        CreatedOn = (DateTime) reader["createdon"]
+                    };
+                    return foundUser;
                 }
+                else { throw new Exception("No user found with the given credentials!"); }
             }
             finally
             {
                 reader.Close();
             }
-            return null;
         }
 
         public void Rollback()
@@ -68,6 +78,7 @@ namespace DBBroker
         public void Add(IEntity obj)
         {
             SqlCommand cmd = connection.CreateCommand();
+            obj.GenerateNewId();
             cmd.CommandText = $"insert into {obj.TableName} values({obj.Values} )";
             cmd.ExecuteNonQuery();
             cmd.Dispose();
@@ -77,7 +88,7 @@ namespace DBBroker
             SqlCommand command = connection.CreateCommand();
             command.CommandText = $"insert into user values (@id, @user, @pass, @fn, @ln, @add, @city, @ph, @cron)";
             command.Parameters.Clear();
-            command.Parameters.AddWithValue("@id", user.Id);
+            command.Parameters.AddWithValue("@id", Guid.NewGuid());
             command.Parameters.AddWithValue("@user", user.Username);
             command.Parameters.AddWithValue("@pass", user.Password);
             command.Parameters.AddWithValue("@fn", user.FirstName);
@@ -85,7 +96,7 @@ namespace DBBroker
             command.Parameters.AddWithValue("@add", user.Address);
             command.Parameters.AddWithValue("@city", user.City);
             command.Parameters.AddWithValue("@ph", user.PhoneNumber);
-            command.Parameters.AddWithValue("@cron", user.CreatedOn);
+            command.Parameters.AddWithValue("@cron", DateTime.Now);
 
             command.ExecuteNonQuery();
             command.Dispose();
@@ -99,7 +110,6 @@ namespace DBBroker
             command.Parameters.AddWithValue("@fn", person.FirstName);
             command.Parameters.AddWithValue("@ln", person.LastName);
             command.Parameters.AddWithValue("@brthd", person.Birthday);
-            command.Parameters.AddWithValue("@gn", person.Gender.ToString());
             command.Parameters.AddWithValue("@mrd", person.IsMarried);
             command.Parameters.AddWithValue("@zc", person.City.ZipCode);
 

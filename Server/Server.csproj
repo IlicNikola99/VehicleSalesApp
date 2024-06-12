@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="ClientHandler.cs" />
     <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Controller\VehicleController.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +61,7 @@
     <Compile Include="Server.cs" />
     <Compile Include="SystemOperation\AddPersonSO.cs" />
     <Compile Include="SystemOperation\AddUserSO.cs" />
+    <Compile Include="SystemOperation\AddVehicleSO.cs" />
     <Compile Include="SystemOperation\LoginSO.cs" />
     <Compile Include="SystemOperation\SystemOperationBase.cs" />
     <EmbeddedResource Include="Form1.resx">

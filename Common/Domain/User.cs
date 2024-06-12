@@ -1,16 +1,19 @@
-﻿using Common.Domain;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Common.Domain
 {
     [Serializable]
     public class User : BaseEntity, IEntity
     {
+        public User()
+        {
+            this.Id = Guid.Empty;
+            this.CreatedOn= DateTime.Now;
+        }
+
         public string Username { get; set; }
         public string Password { get; set; }
         public string FirstName { get; set; }
@@ -22,6 +25,11 @@ namespace Common.Domain
         public string TableName => "[User]";
 
         public string Values => $"'{Id}','{Username}', '{Password}','{FirstName}', '{LastName}', '{Address}', '{City}', '{PhoneNumber}', '{CreatedOn}'";
+
+        public void GenerateNewId()
+        {
+            this.Id = Guid.NewGuid();
+        }
 
         public List<IEntity> GetReaderList(SqlDataReader reader)
         {

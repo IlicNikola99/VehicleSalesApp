@@ -3,72 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|c:\\users\\nikola\\documents\\projektovanje softvera\\ps projekat\\client\\helpers\\validator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\helpers\\validator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|c:\\users\\nikola\\documents\\projektovanje softvera\\ps projekat\\client\\guicontroller\\maincoordinator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\guicontroller\\maincoordinator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|c:\\users\\nikola\\documents\\projektovanje softvera\\ps projekat\\client\\frmregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\frmregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|c:\\users\\nikola\\documents\\projektovanje softvera\\ps projekat\\client\\guicontroller\\advertisementguicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\guicontroller\\advertisementguicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|c:\\users\\nikola\\documents\\projektovanje softvera\\ps projekat\\client\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|c:\\users\\nikola\\documents\\projektovanje softvera\\ps projekat\\client\\usercontrols\\ucaddadvertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\usercontrols\\ucaddadvertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|c:\\users\\nikola\\documents\\projektovanje softvera\\ps projekat\\client\\frmlogin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\frmlogin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|c:\\users\\nikola\\documents\\projektovanje softvera\\ps projekat\\client\\usercontrols\\ucaddadvertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\usercontrols\\ucaddadvertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|c:\\users\\nikola\\documents\\projektovanje softvera\\ps projekat\\client\\frmregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\frmregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|c:\\users\\nikola\\documents\\projektovanje softvera\\ps projekat\\client\\usercontrols\\ucaddadvertisement.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\usercontrols\\ucaddadvertisement.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|c:\\users\\nikola\\documents\\projektovanje softvera\\ps projekat\\client\\usercontrols\\ucaddperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\usercontrols\\ucaddperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\server\\clienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|solutionrelative:server\\clienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|c:\\users\\nikola\\documents\\projektovanje softvera\\ps projekat\\client\\guicontroller\\loginguicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\guicontroller\\loginguicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|c:\\users\\nikola\\documents\\projektovanje softvera\\ps projekat\\client\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\client\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\client\\communication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\communication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A8264EC1-0744-48BB-BE8D-DB4FB6207B48}|DBBroker\\DBBroker.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\dbbroker\\broker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8264EC1-0744-48BB-BE8D-DB4FB6207B48}|DBBroker\\DBBroker.csproj|solutionrelative:dbbroker\\broker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A23A8E72-B066-4F33-A698-9AEF70BA4082}|Common\\Common.csproj|c:\\users\\nikola\\documents\\projektovanje softvera\\ps projekat\\common\\communication\\operation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A23A8E72-B066-4F33-A698-9AEF70BA4082}|Common\\Common.csproj|solutionrelative:common\\communication\\operation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\server\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|solutionrelative:server\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A23A8E72-B066-4F33-A698-9AEF70BA4082}|Common\\Common.csproj|c:\\users\\nikola\\documents\\projektovanje softvera\\ps projekat\\common\\domain\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A23A8E72-B066-4F33-A698-9AEF70BA4082}|Common\\Common.csproj|solutionrelative:common\\domain\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\server\\systemoperation\\adduserso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|solutionrelative:server\\systemoperation\\adduserso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\server\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|solutionrelative:server\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|c:\\users\\nikola\\documents\\projektovanje softvera\\ps projekat\\client\\frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\client\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Domain\\User.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\User.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\client\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,8 +54,124 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ClientHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\ClientHandler.cs",
+              "RelativeDocumentMoniker": "Server\\ClientHandler.cs",
+              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\ClientHandler.cs",
+              "RelativeToolTip": "Server\\ClientHandler.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAmwCsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T21:53:14.486Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UCAddPerson.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\UserControls\\UCAddPerson.cs",
+              "RelativeDocumentMoniker": "Client\\UserControls\\UCAddPerson.cs",
+              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\UserControls\\UCAddPerson.cs [Design]",
+              "RelativeToolTip": "Client\\UserControls\\UCAddPerson.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T09:54:00.483Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdvertisementGuiController.cs",
+              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\GuiController\\AdvertisementGuiController.cs",
+              "RelativeDocumentMoniker": "Client\\GuiController\\AdvertisementGuiController.cs",
+              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\GuiController\\AdvertisementGuiController.cs",
+              "RelativeToolTip": "Client\\GuiController\\AdvertisementGuiController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T09:48:24.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainCoordinator.cs",
+              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\GuiController\\MainCoordinator.cs",
+              "RelativeDocumentMoniker": "Client\\GuiController\\MainCoordinator.cs",
+              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\GuiController\\MainCoordinator.cs",
+              "RelativeToolTip": "Client\\GuiController\\MainCoordinator.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAqwCkAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T09:47:59.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FrmMain.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\FrmMain.Designer.cs",
+              "RelativeDocumentMoniker": "Client\\FrmMain.Designer.cs",
+              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\FrmMain.Designer.cs",
+              "RelativeToolTip": "Client\\FrmMain.Designer.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAADgvzcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T09:46:41.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FrmMain.cs",
+              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\FrmMain.cs",
+              "RelativeDocumentMoniker": "Client\\FrmMain.cs",
+              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\FrmMain.cs",
+              "RelativeToolTip": "Client\\FrmMain.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAArwBMAAABmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T09:46:21.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UCAddAdvertisement.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\UserControls\\UCAddAdvertisement.Designer.cs",
+              "RelativeDocumentMoniker": "Client\\UserControls\\UCAddAdvertisement.Designer.cs",
+              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\UserControls\\UCAddAdvertisement.Designer.cs",
+              "RelativeToolTip": "Client\\UserControls\\UCAddAdvertisement.Designer.cs",
+              "ViewState": "AQIAAL0AAAAAAAAAAAAtwM8AAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T09:38:02.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UCAddAdvertisement.cs",
+              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\UserControls\\UCAddAdvertisement.cs",
+              "RelativeDocumentMoniker": "Client\\UserControls\\UCAddAdvertisement.cs",
+              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\UserControls\\UCAddAdvertisement.cs",
+              "RelativeToolTip": "Client\\UserControls\\UCAddAdvertisement.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAlwBEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T09:37:52.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UCAddAdvertisement.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\UserControls\\UCAddAdvertisement.cs",
+              "RelativeDocumentMoniker": "Client\\UserControls\\UCAddAdvertisement.cs",
+              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\UserControls\\UCAddAdvertisement.cs [Design]",
+              "RelativeToolTip": "Client\\UserControls\\UCAddAdvertisement.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T09:30:27.583Z",
+              "EditorCaption": " [Design]"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -94,217 +186,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ClientHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\ClientHandler.cs",
-              "RelativeDocumentMoniker": "Server\\ClientHandler.cs",
-              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\ClientHandler.cs",
-              "RelativeToolTip": "Server\\ClientHandler.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAhwDwAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T21:53:14.486Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Validator.cs",
-              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\Helpers\\Validator.cs",
-              "RelativeDocumentMoniker": "Client\\Helpers\\Validator.cs",
-              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\Helpers\\Validator.cs",
-              "RelativeToolTip": "Client\\Helpers\\Validator.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAuwB4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T18:21:08.674Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmRegister.cs",
-              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\FrmRegister.cs",
-              "RelativeDocumentMoniker": "Client\\FrmRegister.cs",
-              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\FrmRegister.cs",
-              "RelativeToolTip": "Client\\FrmRegister.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCQAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T17:35:23.996Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FrmRegister.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\FrmRegister.cs",
-              "RelativeDocumentMoniker": "Client\\FrmRegister.cs",
-              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\FrmRegister.cs [Design]",
-              "RelativeToolTip": "Client\\FrmRegister.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T17:27:57.838Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "FrmLogin.cs",
               "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\FrmLogin.cs",
               "RelativeDocumentMoniker": "Client\\FrmLogin.cs",
               "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\FrmLogin.cs",
               "RelativeToolTip": "Client\\FrmLogin.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAlwBcAAABMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBYAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T17:31:09.002Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Operation.cs",
-              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Common\\Communication\\Operation.cs",
-              "RelativeDocumentMoniker": "Common\\Communication\\Operation.cs",
-              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Common\\Communication\\Operation.cs",
-              "RelativeToolTip": "Common\\Communication\\Operation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T17:10:14.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FrmLogin.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\FrmLogin.Designer.cs",
-              "RelativeDocumentMoniker": "Client\\FrmLogin.Designer.cs",
-              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\FrmLogin.Designer.cs",
-              "RelativeToolTip": "Client\\FrmLogin.Designer.cs",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAYwF0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T17:06:11.51Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LoginGuiController.cs",
-              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\GuiController\\LoginGuiController.cs",
-              "RelativeDocumentMoniker": "Client\\GuiController\\LoginGuiController.cs",
-              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\GuiController\\LoginGuiController.cs",
-              "RelativeToolTip": "Client\\GuiController\\LoginGuiController.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAApwFQAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T17:05:06.901Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmLogin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\FrmLogin.cs",
-              "RelativeDocumentMoniker": "Client\\FrmLogin.cs",
-              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\FrmLogin.cs [Design]",
-              "RelativeToolTip": "Client\\FrmLogin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T17:04:24.275Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AddUserSO.cs",
-              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\SystemOperation\\AddUserSO.cs",
-              "RelativeDocumentMoniker": "Server\\SystemOperation\\AddUserSO.cs",
-              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\SystemOperation\\AddUserSO.cs",
-              "RelativeToolTip": "Server\\SystemOperation\\AddUserSO.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAYwBMAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T19:39:34.442Z"
+              "WhenOpened": "2024-06-10T17:31:09.002Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Broker.cs",
-              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\DBBroker\\Broker.cs",
-              "RelativeDocumentMoniker": "DBBroker\\Broker.cs",
-              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\DBBroker\\Broker.cs",
-              "RelativeToolTip": "DBBroker\\Broker.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAEwEcAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T18:10:53.294Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Common\\Domain\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "Common\\Domain\\BaseEntity.cs",
-              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Common\\Domain\\BaseEntity.cs",
-              "RelativeToolTip": "Common\\Domain\\BaseEntity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T18:10:45.441Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\Form1.cs",
-              "RelativeDocumentMoniker": "Server\\Form1.cs",
-              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\Form1.cs [Design]",
-              "RelativeToolTip": "Server\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T18:30:11.634Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Domain\\User.cs",
-              "RelativeDocumentMoniker": "Domain\\User.cs",
-              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Domain\\User.cs",
-              "RelativeToolTip": "Domain\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAkAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T17:32:31.533Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Server.cs",
-              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\Server.cs",
-              "RelativeDocumentMoniker": "Server\\Server.cs",
-              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\Server.cs",
-              "RelativeToolTip": "Server\\Server.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAQwCwAAABLAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T21:53:48.157Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Communication.cs",
-              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\Communication.cs",
-              "RelativeDocumentMoniker": "Client\\Communication.cs",
-              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\Communication.cs",
-              "RelativeToolTip": "Client\\Communication.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAawEsAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T21:53:42.956Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
               "Title": "FrmMain.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\FrmMain.cs",
               "RelativeDocumentMoniker": "Client\\FrmMain.cs",
-              "ToolTip": "C:\\Users\\Nikola\\Downloads\\konacna_arhitektura\\vezbe09sreda\\Client\\FrmMain.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\Downloads\\konacna_arhitektura\\vezbe09sreda\\Client\\FrmMain.cs [Design]",
+              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\FrmMain.cs [Design]",
+              "RelativeToolTip": "Client\\FrmMain.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T21:53:32.278Z"
+              "WhenOpened": "2024-06-02T21:53:32.278Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

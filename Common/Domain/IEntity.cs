@@ -13,6 +13,7 @@ namespace Common.Domain
         string Values { get; }
 
         List<IEntity> GetReaderList(SqlDataReader reader);
+        void GenerateNewId();
 
     }
 }

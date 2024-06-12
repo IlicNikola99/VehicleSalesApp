@@ -1,11 +1,14 @@
-﻿using Common.Communication;
+﻿using Client.Helpers;
+using Common.Communication;
 using Common.Domain;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Client.GuiController
 {
@@ -42,6 +45,11 @@ namespace Client.GuiController
 
         public void Login(object sender, EventArgs e)
         {
+            if (!Validator.ValidateForm(new List<System.Windows.Forms.TextBox>() { frmLogin.TxtUsername, frmLogin.TxtPassword },frmLogin.lblError))
+            {
+                return;
+            }
+
             User user = new User
             {
                 Username = frmLogin.TxtUsername.Text,
@@ -55,7 +63,7 @@ namespace Client.GuiController
             }
             else
             {
-                MessageBox.Show(">>>" + response.Exception.ToString());
+                MessageBox.Show(response.Exception.Message);
             }
         }
 

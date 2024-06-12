@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Common.Domain
 {
-    [Serializable]
-    public class BaseEntity
+    public enum FuelType
     {
-        public Guid Id { get; set; }
-        public DateTime CreatedOn { get; set; } 
+        Petrol,
+        Diesel
     }
 }

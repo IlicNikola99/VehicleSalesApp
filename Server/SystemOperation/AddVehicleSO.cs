@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace Server.SystemOperation
 {
-    public class AddPersonSO : SystemOperationBase
+    public class AddVehicleSO : SystemOperationBase
     {
-        private readonly Person p;
+        private readonly Vehicle v;
 
-        public AddPersonSO(Person p)
+        public AddVehicleSO(Vehicle v)
         {
-            this.p = p;
+            this.v = v;
         }
         protected override void ExecuteConcreteOperation()
         {
-           // broker.Add(p);
+            broker.Add(v);
         }
     }
 }

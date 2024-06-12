@@ -11,7 +11,7 @@ namespace Common.Communication
         CreatePerson,
         Login,
         Register,
-        GetAllCity,
+        CreateVehicle,
         DisconnectClient
     }
 }

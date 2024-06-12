@@ -38,6 +38,7 @@ namespace Client
             this.registerButton = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -101,11 +102,21 @@ namespace Client
             this.label3.TabIndex = 6;
             this.label3.Text = "Dont have an account?";
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(248, 322);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 20);
+            this.lblError.TabIndex = 18;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(690, 394);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.txtPassword);
@@ -130,6 +141,7 @@ namespace Client
         private Button registerButton;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Label label3;
+        public Label lblError;
 
         public Button BtnLogin { get => btnLogin; set => btnLogin = value; }
         public Label Label1 { get => label1; set => label1 = value; }

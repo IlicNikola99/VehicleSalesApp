@@ -1,5 +1,6 @@
 ﻿using Common.Communication;
 using Common.Domain;
+using Server.Controller;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -60,8 +61,9 @@ namespace Server
                     case Operation.DisconnectClient:
                         end = true;
                         break;
-                    case Operation.GetAllCity:
-                        //r.Result = Controller.Instance.GetAllCity();
+                    case Operation.CreateVehicle:
+                        VehicleController.Instance.AddVehicle((Vehicle)req.Argument);
+                        r.Result = req.Argument;
                         break;
                 }
             }

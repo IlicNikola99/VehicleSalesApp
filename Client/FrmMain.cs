@@ -17,7 +17,7 @@ namespace Client
         public FrmMain()
         {
             InitializeComponent();
-            itemAddPerson.Click += (s, a) => MainCoordinator.Instance.ShowAddPersonPanel();
+            itemAddAdvertisement.Click += (s, a) => MainCoordinator.Instance.ShowAddAdvertisementPanel();
         }
 
         public void ChangePanel(Control control)
@@ -29,5 +29,6 @@ namespace Client
             pnlMain.AutoSizeMode = AutoSizeMode.GrowAndShrink;
         }
 
+   
     }
 }

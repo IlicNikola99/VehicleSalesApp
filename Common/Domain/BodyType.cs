@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace Common.Domain
 {
-    public enum Gender
+    public enum BodyType
     {
-        Male,
-        Female
+        Sedane,
+        SUV,
+        Hatchback,
+        Coupe,
+        Pickup,
+        Minivan,
+        Cabrio,
+        Wagon
     }
 }

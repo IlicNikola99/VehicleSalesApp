@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.mnMain = new System.Windows.Forms.MenuStrip();
-            this.itemAddPerson = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemAddAdvertisement = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUser = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.mnMain.SuspendLayout();
@@ -37,47 +37,50 @@
             // 
             // mnMain
             // 
+            this.mnMain.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.mnMain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.itemAddPerson});
+            this.itemAddAdvertisement});
             this.mnMain.Location = new System.Drawing.Point(0, 0);
             this.mnMain.Name = "mnMain";
-            this.mnMain.Size = new System.Drawing.Size(735, 28);
+            this.mnMain.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.mnMain.Size = new System.Drawing.Size(827, 33);
             this.mnMain.TabIndex = 0;
             this.mnMain.Text = "menuStrip1";
             // 
-            // itemAddPerson
+            // itemAddAdvertisement
             // 
-            this.itemAddPerson.Name = "itemAddPerson";
-            this.itemAddPerson.Size = new System.Drawing.Size(98, 24);
-            this.itemAddPerson.Text = "Add Person";
-            //this.itemAddPerson.Click += new System.EventHandler(this.addPersonToolStripMenuItem_Click);
+            this.itemAddAdvertisement.Name = "itemAddAdvertisement";
+            this.itemAddAdvertisement.Size = new System.Drawing.Size(182, 29);
+            this.itemAddAdvertisement.Text = "Add Advertisement";
             // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Location = new System.Drawing.Point(34, 97);
+            this.lblUser.Location = new System.Drawing.Point(38, 121);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(0, 16);
+            this.lblUser.Size = new System.Drawing.Size(0, 20);
             this.lblUser.TabIndex = 1;
             // 
             // pnlMain
             // 
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMain.Location = new System.Drawing.Point(0, 28);
+            this.pnlMain.Location = new System.Drawing.Point(0, 33);
+            this.pnlMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(735, 422);
+            this.pnlMain.Size = new System.Drawing.Size(827, 529);
             this.pnlMain.TabIndex = 2;
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 450);
+            this.ClientSize = new System.Drawing.Size(827, 562);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.mnMain);
             this.MainMenuStrip = this.mnMain;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmMain";
             this.Text = "Main";
             this.mnMain.ResumeLayout(false);
@@ -90,7 +93,7 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip mnMain;
-        private System.Windows.Forms.ToolStripMenuItem itemAddPerson;
+        private System.Windows.Forms.ToolStripMenuItem itemAddAdvertisement;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Panel pnlMain;
     }
