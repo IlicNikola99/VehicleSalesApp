@@ -12,6 +12,8 @@ namespace Common.Communication
         Login,
         Register,
         CreateVehicle,
-        DisconnectClient
+        CreateAdvertisement,
+        DisconnectClient,
+        UploadImages
     }
 }

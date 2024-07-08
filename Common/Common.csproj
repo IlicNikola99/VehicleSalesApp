@@ -46,11 +46,13 @@
     <Compile Include="Communication\Request.cs" />
     <Compile Include="Communication\Response.cs" />
     <Compile Include="Communication\Sender.cs" />
+    <Compile Include="Domain\Advertisement.cs" />
     <Compile Include="Domain\BaseEntity.cs" />
     <Compile Include="Domain\City.cs" />
     <Compile Include="Domain\BodyType.cs" />
     <Compile Include="Domain\FuelType.cs" />
     <Compile Include="Domain\IEntity.cs" />
+    <Compile Include="Domain\Image.cs" />
     <Compile Include="Domain\Person.cs" />
     <Compile Include="Domain\User.cs" />
     <Compile Include="Domain\Vehicle.cs" />

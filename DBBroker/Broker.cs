@@ -75,13 +75,14 @@ namespace DBBroker
         {
             connection.OpenConnection();
         }
-        public void Add(IEntity obj)
+        public IEntity Add(IEntity obj)
         {
             SqlCommand cmd = connection.CreateCommand();
             obj.GenerateNewId();
             cmd.CommandText = $"insert into {obj.TableName} values({obj.Values} )";
             cmd.ExecuteNonQuery();
             cmd.Dispose();
+            return obj;
         }
         public void AddUser(User user)
         {
@@ -97,21 +98,6 @@ namespace DBBroker
             command.Parameters.AddWithValue("@city", user.City);
             command.Parameters.AddWithValue("@ph", user.PhoneNumber);
             command.Parameters.AddWithValue("@cron", DateTime.Now);
-
-            command.ExecuteNonQuery();
-            command.Dispose();
-        }
-
-        public void AddPerson(Person person)
-        {
-            SqlCommand command = connection.CreateCommand();
-            command.CommandText = $"insert into person values (@fn, @ln, @brthd, @gn, @mrd, @zc)";
-            command.Parameters.Clear();
-            command.Parameters.AddWithValue("@fn", person.FirstName);
-            command.Parameters.AddWithValue("@ln", person.LastName);
-            command.Parameters.AddWithValue("@brthd", person.Birthday);
-            command.Parameters.AddWithValue("@mrd", person.IsMarried);
-            command.Parameters.AddWithValue("@zc", person.City.ZipCode);
 
             command.ExecuteNonQuery();
             command.Dispose();
@@ -146,6 +132,23 @@ namespace DBBroker
             return list;
         }
 
+        public Advertisement AddAdvertisement(Advertisement advertisement)
+        {
+            advertisement.Id = Guid.NewGuid();
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = $"insert into {advertisement.TableName} values (@id, @userId, @vehicleId, @exchange, @price, @desc, @cron)";
+            command.Parameters.Clear();
+            command.Parameters.AddWithValue("@id", advertisement.Id);
+            command.Parameters.AddWithValue("@userId", advertisement.User.Id);
+            command.Parameters.AddWithValue("@vehicleId", advertisement.Vehicle.Id);
+            command.Parameters.AddWithValue("@exchange", advertisement.AcceptsExchange ? "true" : "false");
+            command.Parameters.AddWithValue("@price", advertisement.Price);
+            command.Parameters.AddWithValue("@desc", advertisement.Description);
+            command.Parameters.AddWithValue("@cron", DateTime.Now);
 
+            command.ExecuteNonQuery();
+            command.Dispose();
+            return advertisement;
+        }
     }
 }

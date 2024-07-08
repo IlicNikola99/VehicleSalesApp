@@ -58,12 +58,20 @@ namespace Server
                     case Operation.Login:
                         r.Result = UserController.Instance.Login((User)req.Argument);
                         break;
-                    case Operation.DisconnectClient:
-                        end = true;
-                        break;
                     case Operation.CreateVehicle:
                         VehicleController.Instance.AddVehicle((Vehicle)req.Argument);
                         r.Result = req.Argument;
+                        break;
+                    case Operation.CreateAdvertisement:
+                        AdvertisementController.Instance.AddAdvertisement((Advertisement)req.Argument);
+                        r.Result = req.Argument;
+                        break;
+                    case Operation.UploadImages:
+                        ImageController.Instance.UploadImages((List<Image>)req.Argument);
+                        r.Result = req.Argument;
+                        break;
+                    case Operation.DisconnectClient:
+                        end = true;
                         break;
                 }
             }

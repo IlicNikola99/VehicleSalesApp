@@ -9,7 +9,7 @@ namespace Server.SystemOperation
 {
     public class AddVehicleSO : SystemOperationBase
     {
-        private readonly Vehicle v;
+        public Vehicle v;
 
         public AddVehicleSO(Vehicle v)
         {
@@ -17,7 +17,7 @@ namespace Server.SystemOperation
         }
         protected override void ExecuteConcreteOperation()
         {
-            broker.Add(v);
+            this.v = (Vehicle)broker.Add(v);
         }
     }
 }

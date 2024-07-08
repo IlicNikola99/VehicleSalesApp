@@ -79,3 +79,8 @@ C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\bin\Debug\Co
 C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\obj\Debug\Client.csproj.Up2Date
 C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\obj\Debug\Client.FrmRegister.resources
 C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\obj\Debug\Client.UserControls.UCAddAdvertisement.resources
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\bin\Debug\Server.exe
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\bin\Debug\DBBroker.dll
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\bin\Debug\Server.pdb
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\bin\Debug\Server.exe.config
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\bin\Debug\DBBroker.pdb

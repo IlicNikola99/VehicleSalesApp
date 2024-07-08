@@ -99,5 +99,29 @@ namespace Client
             Response response = (Response)receiver.Receive();
             return response;
         }
+
+        internal Response CreateAdvertisement(Advertisement advertisement)
+        {
+            Request request = new Request
+            {
+                Argument = advertisement,
+                Operation = Operation.CreateAdvertisement
+            };
+            sender.Send(request);
+            Response response = (Response)receiver.Receive();
+            return response;
+        }
+
+        internal Response UploadImages(List<Image> images)
+        {
+            Request request = new Request
+            {
+                Argument = images,
+                Operation = Operation.UploadImages
+            };
+            sender.Send(request);
+            Response response = (Response)receiver.Receive();
+            return response;
+        }
     }
 }

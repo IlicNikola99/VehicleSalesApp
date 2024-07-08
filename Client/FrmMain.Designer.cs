@@ -37,21 +37,20 @@
             // 
             // mnMain
             // 
-            this.mnMain.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.mnMain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.itemAddAdvertisement});
             this.mnMain.Location = new System.Drawing.Point(0, 0);
             this.mnMain.Name = "mnMain";
             this.mnMain.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.mnMain.Size = new System.Drawing.Size(827, 33);
+            this.mnMain.Size = new System.Drawing.Size(1392, 24);
             this.mnMain.TabIndex = 0;
             this.mnMain.Text = "menuStrip1";
             // 
             // itemAddAdvertisement
             // 
             this.itemAddAdvertisement.Name = "itemAddAdvertisement";
-            this.itemAddAdvertisement.Size = new System.Drawing.Size(182, 29);
+            this.itemAddAdvertisement.Size = new System.Drawing.Size(121, 20);
             this.itemAddAdvertisement.Text = "Add Advertisement";
             // 
             // lblUser
@@ -64,18 +63,19 @@
             // 
             // pnlMain
             // 
+            this.pnlMain.AutoSize = true;
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMain.Location = new System.Drawing.Point(0, 33);
+            this.pnlMain.Location = new System.Drawing.Point(0, 24);
             this.pnlMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(827, 529);
+            this.pnlMain.Size = new System.Drawing.Size(1392, 643);
             this.pnlMain.TabIndex = 2;
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 562);
+            this.ClientSize = new System.Drawing.Size(1392, 667);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.mnMain);

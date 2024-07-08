@@ -16,6 +16,7 @@ namespace Client.GuiController
     {
 
         private static LoginGuiController instance;
+        public User LoggedInUser { get; set; }
         public static LoginGuiController Instance
         {
             get
@@ -45,7 +46,7 @@ namespace Client.GuiController
 
         public void Login(object sender, EventArgs e)
         {
-            if (!Validator.ValidateForm(new List<System.Windows.Forms.TextBox>() { frmLogin.TxtUsername, frmLogin.TxtPassword },frmLogin.lblError))
+            if (!Validator.ValidateForm(new List<System.Windows.Forms.TextBox>() { frmLogin.TxtUsername, frmLogin.TxtPassword }, frmLogin.lblError))
             {
                 return;
             }
@@ -58,6 +59,7 @@ namespace Client.GuiController
             Response response = Communication.Instance.Login(user);
             if (response.Exception == null)
             {
+                LoggedInUser = (User)response.Result;
                 frmLogin.Visible = false;
                 MainCoordinator.Instance.ShowFrmMain();
             }

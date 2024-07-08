@@ -25,10 +25,11 @@ namespace Server.Controller
         private VehicleController() { broker = new Broker(); }
 
 
-        internal void AddVehicle(Vehicle argument)
+        internal Vehicle AddVehicle(Vehicle argument)
         {
             AddVehicleSO addVehicle = new AddVehicleSO(argument);
             addVehicle.ExecuteTemplate();
+            return addVehicle.v;
         }
 
     }

@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientHandler.cs" />
+    <Compile Include="Controller\AdvertisementController.cs" />
+    <Compile Include="Controller\ImageController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Controller\VehicleController.cs" />
     <Compile Include="Form1.cs">
@@ -59,11 +61,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Server.cs" />
+    <Compile Include="SystemOperation\AddAdvertisementSO.cs" />
     <Compile Include="SystemOperation\AddPersonSO.cs" />
     <Compile Include="SystemOperation\AddUserSO.cs" />
     <Compile Include="SystemOperation\AddVehicleSO.cs" />
     <Compile Include="SystemOperation\LoginSO.cs" />
     <Compile Include="SystemOperation\SystemOperationBase.cs" />
+    <Compile Include="SystemOperation\UploadImagesSO.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
