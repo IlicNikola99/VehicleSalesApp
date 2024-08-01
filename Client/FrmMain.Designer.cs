@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.mnMain = new System.Windows.Forms.MenuStrip();
+            this.itemHome = new System.Windows.Forms.ToolStripMenuItem();
             this.itemAddAdvertisement = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUser = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
@@ -39,6 +40,7 @@
             // 
             this.mnMain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.itemHome,
             this.itemAddAdvertisement});
             this.mnMain.Location = new System.Drawing.Point(0, 0);
             this.mnMain.Name = "mnMain";
@@ -46,6 +48,12 @@
             this.mnMain.Size = new System.Drawing.Size(1392, 24);
             this.mnMain.TabIndex = 0;
             this.mnMain.Text = "menuStrip1";
+            // 
+            // itemHome
+            // 
+            this.itemHome.Name = "itemHome";
+            this.itemHome.Size = new System.Drawing.Size(52, 20);
+            this.itemHome.Text = "Home";
             // 
             // itemAddAdvertisement
             // 
@@ -96,5 +104,6 @@
         private System.Windows.Forms.ToolStripMenuItem itemAddAdvertisement;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Panel pnlMain;
+        public System.Windows.Forms.ToolStripMenuItem itemHome;
     }
 }

@@ -32,6 +32,12 @@ namespace Server.Controller
             addAdvertisement.ExecuteTemplate();
         }
 
+        internal List<Advertisement> GetAllAdvertisements()
+        {
+            GetAllAdvertisementsSO getAllAdvertisements = new GetAllAdvertisementsSO();
+            getAllAdvertisements.ExecuteTemplate();
+            return getAllAdvertisements.Result;
+        }
     }
 }
 

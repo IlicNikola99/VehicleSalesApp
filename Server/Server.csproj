@@ -62,9 +62,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Server.cs" />
     <Compile Include="SystemOperation\AddAdvertisementSO.cs" />
-    <Compile Include="SystemOperation\AddPersonSO.cs" />
     <Compile Include="SystemOperation\AddUserSO.cs" />
     <Compile Include="SystemOperation\AddVehicleSO.cs" />
+    <Compile Include="SystemOperation\GetAllAdvertisementsSO.cs" />
     <Compile Include="SystemOperation\LoginSO.cs" />
     <Compile Include="SystemOperation\SystemOperationBase.cs" />
     <Compile Include="SystemOperation\UploadImagesSO.cs" />

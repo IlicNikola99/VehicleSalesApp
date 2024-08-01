@@ -34,12 +34,6 @@ namespace Server
 
         }
 
-        internal void AddPerson(Person argument)
-        {
-            AddPersonSO addPerson = new AddPersonSO(argument);
-            addPerson.ExecuteTemplate();
-        }
-
         internal void AddUser(User argument)
         {
             AddUserSO addUser = new AddUserSO(argument);

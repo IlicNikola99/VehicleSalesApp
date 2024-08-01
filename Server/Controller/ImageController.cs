@@ -11,7 +11,6 @@ namespace Server.Controller
 {
     public class ImageController
     {
-        private Broker broker;
         private static ImageController instance;
         public static ImageController Instance
         {
@@ -21,7 +20,7 @@ namespace Server.Controller
                 return instance;
             }
         }
-        private ImageController() { broker = new Broker(); }
+        private ImageController() { }
 
         internal void UploadImages(List<Image> images)
         {

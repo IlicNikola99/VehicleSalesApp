@@ -25,10 +25,12 @@ namespace Client.GuiController
         private MainCoordinator()
         {
             advertisementGuiController = new AdvertisementGuiController();
+            homepageGuiController = new HomepageGuiController();
         }
 
         private FrmMain frmMain;
         private AdvertisementGuiController advertisementGuiController;
+        private HomepageGuiController homepageGuiController;
 
         internal void ShowFrmMain()
         {
@@ -41,7 +43,10 @@ namespace Client.GuiController
         {
             frmMain.ChangePanel(advertisementGuiController.CreateAddAdvertisement());
         }
-
+        internal void ShowHomePanel()
+        {
+            frmMain.ChangePanel(homepageGuiController.CreateHomepage());
+        }
 
     }
 }

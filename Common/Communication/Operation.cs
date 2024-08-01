@@ -14,6 +14,7 @@ namespace Common.Communication
         CreateVehicle,
         CreateAdvertisement,
         DisconnectClient,
-        UploadImages
+        UploadImages,
+        GetAllAdvertisements
     }
 }

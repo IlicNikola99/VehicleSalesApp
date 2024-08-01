@@ -38,6 +38,7 @@ namespace Client
             sender = new Sender(socket);
             receiver = new Receiver(socket);
         }
+
         public void Disconnect()
         {
             Request req = new Request
@@ -64,24 +65,13 @@ namespace Client
             Response response = (Response)receiver.Receive();
             return response;
         }
+
         internal Response Register(User user)
         {
             Request request = new Request
             {
                 Argument = user,
                 Operation = Operation.Register
-            };
-            sender.Send(request);
-            Response response = (Response)receiver.Receive();
-            return response;
-        }
-
-        internal Response CreatePerson(Person person)
-        {
-            Request request = new Request
-            {
-                Argument = person,
-                Operation = Operation.CreatePerson
             };
             sender.Send(request);
             Response response = (Response)receiver.Receive();
@@ -118,6 +108,18 @@ namespace Client
             {
                 Argument = images,
                 Operation = Operation.UploadImages
+            };
+            sender.Send(request);
+            Response response = (Response)receiver.Receive();
+            return response;
+        }
+
+        internal Response GetAllAdvertisements()
+        {
+            Request request = new Request
+            {
+                Argument = null,
+                Operation = Operation.GetAllAdvertisements
             };
             sender.Send(request);
             Response response = (Response)receiver.Receive();

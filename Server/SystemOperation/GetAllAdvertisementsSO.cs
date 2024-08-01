@@ -7,17 +7,18 @@ using System.Threading.Tasks;
 
 namespace Server.SystemOperation
 {
-    public class AddPersonSO : SystemOperationBase
+    public class GetAllAdvertisementsSO : SystemOperationBase
     {
-        private readonly Person p;
+        public List<Advertisement> Result { get; set; }
 
-        public AddPersonSO(Person p)
+        public GetAllAdvertisementsSO()
         {
-            this.p = p;
         }
+
         protected override void ExecuteConcreteOperation()
         {
-           // broker.Add(p);
+
+            Result = broker.GetAllAdvertisements();
         }
     }
 }

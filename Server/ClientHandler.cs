@@ -46,11 +46,7 @@ namespace Server
             try
             {
                 switch (req.Operation)
-                {
-                    case Operation.CreatePerson:
-                        UserController.Instance.AddPerson((Person)req.Argument);
-                        r.Result = req.Argument;
-                        break;
+                {           
                     case Operation.Register:
                         UserController.Instance.AddUser((User)req.Argument);
                         r.Result = req.Argument;
@@ -65,6 +61,9 @@ namespace Server
                     case Operation.CreateAdvertisement:
                         AdvertisementController.Instance.AddAdvertisement((Advertisement)req.Argument);
                         r.Result = req.Argument;
+                        break;
+                    case Operation.GetAllAdvertisements:
+                        r.Result = AdvertisementController.Instance.GetAllAdvertisements();
                         break;
                     case Operation.UploadImages:
                         ImageController.Instance.UploadImages((List<Image>)req.Argument);

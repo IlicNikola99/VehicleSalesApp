@@ -65,12 +65,22 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="GuiController\HomepageGuiController.cs" />
     <Compile Include="GuiController\LoginGuiController.cs" />
     <Compile Include="GuiController\MainCoordinator.cs" />
     <Compile Include="GuiController\AdvertisementGuiController.cs" />
     <Compile Include="Helpers\Validator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\Cards\CardsPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Cards\UCCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Cards\UCCard.Designer.cs">
+      <DependentUpon>UCCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCAddAdvertisement.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -82,6 +92,12 @@
     </Compile>
     <Compile Include="UserControls\UCAddPerson.Designer.cs">
       <DependentUpon>UCAddPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCHomepage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCHomepage.Designer.cs">
+      <DependentUpon>UCHomepage.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -101,11 +117,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\Cards\UCCard.resx">
+      <DependentUpon>UCCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCAddAdvertisement.resx">
       <DependentUpon>UCAddAdvertisement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCAddPerson.resx">
       <DependentUpon>UCAddPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCHomepage.resx">
+      <DependentUpon>UCHomepage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

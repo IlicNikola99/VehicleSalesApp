@@ -39,7 +39,7 @@ namespace DBBroker
                         Address = (string)reader["address"],
                         City = (string)reader["city"],
                         PhoneNumber = (string)reader["phonenumber"],
-                        CreatedOn = (DateTime) reader["createdon"]
+                        CreatedOn = (DateTime)reader["createdon"]
                     };
                     return foundUser;
                 }
@@ -117,6 +117,28 @@ namespace DBBroker
                     ZipCode = (int)reader["ZipCode"]
                 };
                 list.Add(city);
+            }
+            reader.Close();
+            return list;
+        }
+
+        public List<Advertisement> GetAllAdvertisements()
+        {
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = "select * from [Advertisement]";
+            List<Advertisement> list = new List<Advertisement>();
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                Advertisement advertisement = new Advertisement()
+                {
+                    Id = (Guid)reader["Id"],
+                    AcceptsExchange = bool.Parse((string)reader["AcceptsExchange"]),
+                    Price = Convert.ToDecimal(reader["Price"]),
+                    Description = (string)reader["Description"],
+                    CreatedOn = (DateTime)reader["CreatedOn"]
+                };
+                list.Add(advertisement);
             }
             reader.Close();
             return list;

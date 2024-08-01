@@ -84,3 +84,5 @@ C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\bin\Debug\DB
 C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\bin\Debug\Server.pdb
 C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\bin\Debug\Server.exe.config
 C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\bin\Debug\DBBroker.pdb
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\obj\Debug\Client.UserControls.UCHomepage.resources
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\obj\Debug\Client.UserControls.Cards.UCCard.resources

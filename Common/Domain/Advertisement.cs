@@ -22,6 +22,7 @@ namespace Common.Domain
         public decimal Price { get; set; }
         public bool AcceptsExchange { get; set; }
         public string Description { get; set; }
+        public List<Image> Images { get; set; }
         public string TableName => "[Advertisement]";
         public string Values => $"'{Id}','{User.Id}', '{Vehicle.Id}','{Price}', '{AcceptsExchange}', '{Description}', '{CreatedOn}'";
 

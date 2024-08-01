@@ -18,6 +18,7 @@ namespace Client
         {
             InitializeComponent();
             itemAddAdvertisement.Click += (s, a) => MainCoordinator.Instance.ShowAddAdvertisementPanel();
+            itemHome.Click += (s, a) => MainCoordinator.Instance.ShowHomePanel();
         }
 
         public void ChangePanel(Control control)
@@ -28,7 +29,5 @@ namespace Client
             pnlMain.AutoSize = true;
             pnlMain.AutoSizeMode = AutoSizeMode.GrowAndShrink;
         }
-
-   
     }
 }
