@@ -54,7 +54,8 @@ namespace Client.GuiController
                     ImagePath = advertisement.Images[0].Path,
                     MakeModel = advertisement.Vehicle.Make + " " + advertisement.Vehicle.Model,
                     Year = advertisement.Vehicle.Year.ToString(),
-                    Price = advertisement.Price.ToString() + " €"
+                    Price = advertisement.Price.ToString() + " €",
+                    Advertisement = advertisement
                 };
                 return cardViewModel;
             }).ToList();
