@@ -17,8 +17,13 @@ namespace Server.SystemOperation
 
         protected override void ExecuteConcreteOperation()
         {
-
-            Result = broker.GetAllAdvertisements();
+            var advertisements = broker.GetAllAdvertisements();
+            Result = advertisements.Select(advertisement =>            {
+                advertisement.User = broker.GetUserById(advertisement.User.Id);
+                advertisement.Vehicle = broker.GetVehicleById(advertisement.Vehicle.Id);
+                advertisement.Images = broker.getImagesForAdvertisement(advertisement.Id);
+                return advertisement;
+            }).ToList();
         }
     }
 }

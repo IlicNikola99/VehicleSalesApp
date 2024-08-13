@@ -47,24 +47,19 @@ namespace Client.GuiController
                 Debug.WriteLine(">>>>> Error when fetching advertisements!");
                 throw response.Exception;
             }
-           
-            ObservableCollection<CardViewModel> cards = new ObservableCollection<CardViewModel>
-            {
-                new CardViewModel()
+            List<Advertisement> allAdvertisements = (List<Advertisement>) response.Result;
+            List<CardViewModel> cardViews = allAdvertisements.Select( advertisement => {
+                CardViewModel cardViewModel = new CardViewModel()
                 {
-                    MakeModel = "Toyota Corolla",
-                    Year = "1999",
-                    Price = "2500 $",
-                    ImagePath = "C:\\Users\\Nikola\\Downloads\\Slike za app\\Mercedes\\ee8e4ca7125a-800x600-dw.jpg"
-                },
-                  new CardViewModel()
-                {
-                    MakeModel = "Mercedes Benz",
-                    Year = "2022",
-                    Price = "12500 $",
-                    ImagePath = "C:\\Users\\Nikola\\Downloads\\Slike za app\\Mercedes\\ee8e4ca7125a-800x600-dw.jpg"
-                }
-            };
+                    ImagePath = advertisement.Images[0].Path,
+                    MakeModel = advertisement.Vehicle.Make + " " + advertisement.Vehicle.Model,
+                    Year = advertisement.Vehicle.Year.ToString(),
+                    Price = advertisement.Price.ToString() + " €"
+                };
+                return cardViewModel;
+            }).ToList();
+
+            ObservableCollection<CardViewModel> cards = new ObservableCollection<CardViewModel>(cardViews);
             CardsViewModel VM = new CardsViewModel()
             {
                 Cards = cards

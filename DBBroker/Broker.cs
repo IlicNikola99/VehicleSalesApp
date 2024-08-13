@@ -134,6 +134,14 @@ namespace DBBroker
                 {
                     Id = (Guid)reader["Id"],
                     AcceptsExchange = bool.Parse((string)reader["AcceptsExchange"]),
+                    User = new User()
+                    {
+                        Id = (Guid)reader["UserId"]
+                    },
+                    Vehicle = new Vehicle()
+                    {
+                        Id = (Guid)reader["VehicleId"]
+                    },
                     Price = Convert.ToDecimal(reader["Price"]),
                     Description = (string)reader["Description"],
                     CreatedOn = (DateTime)reader["CreatedOn"]
@@ -142,6 +150,69 @@ namespace DBBroker
             }
             reader.Close();
             return list;
+        }
+
+        public User GetUserById(Guid userId)
+        {
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = $"select * from [User] where Id = '{userId}' ";
+            SqlDataReader reader = command.ExecuteReader();
+            try
+            {
+
+                if (reader.Read() && reader.HasRows)
+                {
+                    User foundUser = new User
+                    {
+                        Id = (Guid)reader["id"],
+                        Username = (string)reader["username"],
+                        Password = (string)reader["password"],
+                        FirstName = (string)reader["firstname"],
+                        LastName = (string)reader["lastname"],
+                        Address = (string)reader["address"],
+                        City = (string)reader["city"],
+                        PhoneNumber = (string)reader["phonenumber"],
+                        CreatedOn = (DateTime)reader["createdon"]
+                    };
+                    return foundUser;
+                }
+                else { throw new Exception("No user found with the given id!"); }
+            }
+            finally
+            {
+                reader.Close();
+            }
+        }
+
+        public Vehicle GetVehicleById(Guid vehicleId)
+        {
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = $"select * from [Vehicle] where Id = '{vehicleId}' ";
+            SqlDataReader reader = command.ExecuteReader();
+            try
+            {
+
+                if (reader.Read() && reader.HasRows)
+                {
+                    Vehicle foundVehicle = new Vehicle
+                    {
+                        Id = (Guid)reader["id"],
+                        Make = (string)reader["make"],
+                        Model = (string)reader["model"],
+                        BodyType = (BodyType)Enum.Parse(typeof(BodyType), (string)reader["bodyType"]),
+                        Year = (int)reader["year"],
+                        Mileage = (int)reader["mileage"],
+                        FuelType = (FuelType)Enum.Parse(typeof(FuelType), (string)reader["fuelType"]),
+                        CreatedOn = (DateTime)reader["CreatedOn"]
+                    };
+                    return foundVehicle;
+                }
+                else { throw new Exception("No vehicle found with the given id!"); }
+            }
+            finally
+            {
+                reader.Close();
+            }
         }
 
         public List<IEntity> GetAll(IEntity entity)
@@ -171,6 +242,39 @@ namespace DBBroker
             command.ExecuteNonQuery();
             command.Dispose();
             return advertisement;
+        }
+
+        public List<Image> getImagesForAdvertisement(Guid advertisementId)
+        {
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = $"select * from [Image] where AdvertisementId = '{advertisementId}' ";
+            SqlDataReader reader = command.ExecuteReader();
+            List<Image> images = new List<Image>();
+            try
+            {
+
+                if (reader.Read() && reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        Image image = new Image
+                        {
+                            Id = (Guid)reader["Id"],
+                            Path = (string)reader["Path"],
+                            AdvertisementId = (Guid)reader["AdvertisementId"],
+                            CreatedOn = (DateTime)reader["CreatedOn"]
+                        };
+
+                        images.Add(image);
+                    }
+                }
+                else { throw new Exception("No images found for the given advertisementId!"); }
+                return images;
+            }
+            finally
+            {
+                reader.Close();
+            }
         }
     }
 }
