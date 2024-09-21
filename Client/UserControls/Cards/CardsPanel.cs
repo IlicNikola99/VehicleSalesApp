@@ -53,8 +53,14 @@ namespace Client.UserControls.Cards
             int columnCount = Width / CardWidth;
 
             //calc the x index and y index.
-            int xPos = (atIndex % columnCount) * CardWidth;
-            int yPos = (atIndex / columnCount) * CardHeight;
+            int xPos = 0;
+            int yPos = 0;
+
+            if (columnCount > 0)
+            {
+                xPos = (atIndex % columnCount) * CardWidth;
+                yPos = (atIndex / columnCount) * CardHeight;
+            }
 
             ctl.Location = new Point(xPos, yPos);
         }

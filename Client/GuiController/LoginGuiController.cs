@@ -39,14 +39,17 @@ namespace Client.GuiController
             Communication.Instance.Connect();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            frmLogin = new FrmLogin();
-            frmLogin.AutoSize = true;
+            frmLogin = new FrmLogin
+            {
+                AutoSize = true
+            };
             Application.Run(frmLogin);
         }
 
         public void Login(object sender, EventArgs e)
         {
-            if (!Validator.ValidateForm(new List<System.Windows.Forms.TextBox>() { frmLogin.TxtUsername, frmLogin.TxtPassword }, frmLogin.lblError))
+            if (!Validator.ValidateForm(new List<System.Windows.Forms.TextBox>() { frmLogin.TxtUsername,
+                frmLogin.TxtPassword }, frmLogin.lblError))
             {
                 return;
             }

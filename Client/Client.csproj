@@ -65,10 +65,11 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="GuiController\AdvertisementViewGuiController.cs" />
     <Compile Include="GuiController\HomepageGuiController.cs" />
     <Compile Include="GuiController\LoginGuiController.cs" />
     <Compile Include="GuiController\MainCoordinator.cs" />
-    <Compile Include="GuiController\AdvertisementGuiController.cs" />
+    <Compile Include="GuiController\AddAdvertisementGuiController.cs" />
     <Compile Include="Helpers\Validator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,11 +94,23 @@
     <Compile Include="UserControls\UCAddPerson.Designer.cs">
       <DependentUpon>UCAddPerson.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UCAdvertisement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCAdvertisement.Designer.cs">
+      <DependentUpon>UCAdvertisement.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCHomepage.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UCHomepage.Designer.cs">
       <DependentUpon>UCHomepage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCSearch.Designer.cs">
+      <DependentUpon>UCSearch.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -126,8 +139,14 @@
     <EmbeddedResource Include="UserControls\UCAddPerson.resx">
       <DependentUpon>UCAddPerson.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCAdvertisement.resx">
+      <DependentUpon>UCAdvertisement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCHomepage.resx">
       <DependentUpon>UCHomepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCSearch.resx">
+      <DependentUpon>UCSearch.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

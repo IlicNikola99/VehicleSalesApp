@@ -1,4 +1,5 @@
-﻿using Common.Domain;
+﻿using Client.GuiController;
+using Common.Domain;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -42,7 +43,7 @@ namespace Client.UserControls.Cards
         {
             if(this.ViewModel!= null)
             {
-                MessageBox.Show(ViewModel.Advertisement.Id.ToString());
+                MainCoordinator.Instance.ShowAdvertisementPanel(ViewModel.Advertisement);
             }
         }
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Common.Domain;
+using Server;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,19 +26,22 @@ namespace Client.GuiController
 
         private MainCoordinator()
         {
-            advertisementGuiController = new AdvertisementGuiController();
+            advertisementGuiController = new AddAdvertisementGuiController();
             homepageGuiController = new HomepageGuiController();
+            advertisementViewGuiController = new AdvertisementViewGuiController();
         }
 
         private FrmMain frmMain;
-        private AdvertisementGuiController advertisementGuiController;
+        private AddAdvertisementGuiController advertisementGuiController;
         private HomepageGuiController homepageGuiController;
+        private AdvertisementViewGuiController advertisementViewGuiController;
 
         internal void ShowFrmMain()
         {
             frmMain = new FrmMain();
             frmMain.AutoSize = true;
             frmMain.ShowDialog();
+            ShowHomePanel();
         }
 
         internal void ShowAddAdvertisementPanel()
@@ -46,6 +51,11 @@ namespace Client.GuiController
         internal void ShowHomePanel()
         {
             frmMain.ChangePanel(homepageGuiController.CreateHomepage());
+        }
+
+        internal void ShowAdvertisementPanel(Advertisement advertisement)
+        {
+            frmMain.ChangePanel(advertisementViewGuiController.CreateViewAdvertisement(advertisement));
         }
 
     }

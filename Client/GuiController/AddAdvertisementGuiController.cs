@@ -14,7 +14,7 @@ using TextBox = System.Windows.Forms.TextBox;
 
 namespace Client.GuiController
 {
-    public class AdvertisementGuiController
+    public class AddAdvertisementGuiController
     {
 
         private UCAddAdvertisement addAdvertisement;
