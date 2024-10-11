@@ -27,5 +27,11 @@ namespace Server.Controller
             UploadImagesSO uploadImages = new UploadImagesSO(images);
             uploadImages.ExecuteTemplate(); 
         }
+
+        internal void RemoveImages(Guid advertisementId)
+        {
+            RemoveImagesSO removeImages = new RemoveImagesSO(advertisementId);
+            removeImages.ExecuteTemplate();
+        }
     }
 }

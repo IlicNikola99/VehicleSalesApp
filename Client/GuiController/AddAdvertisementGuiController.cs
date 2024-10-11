@@ -20,11 +20,13 @@ namespace Client.GuiController
         private UCAddAdvertisement addAdvertisement;
         private List<TextBox> textBoxes;
         private string[] uploadedImagePaths;
+        private Advertisement currentAdvertisement;
         internal Control CreateAddAdvertisement()
         {
             addAdvertisement = new UCAddAdvertisement();
             addAdvertisement.btnSubmit.Click += AddAdvertisement;
             addAdvertisement.btnUploadImages.Click += UploadImages;
+            addAdvertisement.btnResetSelection.Text = "Reset Selection";
             addAdvertisement.btnResetSelection.Click += ResetSelection;
             addAdvertisement.rbDiesel.Checked = true;
             addAdvertisement.cmbBodyType.DataSource = Enum.GetValues(typeof(BodyType));
@@ -41,6 +43,53 @@ namespace Client.GuiController
 
             return addAdvertisement;
         }
+
+        internal Control CreateUpdateAdvertisement(Advertisement advertisement)
+        {
+            addAdvertisement = new UCAddAdvertisement();
+            currentAdvertisement = advertisement;
+            addAdvertisement.btnSubmit.Click += UpdateAdvertisement;
+            addAdvertisement.btnUploadImages.Click += UploadImages;
+            addAdvertisement.btnResetSelection.Text = "Remove Images";
+            addAdvertisement.btnResetSelection.Click += RemoveImages;
+
+            addAdvertisement.txtMake.Text = advertisement.Vehicle.Make;
+            addAdvertisement.txtModel.Text = advertisement.Vehicle.Model;
+            addAdvertisement.txtPrice.Text = advertisement.Price.ToString();
+            addAdvertisement.txtYear.Text = advertisement.Vehicle.Year.ToString();
+            addAdvertisement.txtMileage.Text = advertisement.Vehicle.Mileage.ToString();
+            addAdvertisement.txtDescription.Text = advertisement.Description;
+            addAdvertisement.cmbBodyType.DataSource = Enum.GetValues(typeof(BodyType));
+            addAdvertisement.cmbBodyType.SelectedItem = advertisement.Vehicle.BodyType;
+            if (advertisement.Vehicle.FuelType.Equals(FuelType.Petrol))
+            {
+                addAdvertisement.rbPetrol.Checked = true;
+            }
+            else
+            {
+                addAdvertisement.rbDiesel.Checked = true;
+            }
+
+            List<string> filePaths = new List<string>(); 
+            foreach (var img in advertisement.Images)
+            {
+                filePaths.Add(img.Path);
+            }
+            PopulateImagePanel(filePaths.ToArray());
+
+            textBoxes = new List<TextBox>
+            {
+                addAdvertisement.txtMake,
+                addAdvertisement.txtModel,
+                addAdvertisement.txtPrice,
+                addAdvertisement.txtYear,
+                addAdvertisement.txtMileage
+
+            };
+
+            return addAdvertisement;
+        }
+
         private void UploadImages(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -53,25 +102,30 @@ namespace Client.GuiController
             if (dialogResult == DialogResult.OK)
             {
                 string[] filePaths = openFileDialog.FileNames;
-                int x = 20; int y = 20;
-                int maxHeight = -1;
-                foreach (var img in filePaths)
-                {
-                    PictureBox pictureBox = new PictureBox();
-                    pictureBox.Image = System.Drawing.Image.FromFile(img);
-                    pictureBox.Location  = new Point(x, y);
-                    pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
-                    x += pictureBox.Width + 10;
-                    maxHeight = Math.Max(pictureBox.Height, maxHeight);
-                    if (x > addAdvertisement.pnlImages.ClientSize.Width - 100)
-                    {
-                        x = 20;
-                        y += maxHeight + 10;
+                PopulateImagePanel(filePaths);
+            }
+        }
 
-                    }
-                    addAdvertisement.pnlImages.Controls.Add(pictureBox);
-                    this.uploadedImagePaths = filePaths;
+        private void PopulateImagePanel(string[] filePaths)
+        {
+            int x = 20; int y = 20;
+            int maxHeight = -1;
+            foreach (var img in filePaths)
+            {
+                PictureBox pictureBox = new PictureBox();
+                pictureBox.Image = System.Drawing.Image.FromFile(img);
+                pictureBox.Location = new Point(x, y);
+                pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+                x += pictureBox.Width + 10;
+                maxHeight = Math.Max(pictureBox.Height, maxHeight);
+                if (x > addAdvertisement.pnlImages.ClientSize.Width - 100)
+                {
+                    x = 20;
+                    y += maxHeight + 10;
+
                 }
+                addAdvertisement.pnlImages.Controls.Add(pictureBox);
+                this.uploadedImagePaths = filePaths;
             }
         }
 
@@ -112,7 +166,7 @@ namespace Client.GuiController
 
         private void UploadImages(Advertisement advertisement)
         {
-            if (uploadedImagePaths==null || uploadedImagePaths.Length==0)
+            if (uploadedImagePaths == null || uploadedImagePaths.Length == 0)
             {
                 throw new Exception("No images are uploaded!");
             }
@@ -152,6 +206,19 @@ namespace Client.GuiController
                 Debug.WriteLine(">>>>> Error when adding new vehicle!");
                 throw response.Exception;
             }
+        }
+
+        private void UpdateAdvertisement(object sender, EventArgs e)
+        {
+            UploadImages(currentAdvertisement);
+        }
+
+        private void RemoveImages(object sender, EventArgs e)
+        {
+            addAdvertisement.pnlImages.Controls.Clear();
+            this.uploadedImagePaths = null;
+            Response response = Communication.Instance.RemoveAllImagesForAdvertisement(currentAdvertisement.Id);
+
         }
 
     }

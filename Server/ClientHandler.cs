@@ -69,6 +69,10 @@ namespace Server
                         ImageController.Instance.UploadImages((List<Image>)req.Argument);
                         r.Result = req.Argument;
                         break;
+                    case Operation.RemoveImages:
+                        ImageController.Instance.RemoveImages((Guid)req.Argument);
+                        r.Result = req.Argument;
+                        break;
                     case Operation.DisconnectClient:
                         end = true;
                         break;

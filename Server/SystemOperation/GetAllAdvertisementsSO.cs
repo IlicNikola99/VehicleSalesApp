@@ -21,7 +21,7 @@ namespace Server.SystemOperation
             Result = advertisements.Select(advertisement =>            {
                 advertisement.User = broker.GetUserById(advertisement.User.Id);
                 advertisement.Vehicle = broker.GetVehicleById(advertisement.Vehicle.Id);
-                advertisement.Images = broker.getImagesForAdvertisement(advertisement.Id);
+                advertisement.Images = broker.GetImagesForAdvertisement(advertisement.Id);
                 return advertisement;
             }).ToList();
         }

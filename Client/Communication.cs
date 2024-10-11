@@ -125,5 +125,17 @@ namespace Client
             Response response = (Response)receiver.Receive();
             return response;
         }
+
+        internal Response RemoveAllImagesForAdvertisement(Guid advertisementId)
+        {
+            Request request = new Request
+            {
+                Argument = advertisementId,
+                Operation = Operation.RemoveImages
+            };
+            sender.Send(request);
+            Response response = (Response)receiver.Receive();
+            return response;
+        }
     }
 }

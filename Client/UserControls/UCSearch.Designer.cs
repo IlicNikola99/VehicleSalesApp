@@ -44,10 +44,9 @@
             // 
             // txtMileageTo
             // 
-            this.txtMileageTo.Location = new System.Drawing.Point(483, 148);
-            this.txtMileageTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMileageTo.Location = new System.Drawing.Point(322, 96);
             this.txtMileageTo.Name = "txtMileageTo";
-            this.txtMileageTo.Size = new System.Drawing.Size(181, 26);
+            this.txtMileageTo.Size = new System.Drawing.Size(122, 20);
             this.txtMileageTo.TabIndex = 17;
             this.txtMileageTo.Text = "Mileage to";
             this.txtMileageTo.Enter += new System.EventHandler(this.EraseText);
@@ -55,10 +54,9 @@
             // 
             // txtYearTo
             // 
-            this.txtYearTo.Location = new System.Drawing.Point(33, 94);
-            this.txtYearTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtYearTo.Name = "txtYearto";
-            this.txtYearTo.Size = new System.Drawing.Size(181, 26);
+            this.txtYearTo.Location = new System.Drawing.Point(166, 60);
+            this.txtYearTo.Name = "txtYearTo";
+            this.txtYearTo.Size = new System.Drawing.Size(122, 20);
             this.txtYearTo.TabIndex = 16;
             this.txtYearTo.Text = "Year to";
             this.txtYearTo.Enter += new System.EventHandler(this.EraseText);
@@ -66,10 +64,9 @@
             // 
             // txtMaxPrice
             // 
-            this.txtMaxPrice.Location = new System.Drawing.Point(722, 34);
-            this.txtMaxPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMaxPrice.Location = new System.Drawing.Point(481, 22);
             this.txtMaxPrice.Name = "txtMaxPrice";
-            this.txtMaxPrice.Size = new System.Drawing.Size(181, 26);
+            this.txtMaxPrice.Size = new System.Drawing.Size(122, 20);
             this.txtMaxPrice.TabIndex = 15;
             this.txtMaxPrice.Text = "Price To";
             this.txtMaxPrice.Enter += new System.EventHandler(this.EraseText);
@@ -77,10 +74,9 @@
             // 
             // txtMinPrice
             // 
-            this.txtMinPrice.Location = new System.Drawing.Point(483, 34);
-            this.txtMinPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMinPrice.Location = new System.Drawing.Point(322, 22);
             this.txtMinPrice.Name = "txtMinPrice";
-            this.txtMinPrice.Size = new System.Drawing.Size(181, 26);
+            this.txtMinPrice.Size = new System.Drawing.Size(122, 20);
             this.txtMinPrice.TabIndex = 14;
             this.txtMinPrice.Text = "Price From";
             this.txtMinPrice.Enter += new System.EventHandler(this.EraseText);
@@ -88,10 +84,9 @@
             // 
             // txtModel
             // 
-            this.txtModel.Location = new System.Drawing.Point(249, 34);
-            this.txtModel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtModel.Location = new System.Drawing.Point(166, 22);
             this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(181, 26);
+            this.txtModel.Size = new System.Drawing.Size(122, 20);
             this.txtModel.TabIndex = 13;
             this.txtModel.Text = "Model";
             this.txtModel.Enter += new System.EventHandler(this.EraseText);
@@ -99,10 +94,9 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(385, 250);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSearch.Location = new System.Drawing.Point(257, 162);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(123, 35);
+            this.btnSearch.Size = new System.Drawing.Size(82, 23);
             this.btnSearch.TabIndex = 11;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -110,47 +104,48 @@
             // cmbMake
             // 
             this.cmbMake.FormattingEnabled = true;
-            this.cmbMake.Location = new System.Drawing.Point(33, 32);
+            this.cmbMake.Location = new System.Drawing.Point(22, 21);
+            this.cmbMake.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbMake.Name = "cmbMake";
-            this.cmbMake.Size = new System.Drawing.Size(181, 28);
+            this.cmbMake.Size = new System.Drawing.Size(122, 21);
             this.cmbMake.TabIndex = 20;
             this.cmbMake.Text = "Make";
             // 
             // cmbBodyType
             // 
             this.cmbBodyType.FormattingEnabled = true;
-            this.cmbBodyType.Location = new System.Drawing.Point(483, 92);
+            this.cmbBodyType.Location = new System.Drawing.Point(322, 60);
+            this.cmbBodyType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbBodyType.Name = "cmbBodyType";
-            this.cmbBodyType.Size = new System.Drawing.Size(181, 28);
+            this.cmbBodyType.Size = new System.Drawing.Size(122, 21);
             this.cmbBodyType.TabIndex = 21;
             this.cmbBodyType.Text = "Body Type";
             // 
             // cmbFuelType
             // 
             this.cmbFuelType.FormattingEnabled = true;
-            this.cmbFuelType.Location = new System.Drawing.Point(722, 92);
+            this.cmbFuelType.Location = new System.Drawing.Point(481, 60);
+            this.cmbFuelType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbFuelType.Name = "cmbFuelType";
-            this.cmbFuelType.Size = new System.Drawing.Size(181, 28);
+            this.cmbFuelType.Size = new System.Drawing.Size(122, 21);
             this.cmbFuelType.TabIndex = 22;
             this.cmbFuelType.Text = "Fuel Type";
             // 
             // btnResetSelection
             // 
             this.btnResetSelection.ForeColor = System.Drawing.Color.Crimson;
-            this.btnResetSelection.Location = new System.Drawing.Point(738, 144);
-            this.btnResetSelection.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnResetSelection.Location = new System.Drawing.Point(492, 94);
             this.btnResetSelection.Name = "btnResetSelection";
-            this.btnResetSelection.Size = new System.Drawing.Size(134, 35);
+            this.btnResetSelection.Size = new System.Drawing.Size(89, 23);
             this.btnResetSelection.TabIndex = 23;
             this.btnResetSelection.Text = "Reset Selection";
             this.btnResetSelection.UseVisualStyleBackColor = true;
             // 
             // txtYearFrom
             // 
-            this.txtYearFrom.Location = new System.Drawing.Point(249, 94);
-            this.txtYearFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtYearFrom.Location = new System.Drawing.Point(22, 61);
             this.txtYearFrom.Name = "txtYearFrom";
-            this.txtYearFrom.Size = new System.Drawing.Size(181, 26);
+            this.txtYearFrom.Size = new System.Drawing.Size(122, 20);
             this.txtYearFrom.TabIndex = 24;
             this.txtYearFrom.Text = "Year from";
             this.txtYearFrom.Enter += new System.EventHandler(this.EraseText);
@@ -158,10 +153,9 @@
             // 
             // txtMileageFrom
             // 
-            this.txtMileageFrom.Location = new System.Drawing.Point(249, 148);
-            this.txtMileageFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMileageFrom.Location = new System.Drawing.Point(166, 96);
             this.txtMileageFrom.Name = "txtMileageFrom";
-            this.txtMileageFrom.Size = new System.Drawing.Size(181, 26);
+            this.txtMileageFrom.Size = new System.Drawing.Size(122, 20);
             this.txtMileageFrom.TabIndex = 25;
             this.txtMileageFrom.Text = "Mileage From";
             this.txtMileageFrom.Enter += new System.EventHandler(this.EraseText);
@@ -169,7 +163,7 @@
             // 
             // UCSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -185,9 +179,8 @@
             this.Controls.Add(this.txtMinPrice);
             this.Controls.Add(this.txtModel);
             this.Controls.Add(this.btnSearch);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UCSearch";
-            this.Size = new System.Drawing.Size(907, 290);
+            this.Size = new System.Drawing.Size(606, 188);
             this.ResumeLayout(false);
             this.PerformLayout();
 

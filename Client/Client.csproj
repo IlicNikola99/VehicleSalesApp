@@ -66,6 +66,7 @@
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="GuiController\AdvertisementViewGuiController.cs" />
+    <Compile Include="GuiController\UpdateAdvertisementGuiController.cs" />
     <Compile Include="GuiController\HomepageGuiController.cs" />
     <Compile Include="GuiController\LoginGuiController.cs" />
     <Compile Include="GuiController\MainCoordinator.cs" />

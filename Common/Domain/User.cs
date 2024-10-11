@@ -26,6 +26,22 @@ namespace Common.Domain
 
         public string Values => $"'{Id}','{Username}', '{Password}','{FirstName}', '{LastName}', '{Address}', '{City}', '{PhoneNumber}', '{CreatedOn}'";
 
+        public override bool Equals(object obj)
+        {
+            if (obj == null || this.GetType() != obj.GetType())
+                return false;
+
+            User other = obj as User;
+
+            return this.Id.Equals(other.Id);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+
         public void GenerateNewId()
         {
             this.Id = Guid.NewGuid();

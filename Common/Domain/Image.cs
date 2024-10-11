@@ -20,10 +20,14 @@ namespace Common.Domain
             this.CreatedOn = DateTime.Now;
         }
         public string Path { get; set; }
+
         public Guid AdvertisementId { get; set; }
+
+        public bool Thumbnail { get; set; } = false;
+
         public string TableName => "[Image]";
 
-        public string Values => $"'{Id}','{Path}', '{AdvertisementId}', '{CreatedOn}'";
+        public string Values => $"'{Id}','{Path}', '{AdvertisementId}', '{CreatedOn}', '{Thumbnail}'";
 
         public void GenerateNewId()
         {

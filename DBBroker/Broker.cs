@@ -1,13 +1,9 @@
-﻿using Common;
-using Common.Domain;
+﻿using Common.Domain;
+using Common;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+using Common.Helpers;
 
 namespace DBBroker
 {
@@ -103,24 +99,6 @@ namespace DBBroker
             command.Dispose();
         }
 
-        public List<City> GetAllCity()
-        {
-            SqlCommand command = connection.CreateCommand();
-            command.CommandText = "select * from city";
-            List<City> list = new List<City>();
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                City city = new City()
-                {
-                    Name = (string)reader["Name"],
-                    ZipCode = (int)reader["ZipCode"]
-                };
-                list.Add(city);
-            }
-            reader.Close();
-            return list;
-        }
 
         public List<Advertisement> GetAllAdvertisements()
         {
@@ -244,7 +222,7 @@ namespace DBBroker
             return advertisement;
         }
 
-        public List<Image> getImagesForAdvertisement(Guid advertisementId)
+        public List<Image> GetImagesForAdvertisement(Guid advertisementId)
         {
             SqlCommand command = connection.CreateCommand();
             command.CommandText = $"select * from [Image] where AdvertisementId = '{advertisementId}' ";
@@ -268,13 +246,24 @@ namespace DBBroker
                         images.Add(image);
                     }
                 }
-                else { throw new Exception("No images found for the given advertisementId!"); }
+                else {
+                    
+                    images.Add(PlaceHolderImage.GetPlaceHolderImage());
+                }
                 return images;
             }
             finally
             {
                 reader.Close();
             }
+        }
+
+        public void RemoveImagesForAdvertisement(Guid advertisementId)
+        {
+
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = $"delete from [Image] where AdvertisementId = '{advertisementId}' ";
+            command.ExecuteNonQuery();
         }
     }
 }

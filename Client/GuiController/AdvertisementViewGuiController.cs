@@ -1,5 +1,8 @@
-﻿using Client.UserControls;
+﻿using Client.Helpers;
+using Client.UserControls;
 using Common.Domain;
+using Common.Helpers;
+using Server;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -25,10 +28,27 @@ namespace Client.GuiController
             viewAdvertisement.labelFuelPlaceholder.Text = advertisement.Vehicle.FuelType.ToString();
             selectedImageIndex = 0;
             imagePaths = advertisement.Images.Select(x => x.Path).ToArray();
-            viewAdvertisement.pictureBox.Image = System.Drawing.Image.FromFile(imagePaths[selectedImageIndex]);
+            if (advertisement.Images.Count > 0)
+            {
+                viewAdvertisement.pictureBox.Image = System.Drawing.Image.FromFile(imagePaths[selectedImageIndex]);
+
+            }
+            else
+            {
+
+                viewAdvertisement.pictureBox.Image = System.Drawing.Image.FromFile(PlaceHolderImage.GetPlaceHolderImage().Path);
+                viewAdvertisement.btnPrevImage.Visible = false;
+                viewAdvertisement.btnNextImage.Visible = false;
+            }
             viewAdvertisement.pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             viewAdvertisement.btnPrevImage.Click += PrevImage;
             viewAdvertisement.btnNextImage.Click += NextImage;
+            viewAdvertisement.btnEditAdvertisement.Click += (s, a) => MainCoordinator.Instance.ShowEditAdvertisementPanel(advertisement);
+
+            if (advertisement.User.Equals(LoginGuiController.Instance.LoggedInUser))
+            {
+                viewAdvertisement.btnEditAdvertisement.Visible = true;
+            }
 
             return viewAdvertisement;
         }

@@ -26,7 +26,7 @@ namespace Common.Domain
         public string TableName => "[Advertisement]";
         public string Values => $"'{Id}','{User.Id}', '{Vehicle.Id}','{Price}', '{AcceptsExchange}', '{Description}', '{CreatedOn}'";
 
-        public void GenerateNewId()
+            public void GenerateNewId()
         {
             this.Id = Guid.NewGuid();
         }

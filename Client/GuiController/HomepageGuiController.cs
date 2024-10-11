@@ -1,7 +1,9 @@
-﻿using Client.UserControls;
+﻿using Client.Helpers;
+using Client.UserControls;
 using Client.UserControls.Cards;
 using Common.Communication;
 using Common.Domain;
+using Common.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -141,12 +143,21 @@ namespace Client.GuiController
             {
                 CardViewModel cardViewModel = new CardViewModel()
                 {
-                    ImagePath = advertisement.Images[0].Path,
                     MakeModel = advertisement.Vehicle.Make + " " + advertisement.Vehicle.Model,
                     Year = advertisement.Vehicle.Year.ToString(),
                     Price = advertisement.Price.ToString() + " €",
                     Advertisement = advertisement
                 };
+
+                if(advertisement.Images.Count > 0 )
+                {
+                    cardViewModel.ImagePath = advertisement.Images[0].Path;
+                }
+                else
+                {
+                    cardViewModel.ImagePath = PlaceHolderImage.GetPlaceHolderImage().Path;
+                }
+
                 return cardViewModel;
             }).ToList();
 

@@ -47,6 +47,7 @@
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.btnPrevImage = new System.Windows.Forms.Button();
             this.btnNextImage = new System.Windows.Forms.Button();
+            this.btnEditAdvertisement = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -258,10 +259,22 @@
             this.btnNextImage.Text = "Next Image";
             this.btnNextImage.UseVisualStyleBackColor = true;
             // 
+            // btnEditAdvertisement
+            // 
+            this.btnEditAdvertisement.ForeColor = System.Drawing.Color.OliveDrab;
+            this.btnEditAdvertisement.Location = new System.Drawing.Point(9, 3);
+            this.btnEditAdvertisement.Name = "btnEditAdvertisement";
+            this.btnEditAdvertisement.Size = new System.Drawing.Size(112, 31);
+            this.btnEditAdvertisement.TabIndex = 28;
+            this.btnEditAdvertisement.Text = "Edit Advertisement";
+            this.btnEditAdvertisement.UseVisualStyleBackColor = true;
+            this.btnEditAdvertisement.Visible = false;
+            // 
             // UCAdvertisement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnEditAdvertisement);
             this.Controls.Add(this.btnNextImage);
             this.Controls.Add(this.btnPrevImage);
             this.Controls.Add(this.pictureBox);
@@ -298,5 +311,6 @@
         public System.Windows.Forms.PictureBox pictureBox;
         public System.Windows.Forms.Button btnNextImage;
         public System.Windows.Forms.Button btnPrevImage;
+        public System.Windows.Forms.Button btnEditAdvertisement;
     }
 }

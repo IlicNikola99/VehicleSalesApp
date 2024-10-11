@@ -1,4 +1,5 @@
-﻿using Common.Domain;
+﻿using Client.UserControls;
+using Common.Domain;
 using Server;
 using System;
 using System.Collections.Generic;
@@ -26,13 +27,13 @@ namespace Client.GuiController
 
         private MainCoordinator()
         {
-            advertisementGuiController = new AddAdvertisementGuiController();
+            addAdvertisementGuiController = new AddAdvertisementGuiController();
             homepageGuiController = new HomepageGuiController();
             advertisementViewGuiController = new AdvertisementViewGuiController();
         }
 
         private FrmMain frmMain;
-        private AddAdvertisementGuiController advertisementGuiController;
+        private AddAdvertisementGuiController addAdvertisementGuiController;
         private HomepageGuiController homepageGuiController;
         private AdvertisementViewGuiController advertisementViewGuiController;
 
@@ -46,7 +47,7 @@ namespace Client.GuiController
 
         internal void ShowAddAdvertisementPanel()
         {
-            frmMain.ChangePanel(advertisementGuiController.CreateAddAdvertisement());
+            frmMain.ChangePanel(addAdvertisementGuiController.CreateAddAdvertisement());
         }
         internal void ShowHomePanel()
         {
@@ -58,5 +59,9 @@ namespace Client.GuiController
             frmMain.ChangePanel(advertisementViewGuiController.CreateViewAdvertisement(advertisement));
         }
 
+        internal void ShowEditAdvertisementPanel(Advertisement advertisement)
+        {
+            frmMain.ChangePanel(addAdvertisementGuiController.CreateUpdateAdvertisement(advertisement));
+        }
     }
 }
