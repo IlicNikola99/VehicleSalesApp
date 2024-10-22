@@ -64,10 +64,12 @@
     <Compile Include="SystemOperation\AddAdvertisementSO.cs" />
     <Compile Include="SystemOperation\AddUserSO.cs" />
     <Compile Include="SystemOperation\AddVehicleSO.cs" />
+    <Compile Include="SystemOperation\UpdateVehicleSO.cs" />
     <Compile Include="SystemOperation\GetAllAdvertisementsSO.cs" />
     <Compile Include="SystemOperation\LoginSO.cs" />
     <Compile Include="SystemOperation\RemoveImagesSO.cs" />
     <Compile Include="SystemOperation\SystemOperationBase.cs" />
+    <Compile Include="SystemOperation\UpdateAdvertisemsentSO.cs" />
     <Compile Include="SystemOperation\UploadImagesSO.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

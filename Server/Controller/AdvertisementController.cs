@@ -38,6 +38,12 @@ namespace Server.Controller
             getAllAdvertisements.ExecuteTemplate();
             return getAllAdvertisements.Result;
         }
+
+        internal void UpdateAdvertisement(Advertisement argument)
+        {
+            UpdateAdvertisemsentSO updateAdvertisement = new UpdateAdvertisemsentSO(argument);
+            updateAdvertisement.ExecuteTemplate();
+        }
     }
 }
 

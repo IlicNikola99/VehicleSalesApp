@@ -265,5 +265,44 @@ namespace DBBroker
             command.CommandText = $"delete from [Image] where AdvertisementId = '{advertisementId}' ";
             command.ExecuteNonQuery();
         }
+
+        public Advertisement UpdateAdvertisement(Advertisement advertisement)
+        {
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = $"update {advertisement.TableName} set userId = @userId, vehicleId = @vehicleId, AcceptsExchange = @exchange, price = @price, description = @desc where id = @id";
+            command.Parameters.Clear();
+            command.Parameters.AddWithValue("@id", advertisement.Id);
+            command.Parameters.AddWithValue("@userId", advertisement.User.Id);
+            command.Parameters.AddWithValue("@vehicleId", advertisement.Vehicle.Id);
+            command.Parameters.AddWithValue("@exchange", advertisement.AcceptsExchange ? "true" : "false");
+            command.Parameters.AddWithValue("@price", advertisement.Price);
+            command.Parameters.AddWithValue("@desc", advertisement.Description);
+
+            Console.WriteLine(">>> SQL COMMAND: ");
+            Console.WriteLine(command.CommandText);
+            command.ExecuteNonQuery();
+            command.Dispose();
+            return advertisement;
+        }
+
+        public Vehicle UpdateVehicle(Vehicle vehicle)
+        {
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = $"update {vehicle.TableName} set make = @make, model = @model, bodyType = @bodyType, year = @year, mileage = @mileage, fuelType = @fuelType where id = @id";
+            command.Parameters.Clear();
+            command.Parameters.AddWithValue("@id", vehicle.Id);
+            command.Parameters.AddWithValue("@make", vehicle.Make);
+            command.Parameters.AddWithValue("@model", vehicle.Model);
+            command.Parameters.AddWithValue("@bodyType", vehicle.BodyType.ToString());
+            command.Parameters.AddWithValue("@year", vehicle.Year.ToString());
+            command.Parameters.AddWithValue("@mileage", vehicle.Mileage.ToString());
+            command.Parameters.AddWithValue("@fuelType", vehicle.FuelType.ToString());
+
+            Console.WriteLine(">>> SQL COMMAND: ");
+            Console.WriteLine(command.CommandText);
+            command.ExecuteNonQuery();
+            command.Dispose();
+            return vehicle;
+        }
     }
 }

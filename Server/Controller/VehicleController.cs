@@ -32,5 +32,11 @@ namespace Server.Controller
             return addVehicle.v;
         }
 
+        internal Vehicle UpdateVehicle(Vehicle argument)
+        {
+            UpdateVehicleSO updateVehicle = new UpdateVehicleSO(argument);
+            updateVehicle.ExecuteTemplate();
+            return updateVehicle.v;
+        }
     }
 }

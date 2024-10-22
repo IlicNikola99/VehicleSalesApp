@@ -58,8 +58,16 @@ namespace Server
                         VehicleController.Instance.AddVehicle((Vehicle)req.Argument);
                         r.Result = req.Argument;
                         break;
+                    case Operation.UpdateVehicle:
+                        VehicleController.Instance.UpdateVehicle((Vehicle)req.Argument);
+                        r.Result = req.Argument;
+                        break;
                     case Operation.CreateAdvertisement:
                         AdvertisementController.Instance.AddAdvertisement((Advertisement)req.Argument);
+                        r.Result = req.Argument;
+                        break;
+                    case Operation.UpdateAdvertisement:
+                        AdvertisementController.Instance.UpdateAdvertisement((Advertisement)req.Argument);
                         r.Result = req.Argument;
                         break;
                     case Operation.GetAllAdvertisements:

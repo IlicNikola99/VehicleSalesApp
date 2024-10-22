@@ -2,10 +2,8 @@
 using Client.UserControls;
 using Common.Communication;
 using Common.Domain;
-using Server;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
@@ -61,6 +59,7 @@ namespace Client.GuiController
             addAdvertisement.txtDescription.Text = advertisement.Description;
             addAdvertisement.cmbBodyType.DataSource = Enum.GetValues(typeof(BodyType));
             addAdvertisement.cmbBodyType.SelectedItem = advertisement.Vehicle.BodyType;
+            addAdvertisement.checkBoxExchange.Checked = advertisement.AcceptsExchange;
             if (advertisement.Vehicle.FuelType.Equals(FuelType.Petrol))
             {
                 addAdvertisement.rbPetrol.Checked = true;
@@ -70,7 +69,7 @@ namespace Client.GuiController
                 addAdvertisement.rbDiesel.Checked = true;
             }
 
-            List<string> filePaths = new List<string>(); 
+            List<string> filePaths = new List<string>();
             foreach (var img in advertisement.Images)
             {
                 filePaths.Add(img.Path);
@@ -168,7 +167,8 @@ namespace Client.GuiController
         {
             if (uploadedImagePaths == null || uploadedImagePaths.Length == 0)
             {
-                throw new Exception("No images are uploaded!");
+                MessageBox.Show("No images are uploaded!");
+                return;
             }
             List<Common.Domain.Image> images = uploadedImagePaths.Select(path => new Common.Domain.Image(advertisement.Id, path)).ToList();
 
@@ -210,7 +210,42 @@ namespace Client.GuiController
 
         private void UpdateAdvertisement(object sender, EventArgs e)
         {
-            UploadImages(currentAdvertisement);
+
+            currentAdvertisement.Vehicle.Make = addAdvertisement.txtMake.Text;
+            currentAdvertisement.Vehicle.Model = addAdvertisement.txtModel.Text;
+            currentAdvertisement.Vehicle.BodyType = (BodyType)addAdvertisement.cmbBodyType.SelectedItem;
+            currentAdvertisement.Vehicle.Year = Int32.Parse(addAdvertisement.txtYear.Text);
+            currentAdvertisement.Vehicle.Mileage = Int32.Parse(addAdvertisement.txtMileage.Text);
+            currentAdvertisement.Vehicle.FuelType = addAdvertisement.rbPetrol.Checked ? FuelType.Petrol : FuelType.Diesel;
+            currentAdvertisement.Price = Int32.Parse(addAdvertisement.txtPrice.Text);
+            currentAdvertisement.AcceptsExchange = addAdvertisement.checkBoxExchange.Checked;
+            currentAdvertisement.Description = addAdvertisement.txtDescription.Text;
+
+            Response responseVehicle = Communication.Instance.UpdateVehicle(currentAdvertisement.Vehicle);
+            if (responseVehicle.Exception == null)
+            {
+                Response responseAdvertisement = Communication.Instance.UpdateAdvertisement(currentAdvertisement);
+                if (responseAdvertisement.Exception == null)
+                {
+                    if (currentAdvertisement.Images.Count != uploadedImagePaths.Length)
+                    {
+                        UploadImages((Advertisement)responseAdvertisement.Result);
+                    }
+                    Debug.WriteLine("Advertisement succesfully updated!");
+                    MessageBox.Show("Advertisement succesfully updated!");
+                }
+                else
+                {
+                    Debug.WriteLine(">>>>> Error while updating the advertisement!");
+                    throw responseAdvertisement.Exception;
+                }
+            }
+            else
+            {
+                Debug.WriteLine(">>>>> Error while updating the vehicle info!");
+                throw responseVehicle.Exception;
+            }
+           
         }
 
         private void RemoveImages(object sender, EventArgs e)
@@ -218,6 +253,10 @@ namespace Client.GuiController
             addAdvertisement.pnlImages.Controls.Clear();
             this.uploadedImagePaths = null;
             Response response = Communication.Instance.RemoveAllImagesForAdvertisement(currentAdvertisement.Id);
+            if(response.Exception != null)
+            {
+                currentAdvertisement.Images = null;
+            }
 
         }
 

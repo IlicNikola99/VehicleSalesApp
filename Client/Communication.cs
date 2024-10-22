@@ -137,5 +137,29 @@ namespace Client
             Response response = (Response)receiver.Receive();
             return response;
         }
+
+        internal Response UpdateAdvertisement(Advertisement advertisement)
+        {
+            Request request = new Request
+            {
+                Argument = advertisement,
+                Operation = Operation.UpdateAdvertisement
+            };
+            sender.Send(request);
+            Response response = (Response)receiver.Receive();
+            return response;
+        }
+
+        internal Response UpdateVehicle(Vehicle vehicle)
+        {
+            Request request = new Request
+            {
+                Argument = vehicle,
+                Operation = Operation.UpdateVehicle
+            };
+            sender.Send(request);
+            Response response = (Response)receiver.Receive();
+            return response;
+        }
     }
 }
