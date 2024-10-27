@@ -304,5 +304,26 @@ namespace DBBroker
             command.Dispose();
             return vehicle;
         }
+
+        public List<CommentView> GetAllCommentsForAdvertisement(Guid advertisementId)
+        {
+
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = $"select u.Username, c.Text " +
+                $"from [Comment] c join [User] u on c.UserId = u.id  " +
+                $"where c.advertisementId = '{advertisementId}'";
+            List<CommentView> result = new List<CommentView>();
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                CommentView comment = new CommentView();
+                comment.Text = reader["Text"].ToString();
+                comment.Username = reader["Username"].ToString();
+
+                result.Add(comment);   
+            }
+            reader.Close();
+            return result;
+        }
     }
 }

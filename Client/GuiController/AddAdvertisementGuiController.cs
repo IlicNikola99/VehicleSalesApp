@@ -170,8 +170,9 @@ namespace Client.GuiController
                 MessageBox.Show("No images are uploaded!");
                 return;
             }
-            List<Common.Domain.Image> images = uploadedImagePaths.Select(path => new Common.Domain.Image(advertisement.Id, path)).ToList();
-
+            List<Common.Domain.Image> images = uploadedImagePaths
+            .Select((path, index) => new Common.Domain.Image(advertisement.Id, path) { Thumbnail = index == 0 })
+            .ToList();
             Response response = Communication.Instance.UploadImages(images);
             if (response.Exception == null)
             {

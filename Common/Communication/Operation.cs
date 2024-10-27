@@ -18,6 +18,8 @@ namespace Common.Communication
         RemoveImages,
         GetAllAdvertisements,
         UpdateAdvertisement,
-        UpdateVehicle
+        UpdateVehicle,
+        AddComment,
+        GetAllComments
     }
 }

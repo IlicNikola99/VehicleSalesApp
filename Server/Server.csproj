@@ -64,6 +64,8 @@
     <Compile Include="SystemOperation\AddAdvertisementSO.cs" />
     <Compile Include="SystemOperation\AddUserSO.cs" />
     <Compile Include="SystemOperation\AddVehicleSO.cs" />
+    <Compile Include="SystemOperation\AddCommentSO.cs" />
+    <Compile Include="SystemOperation\GetAllCommentSO.cs" />
     <Compile Include="SystemOperation\UpdateVehicleSO.cs" />
     <Compile Include="SystemOperation\GetAllAdvertisementsSO.cs" />
     <Compile Include="SystemOperation\LoginSO.cs" />

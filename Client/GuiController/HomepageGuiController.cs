@@ -151,7 +151,10 @@ namespace Client.GuiController
 
                 if(advertisement.Images.Count > 0 )
                 {
-                    cardViewModel.ImagePath = advertisement.Images[0].Path;
+                    var thumbnailImage = advertisement.Images.FirstOrDefault(img => img.Thumbnail);
+                    if (thumbnailImage == null)
+                        thumbnailImage = advertisement.Images.First();
+                    cardViewModel.ImagePath = thumbnailImage?.Path;
                 }
                 else
                 {

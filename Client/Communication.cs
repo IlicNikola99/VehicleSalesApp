@@ -161,5 +161,29 @@ namespace Client
             Response response = (Response)receiver.Receive();
             return response;
         }
+
+        internal Response AddComment(Comment comment)
+        {
+            Request request = new Request
+            {
+                Argument = comment,
+                Operation = Operation.AddComment
+            };
+            sender.Send(request);
+            Response response = (Response)receiver.Receive();
+            return response;
+        }
+
+        internal Response GetAllComments(Advertisement advertisement)
+        {
+            Request request = new Request
+            {
+                Argument = advertisement,
+                Operation = Operation.GetAllComments
+            };
+            sender.Send(request);
+            Response response = (Response)receiver.Receive();
+            return response;
+        }
     }
 }

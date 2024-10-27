@@ -44,6 +44,20 @@ namespace Server.Controller
             UpdateAdvertisemsentSO updateAdvertisement = new UpdateAdvertisemsentSO(argument);
             updateAdvertisement.ExecuteTemplate();
         }
+
+        internal Comment AddComment(Comment argument)
+        {
+            AddCommentSO addComment = new AddCommentSO(argument);
+            addComment.ExecuteTemplate();
+            return argument;
+        }
+
+        internal List<CommentView> GetAllComments(Advertisement argument)
+        {
+            GetAllCommentSO getAllComment = new GetAllCommentSO(argument);
+            getAllComment.ExecuteTemplate();
+            return getAllComment.Result;
+        }
     }
 }
 

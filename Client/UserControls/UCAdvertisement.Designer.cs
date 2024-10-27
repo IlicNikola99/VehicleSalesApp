@@ -48,6 +48,9 @@
             this.btnPrevImage = new System.Windows.Forms.Button();
             this.btnNextImage = new System.Windows.Forms.Button();
             this.btnEditAdvertisement = new System.Windows.Forms.Button();
+            this.btnAddComment = new System.Windows.Forms.Button();
+            this.listBoxComment = new System.Windows.Forms.ListBox();
+            this.txtBoxComment = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +70,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(49, 221);
+            this.groupBox1.Location = new System.Drawing.Point(9, 243);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(264, 200);
             this.groupBox1.TabIndex = 18;
@@ -215,7 +218,7 @@
             this.lblPricePlaceholder.AutoSize = true;
             this.lblPricePlaceholder.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPricePlaceholder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblPricePlaceholder.Location = new System.Drawing.Point(554, 243);
+            this.lblPricePlaceholder.Location = new System.Drawing.Point(384, 252);
             this.lblPricePlaceholder.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPricePlaceholder.Name = "lblPricePlaceholder";
             this.lblPricePlaceholder.Size = new System.Drawing.Size(98, 32);
@@ -226,10 +229,10 @@
             // 
             this.descriptionPlaceholder.BackColor = System.Drawing.SystemColors.ControlLight;
             this.descriptionPlaceholder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.descriptionPlaceholder.Location = new System.Drawing.Point(446, 278);
+            this.descriptionPlaceholder.Location = new System.Drawing.Point(292, 300);
             this.descriptionPlaceholder.Name = "descriptionPlaceholder";
             this.descriptionPlaceholder.ReadOnly = true;
-            this.descriptionPlaceholder.Size = new System.Drawing.Size(339, 143);
+            this.descriptionPlaceholder.Size = new System.Drawing.Size(289, 143);
             this.descriptionPlaceholder.TabIndex = 24;
             this.descriptionPlaceholder.Text = "";
             // 
@@ -270,10 +273,41 @@
             this.btnEditAdvertisement.UseVisualStyleBackColor = true;
             this.btnEditAdvertisement.Visible = false;
             // 
+            // btnAddComment
+            // 
+            this.btnAddComment.Location = new System.Drawing.Point(730, 477);
+            this.btnAddComment.Name = "btnAddComment";
+            this.btnAddComment.Size = new System.Drawing.Size(98, 29);
+            this.btnAddComment.TabIndex = 29;
+            this.btnAddComment.Text = "Add Comment";
+            this.btnAddComment.UseVisualStyleBackColor = true;
+            // 
+            // listBoxComment
+            // 
+            this.listBoxComment.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.listBoxComment.FormattingEnabled = true;
+            this.listBoxComment.Location = new System.Drawing.Point(665, 244);
+            this.listBoxComment.Name = "listBoxComment";
+            this.listBoxComment.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.listBoxComment.Size = new System.Drawing.Size(221, 199);
+            this.listBoxComment.TabIndex = 30;
+            // 
+            // txtBoxComment
+            // 
+            this.txtBoxComment.Location = new System.Drawing.Point(665, 451);
+            this.txtBoxComment.Multiline = true;
+            this.txtBoxComment.Name = "txtBoxComment";
+            this.txtBoxComment.Size = new System.Drawing.Size(221, 20);
+            this.txtBoxComment.TabIndex = 31;
+            this.txtBoxComment.Text = "Type comment";
+            // 
             // UCAdvertisement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtBoxComment);
+            this.Controls.Add(this.listBoxComment);
+            this.Controls.Add(this.btnAddComment);
             this.Controls.Add(this.btnEditAdvertisement);
             this.Controls.Add(this.btnNextImage);
             this.Controls.Add(this.btnPrevImage);
@@ -282,7 +316,7 @@
             this.Controls.Add(this.lblPricePlaceholder);
             this.Controls.Add(this.groupBox1);
             this.Name = "UCAdvertisement";
-            this.Size = new System.Drawing.Size(916, 478);
+            this.Size = new System.Drawing.Size(916, 518);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
@@ -312,5 +346,8 @@
         public System.Windows.Forms.Button btnNextImage;
         public System.Windows.Forms.Button btnPrevImage;
         public System.Windows.Forms.Button btnEditAdvertisement;
+        public System.Windows.Forms.Button btnAddComment;
+        public System.Windows.Forms.ListBox listBoxComment;
+        public System.Windows.Forms.TextBox txtBoxComment;
     }
 }

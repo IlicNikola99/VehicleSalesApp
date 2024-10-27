@@ -11,5 +11,10 @@ namespace Common.Communication
     {
         public object Result { get; set; }
         public Exception Exception { get; set; }
+
+        public static implicit operator Dictionary<object, object>(Response v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

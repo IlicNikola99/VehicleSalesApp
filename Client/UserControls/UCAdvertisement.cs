@@ -17,6 +17,5 @@ namespace Client.UserControls
             InitializeComponent();
         }
 
-   
     }
 }

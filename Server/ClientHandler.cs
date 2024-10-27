@@ -81,6 +81,13 @@ namespace Server
                         ImageController.Instance.RemoveImages((Guid)req.Argument);
                         r.Result = req.Argument;
                         break;
+                    case Operation.AddComment:
+                        AdvertisementController.Instance.AddComment((Comment)req.Argument);
+                        r.Result = req.Argument;
+                        break;
+                    case Operation.GetAllComments:
+                        r.Result = AdvertisementController.Instance.GetAllComments((Advertisement)req.Argument);
+                        break;
                     case Operation.DisconnectClient:
                         end = true;
                         break;
