@@ -28,9 +28,9 @@ namespace Client.GuiController
             viewAdvertisement.labelMakePlaceholder.Text = advertisement.Vehicle.Make;
             viewAdvertisement.labelModelPlaceholder.Text = advertisement.Vehicle.Model;
             viewAdvertisement.labelBodyPlaceholder.Text = advertisement.Vehicle.BodyType.ToString();
-            viewAdvertisement.labelYearPlaceholder.Text = advertisement.Vehicle.Year.ToString();
-            viewAdvertisement.labelMileagePlaceholder.Text = advertisement.Vehicle.Mileage.ToString();
-            viewAdvertisement.labelFuelPlaceholder.Text = advertisement.Vehicle.FuelType.ToString();
+            viewAdvertisement.labelYearPlaceholder.Text = advertisement.Year.ToString();
+            viewAdvertisement.labelMileagePlaceholder.Text = advertisement.Mileage.ToString();
+            viewAdvertisement.labelFuelPlaceholder.Text = advertisement.FuelType.ToString();
             selectedImageIndex = 0;
             imagePaths = advertisement.Images.Select(x => x.Path).ToArray();
             if (advertisement.Images.Count > 0)

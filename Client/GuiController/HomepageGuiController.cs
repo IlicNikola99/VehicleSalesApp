@@ -83,21 +83,21 @@ namespace Client.GuiController
 
             if (int.TryParse(ucSearch.txtMileageFrom.Text, out int mileageFrom))
             {
-                allAdvertisements = allAdvertisements.Where(add => add.Vehicle.Mileage >= mileageFrom).ToList();
+                allAdvertisements = allAdvertisements.Where(add => add.Mileage >= mileageFrom).ToList();
             }
 
             if (int.TryParse(ucSearch.txtMileageTo.Text, out int mileageTo))
             {
-                allAdvertisements = allAdvertisements.Where(add => add.Vehicle.Mileage <= mileageTo).ToList();
+                allAdvertisements = allAdvertisements.Where(add => add.Mileage <= mileageTo).ToList();
             }
             if (int.TryParse(ucSearch.txtYearFrom.Text, out int yearFrom))
             {
-                allAdvertisements = allAdvertisements.Where(add => add.Vehicle.Year >= yearFrom).ToList();
+                allAdvertisements = allAdvertisements.Where(add => add.Year >= yearFrom).ToList();
             }
 
             if (int.TryParse(ucSearch.txtYearTo.Text, out int yearTo))
             {
-                allAdvertisements = allAdvertisements.Where(add => add.Vehicle.Year <= yearTo).ToList();
+                allAdvertisements = allAdvertisements.Where(add => add.Year <= yearTo).ToList();
             }
 
             if (!string.IsNullOrEmpty(model) && !model.Equals("Model"))
@@ -117,7 +117,7 @@ namespace Client.GuiController
 
             if (!string.IsNullOrEmpty(fuelType) && !fuelType.Equals(FUEL_TYPE))
             {
-                allAdvertisements = allAdvertisements.Where(add => add.Vehicle.FuelType.ToString().Equals(fuelType)).ToList();
+                allAdvertisements = allAdvertisements.Where(add => add.FuelType.ToString().Equals(fuelType)).ToList();
             }
             homepage.cardsPanel.ViewModel = LoadData();
             ReloadCards();
@@ -144,7 +144,7 @@ namespace Client.GuiController
                 CardViewModel cardViewModel = new CardViewModel()
                 {
                     MakeModel = advertisement.Vehicle.Make + " " + advertisement.Vehicle.Model,
-                    Year = advertisement.Vehicle.Year.ToString(),
+                    Year = advertisement.Year.ToString(),
                     Price = advertisement.Price.ToString() + " €",
                     Advertisement = advertisement
                 };

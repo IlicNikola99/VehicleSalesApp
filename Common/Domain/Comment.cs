@@ -29,7 +29,12 @@ namespace Common.Domain
             this.Id = Guid.NewGuid();
         }
 
-        public List<IEntity> GetReaderList(SqlDataReader reader)
+        public List<IEntity> GetAll(SqlDataReader reader)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEntity GetOne(SqlDataReader reader)
         {
             throw new NotImplementedException();
         }

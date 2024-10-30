@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
@@ -34,7 +35,41 @@ namespace Common.Domain
             this.Id = Guid.NewGuid();
         }
 
-        public List<IEntity> GetReaderList(SqlDataReader reader)
+        public List<IEntity> GetAll(SqlDataReader reader)
+        {
+            List<IEntity> resultList = new List<IEntity>();
+            try
+            {
+
+                if (reader.Read() && reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        Image image = new Image
+                        {
+                            Id = (Guid)reader["Id"],
+                            Path = (string)reader["Path"],
+                            AdvertisementId = (Guid)reader["AdvertisementId"],
+                            CreatedOn = (DateTime)reader["CreatedOn"]
+                        };
+
+                        resultList.Add(image);
+                    }
+                }
+                else
+                {
+
+                    resultList.Add(PlaceHolderImage.GetPlaceHolderImage());
+                }
+                return resultList;
+            }
+            finally
+            {
+                reader.Close();
+            }
+        }
+
+        public IEntity GetOne(SqlDataReader reader)
         {
             throw new NotImplementedException();
         }

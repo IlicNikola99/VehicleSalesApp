@@ -54,13 +54,13 @@ namespace Client.GuiController
             addAdvertisement.txtMake.Text = advertisement.Vehicle.Make;
             addAdvertisement.txtModel.Text = advertisement.Vehicle.Model;
             addAdvertisement.txtPrice.Text = advertisement.Price.ToString();
-            addAdvertisement.txtYear.Text = advertisement.Vehicle.Year.ToString();
-            addAdvertisement.txtMileage.Text = advertisement.Vehicle.Mileage.ToString();
+            addAdvertisement.txtYear.Text = advertisement.Year.ToString();
+            addAdvertisement.txtMileage.Text = advertisement.Mileage.ToString();
             addAdvertisement.txtDescription.Text = advertisement.Description;
             addAdvertisement.cmbBodyType.DataSource = Enum.GetValues(typeof(BodyType));
             addAdvertisement.cmbBodyType.SelectedItem = advertisement.Vehicle.BodyType;
             addAdvertisement.checkBoxExchange.Checked = advertisement.AcceptsExchange;
-            if (advertisement.Vehicle.FuelType.Equals(FuelType.Petrol))
+            if (advertisement.FuelType.Equals(FuelType.Petrol))
             {
                 addAdvertisement.rbPetrol.Checked = true;
             }
@@ -146,7 +146,10 @@ namespace Client.GuiController
                     Vehicle = addedVehicle,
                     Price = decimal.Parse(addAdvertisement.txtPrice.Text),
                     Description = addAdvertisement.txtDescription.Text,
-                    AcceptsExchange = addAdvertisement.checkBoxExchange.Checked
+                    AcceptsExchange = addAdvertisement.checkBoxExchange.Checked,
+                    Year = int.Parse(addAdvertisement.txtYear.Text),
+                    Mileage = int.Parse(addAdvertisement.txtMileage.Text),
+                    FuelType = addAdvertisement.rbDiesel.Checked ? FuelType.Diesel : FuelType.Petrol
                 };
                 Response response = Communication.Instance.CreateAdvertisement(advertisement);
                 if (response.Exception == null)
@@ -191,10 +194,7 @@ namespace Client.GuiController
             {
                 Make = addAdvertisement.txtMake.Text,
                 Model = addAdvertisement.txtModel.Text,
-                BodyType = (BodyType)addAdvertisement.cmbBodyType.SelectedItem,
-                Year = int.Parse(addAdvertisement.txtYear.Text),
-                Mileage = int.Parse(addAdvertisement.txtMileage.Text),
-                FuelType = addAdvertisement.rbDiesel.Checked ? FuelType.Diesel : FuelType.Petrol
+                BodyType = (BodyType)addAdvertisement.cmbBodyType.SelectedItem
             };
             Response response = Communication.Instance.CreateVehicle(vehicle);
             if (response.Exception == null)
@@ -215,9 +215,9 @@ namespace Client.GuiController
             currentAdvertisement.Vehicle.Make = addAdvertisement.txtMake.Text;
             currentAdvertisement.Vehicle.Model = addAdvertisement.txtModel.Text;
             currentAdvertisement.Vehicle.BodyType = (BodyType)addAdvertisement.cmbBodyType.SelectedItem;
-            currentAdvertisement.Vehicle.Year = Int32.Parse(addAdvertisement.txtYear.Text);
-            currentAdvertisement.Vehicle.Mileage = Int32.Parse(addAdvertisement.txtMileage.Text);
-            currentAdvertisement.Vehicle.FuelType = addAdvertisement.rbPetrol.Checked ? FuelType.Petrol : FuelType.Diesel;
+            currentAdvertisement.Year = Int32.Parse(addAdvertisement.txtYear.Text);
+            currentAdvertisement.Mileage = Int32.Parse(addAdvertisement.txtMileage.Text);
+            currentAdvertisement.FuelType = addAdvertisement.rbPetrol.Checked ? FuelType.Petrol : FuelType.Diesel;
             currentAdvertisement.Price = Int32.Parse(addAdvertisement.txtPrice.Text);
             currentAdvertisement.AcceptsExchange = addAdvertisement.checkBoxExchange.Checked;
             currentAdvertisement.Description = addAdvertisement.txtDescription.Text;

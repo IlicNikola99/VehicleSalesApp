@@ -162,43 +162,43 @@ namespace DBBroker
             }
         }
 
-        public Vehicle GetVehicleById(Guid vehicleId)
-        {
-            SqlCommand command = connection.CreateCommand();
-            command.CommandText = $"select * from [Vehicle] where Id = '{vehicleId}' ";
-            SqlDataReader reader = command.ExecuteReader();
-            try
-            {
+        //public Vehicle GetVehicleById(Guid vehicleId)
+        //{
+        //    SqlCommand command = connection.CreateCommand();
+        //    command.CommandText = $"select * from [Vehicle] where Id = '{vehicleId}' ";
+        //    SqlDataReader reader = command.ExecuteReader();
+        //    try
+        //    {
 
-                if (reader.Read() && reader.HasRows)
-                {
-                    Vehicle foundVehicle = new Vehicle
-                    {
-                        Id = (Guid)reader["id"],
-                        Make = (string)reader["make"],
-                        Model = (string)reader["model"],
-                        BodyType = (BodyType)Enum.Parse(typeof(BodyType), (string)reader["bodyType"]),
-                        Year = (int)reader["year"],
-                        Mileage = (int)reader["mileage"],
-                        FuelType = (FuelType)Enum.Parse(typeof(FuelType), (string)reader["fuelType"]),
-                        CreatedOn = (DateTime)reader["CreatedOn"]
-                    };
-                    return foundVehicle;
-                }
-                else { throw new Exception("No vehicle found with the given id!"); }
-            }
-            finally
-            {
-                reader.Close();
-            }
-        }
+        //        if (reader.Read() && reader.HasRows)
+        //        {
+        //            Vehicle foundVehicle = new Vehicle
+        //            {
+        //                Id = (Guid)reader["id"],
+        //                Make = (string)reader["make"],
+        //                Model = (string)reader["model"],
+        //                BodyType = (BodyType)Enum.Parse(typeof(BodyType), (string)reader["bodyType"]),
+        //                Year = (int)reader["year"],
+        //                Mileage = (int)reader["mileage"],
+        //                FuelType = (FuelType)Enum.Parse(typeof(FuelType), (string)reader["fuelType"]),
+        //                CreatedOn = (DateTime)reader["CreatedOn"]
+        //            };
+        //            return foundVehicle;
+        //        }
+        //        else { throw new Exception("No vehicle found with the given id!"); }
+        //    }
+        //    finally
+        //    {
+        //        reader.Close();
+        //    }
+        //}
 
         public List<IEntity> GetAll(IEntity entity)
         {
             SqlCommand command = connection.CreateCommand();
             command.CommandText = $"select * from {entity.TableName}";
             SqlDataReader reader = command.ExecuteReader();
-            List<IEntity> list = entity.GetReaderList(reader);
+            List<IEntity> list = entity.GetAll(reader);
             command.Dispose();
             return list;
         }
@@ -294,9 +294,9 @@ namespace DBBroker
             command.Parameters.AddWithValue("@make", vehicle.Make);
             command.Parameters.AddWithValue("@model", vehicle.Model);
             command.Parameters.AddWithValue("@bodyType", vehicle.BodyType.ToString());
-            command.Parameters.AddWithValue("@year", vehicle.Year.ToString());
-            command.Parameters.AddWithValue("@mileage", vehicle.Mileage.ToString());
-            command.Parameters.AddWithValue("@fuelType", vehicle.FuelType.ToString());
+           // command.Parameters.AddWithValue("@year", vehicle.Year.ToString());
+            //command.Parameters.AddWithValue("@mileage", vehicle.Mileage.ToString());
+            //command.Parameters.AddWithValue("@fuelType", vehicle.FuelType.ToString());
 
             Console.WriteLine(">>> SQL COMMAND: ");
             Console.WriteLine(command.CommandText);
@@ -323,6 +323,16 @@ namespace DBBroker
                 result.Add(comment);   
             }
             reader.Close();
+            return result;
+        }
+
+        public IEntity GetById(IEntity entity, Guid id)
+        {
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = $"select * from {entity.TableName} where id = '{id}'";
+            SqlDataReader reader = command.ExecuteReader();
+            IEntity result = entity.GetOne(reader);
+            command.Dispose();
             return result;
         }
     }

@@ -12,7 +12,8 @@ namespace Common.Domain
         string TableName { get; }
         string Values { get; }
 
-        List<IEntity> GetReaderList(SqlDataReader reader);
+        List<IEntity> GetAll(SqlDataReader reader);
+        IEntity GetOne(SqlDataReader reader);
         void GenerateNewId();
 
     }

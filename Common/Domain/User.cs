@@ -47,9 +47,38 @@ namespace Common.Domain
             this.Id = Guid.NewGuid();
         }
 
-        public List<IEntity> GetReaderList(SqlDataReader reader)
+        public List<IEntity> GetAll(SqlDataReader reader)
         {
             throw new NotImplementedException();
+        }
+
+        public IEntity GetOne(SqlDataReader reader)
+        {
+            try
+            {
+
+                if (reader.Read() && reader.HasRows)
+                {
+                    User foundUser = new User
+                    {
+                        Id = (Guid)reader["id"],
+                        Username = (string)reader["username"],
+                        Password = (string)reader["password"],
+                        FirstName = (string)reader["firstname"],
+                        LastName = (string)reader["lastname"],
+                        Address = (string)reader["address"],
+                        City = (string)reader["city"],
+                        PhoneNumber = (string)reader["phonenumber"],
+                        CreatedOn = (DateTime)reader["createdon"]
+                    };
+                    return foundUser;
+                }
+                else { throw new Exception("No user found with the given id!"); }
+            }
+            finally
+            {
+                reader.Close();
+            }
         }
     }
 }

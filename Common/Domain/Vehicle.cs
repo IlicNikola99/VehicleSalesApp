@@ -18,21 +18,43 @@ namespace Common.Domain
         public string Make { get; set; }
         public string Model { get; set; }
         public BodyType BodyType { get; set; }
-        public int Year { get; set; }
-        public int Mileage { get; set; }
-        public FuelType FuelType { get; set; }
         public string TableName => "[Vehicle]";
 
-        public string Values => $"'{Id}','{Make}', '{Model}','{BodyType}', '{Year}', '{Mileage}', '{FuelType}', '{CreatedOn}'";
+        public string Values => $"'{Id}','{Make}', '{Model}','{BodyType}','{CreatedOn}'";
 
         public void GenerateNewId()
         {
             this.Id = Guid.NewGuid();
         }
 
-        public List<IEntity> GetReaderList(SqlDataReader reader)
+        public List<IEntity> GetAll(SqlDataReader reader)
         {
             throw new NotImplementedException();
+        }
+
+        public IEntity GetOne(SqlDataReader reader)
+        {
+            try
+            {
+
+                if (reader.Read() && reader.HasRows)
+                {
+                    Vehicle foundVehicle = new Vehicle
+                    {
+                        Id = (Guid)reader["id"],
+                        Make = (string)reader["make"],
+                        Model = (string)reader["model"],
+                        BodyType = (BodyType)Enum.Parse(typeof(BodyType), (string)reader["bodyType"]),
+                        CreatedOn = (DateTime)reader["CreatedOn"]
+                    };
+                    return foundVehicle;
+                }
+                else { throw new Exception("No vehicle found with the given id!"); }
+            }
+            finally
+            {
+                reader.Close();
+            }
         }
     }
 }
