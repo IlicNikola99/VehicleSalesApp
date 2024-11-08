@@ -31,7 +31,7 @@ namespace Common.Domain
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         public string TableName => "[Advertisement]";
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        public string InsertValues => $"'{Id}','{User.Id}', '{Vehicle.Id}','{Price}', '{AcceptsExchange}', '{Description}', '{Year}', '{Mileage}','{FuelType}', '{CreatedOn}'";
+        public string InsertValues => $"'{Id}','{User.Id}', '{Vehicle.Id}', '{AcceptsExchange}','{Price}', '{Description}', '{Year}', '{Mileage}','{FuelType}', '{CreatedOn}'";
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         public string TableAlias => "";

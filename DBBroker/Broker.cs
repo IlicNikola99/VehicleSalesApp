@@ -15,37 +15,37 @@ namespace DBBroker
             connection = new DbConnection();
         }
 
-        public User Login(User user)
-        {
-            SqlCommand command = connection.CreateCommand();
-            command.CommandText = $"select * from [user] where username = '{user.Username}' and password = '{user.Password}'";
-            SqlDataReader reader = command.ExecuteReader();
-            try
-            {
+        //public User Login(User user)
+        //{
+        //    SqlCommand command = connection.CreateCommand();
+        //    command.CommandText = $"select * from [user] where username = '{user.Username}' and password = '{user.Password}'";
+        //    SqlDataReader reader = command.ExecuteReader();
+        //    try
+        //    {
 
-                if (reader.Read() && reader.HasRows)
-                {
-                    User foundUser = new User
-                    {
-                        Id = (Guid)reader["id"],
-                        Username = (string)reader["username"],
-                        Password = (string)reader["password"],
-                        FirstName = (string)reader["firstname"],
-                        LastName = (string)reader["lastname"],
-                        Address = (string)reader["address"],
-                        City = (string)reader["city"],
-                        PhoneNumber = (string)reader["phonenumber"],
-                        CreatedOn = (DateTime)reader["createdon"]
-                    };
-                    return foundUser;
-                }
-                else { throw new Exception("No user found with the given credentials!"); }
-            }
-            finally
-            {
-                reader.Close();
-            }
-        }
+        //        if (reader.Read() && reader.HasRows)
+        //        {
+        //            User foundUser = new User
+        //            {
+        //                Id = (Guid)reader["id"],
+        //                Username = (string)reader["username"],
+        //                Password = (string)reader["password"],
+        //                FirstName = (string)reader["firstname"],
+        //                LastName = (string)reader["lastname"],
+        //                Address = (string)reader["address"],
+        //                City = (string)reader["city"],
+        //                PhoneNumber = (string)reader["phonenumber"],
+        //                CreatedOn = (DateTime)reader["createdon"]
+        //            };
+        //            return foundUser;
+        //        }
+        //        else { throw new Exception("No user found with the given credentials!"); }
+        //    }
+        //    finally
+        //    {
+        //        reader.Close();
+        //    }
+        //}
 
         public void Rollback()
         {
@@ -80,87 +80,87 @@ namespace DBBroker
             cmd.Dispose();
             return obj;
         }
-        public void AddUser(User user)
-        {
-            SqlCommand command = connection.CreateCommand();
-            command.CommandText = $"insert into user values (@id, @user, @pass, @fn, @ln, @add, @city, @ph, @cron)";
-            command.Parameters.Clear();
-            command.Parameters.AddWithValue("@id", Guid.NewGuid());
-            command.Parameters.AddWithValue("@user", user.Username);
-            command.Parameters.AddWithValue("@pass", user.Password);
-            command.Parameters.AddWithValue("@fn", user.FirstName);
-            command.Parameters.AddWithValue("@ln", user.LastName);
-            command.Parameters.AddWithValue("@add", user.Address);
-            command.Parameters.AddWithValue("@city", user.City);
-            command.Parameters.AddWithValue("@ph", user.PhoneNumber);
-            command.Parameters.AddWithValue("@cron", DateTime.Now);
+        //public void AddUser(User user)
+        //{
+        //    SqlCommand command = connection.CreateCommand();
+        //    command.CommandText = $"insert into user values (@id, @user, @pass, @fn, @ln, @add, @city, @ph, @cron)";
+        //    command.Parameters.Clear();
+        //    command.Parameters.AddWithValue("@id", Guid.NewGuid());
+        //    command.Parameters.AddWithValue("@user", user.Username);
+        //    command.Parameters.AddWithValue("@pass", user.Password);
+        //    command.Parameters.AddWithValue("@fn", user.FirstName);
+        //    command.Parameters.AddWithValue("@ln", user.LastName);
+        //    command.Parameters.AddWithValue("@add", user.Address);
+        //    command.Parameters.AddWithValue("@city", user.City);
+        //    command.Parameters.AddWithValue("@ph", user.PhoneNumber);
+        //    command.Parameters.AddWithValue("@cron", DateTime.Now);
 
-            command.ExecuteNonQuery();
-            command.Dispose();
-        }
+        //    command.ExecuteNonQuery();
+        //    command.Dispose();
+        //}
 
 
-        public List<Advertisement> GetAllAdvertisements()
-        {
-            SqlCommand command = connection.CreateCommand();
-            command.CommandText = "select * from [Advertisement]";
-            List<Advertisement> list = new List<Advertisement>();
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                Advertisement advertisement = new Advertisement()
-                {
-                    Id = (Guid)reader["Id"],
-                    AcceptsExchange = bool.Parse((string)reader["AcceptsExchange"]),
-                    User = new User()
-                    {
-                        Id = (Guid)reader["UserId"]
-                    },
-                    Vehicle = new Vehicle()
-                    {
-                        Id = (Guid)reader["VehicleId"]
-                    },
-                    Price = Convert.ToDecimal(reader["Price"]),
-                    Description = (string)reader["Description"],
-                    CreatedOn = (DateTime)reader["CreatedOn"]
-                };
-                list.Add(advertisement);
-            }
-            reader.Close();
-            return list;
-        }
+        //public List<Advertisement> GetAllAdvertisements()
+        //{
+        //    SqlCommand command = connection.CreateCommand();
+        //    command.CommandText = "select * from [Advertisement]";
+        //    List<Advertisement> list = new List<Advertisement>();
+        //    SqlDataReader reader = command.ExecuteReader();
+        //    while (reader.Read())
+        //    {
+        //        Advertisement advertisement = new Advertisement()
+        //        {
+        //            Id = (Guid)reader["Id"],
+        //            AcceptsExchange = bool.Parse((string)reader["AcceptsExchange"]),
+        //            User = new User()
+        //            {
+        //                Id = (Guid)reader["UserId"]
+        //            },
+        //            Vehicle = new Vehicle()
+        //            {
+        //                Id = (Guid)reader["VehicleId"]
+        //            },
+        //            Price = Convert.ToDecimal(reader["Price"]),
+        //            Description = (string)reader["Description"],
+        //            CreatedOn = (DateTime)reader["CreatedOn"]
+        //        };
+        //        list.Add(advertisement);
+        //    }
+        //    reader.Close();
+        //    return list;
+        //}
 
-        public User GetUserById(Guid userId)
-        {
-            SqlCommand command = connection.CreateCommand();
-            command.CommandText = $"select * from [User] where Id = '{userId}' ";
-            SqlDataReader reader = command.ExecuteReader();
-            try
-            {
+        //public User GetUserById(Guid userId)
+        //{
+        //    SqlCommand command = connection.CreateCommand();
+        //    command.CommandText = $"select * from [User] where Id = '{userId}' ";
+        //    SqlDataReader reader = command.ExecuteReader();
+        //    try
+        //    {
 
-                if (reader.Read() && reader.HasRows)
-                {
-                    User foundUser = new User
-                    {
-                        Id = (Guid)reader["id"],
-                        Username = (string)reader["username"],
-                        Password = (string)reader["password"],
-                        FirstName = (string)reader["firstname"],
-                        LastName = (string)reader["lastname"],
-                        Address = (string)reader["address"],
-                        City = (string)reader["city"],
-                        PhoneNumber = (string)reader["phonenumber"],
-                        CreatedOn = (DateTime)reader["createdon"]
-                    };
-                    return foundUser;
-                }
-                else { throw new Exception("No user found with the given id!"); }
-            }
-            finally
-            {
-                reader.Close();
-            }
-        }
+        //        if (reader.Read() && reader.HasRows)
+        //        {
+        //            User foundUser = new User
+        //            {
+        //                Id = (Guid)reader["id"],
+        //                Username = (string)reader["username"],
+        //                Password = (string)reader["password"],
+        //                FirstName = (string)reader["firstname"],
+        //                LastName = (string)reader["lastname"],
+        //                Address = (string)reader["address"],
+        //                City = (string)reader["city"],
+        //                PhoneNumber = (string)reader["phonenumber"],
+        //                CreatedOn = (DateTime)reader["createdon"]
+        //            };
+        //            return foundUser;
+        //        }
+        //        else { throw new Exception("No user found with the given id!"); }
+        //    }
+        //    finally
+        //    {
+        //        reader.Close();
+        //    }
+        //}
 
         //public Vehicle GetVehicleById(Guid vehicleId)
         //{
@@ -192,6 +192,42 @@ namespace DBBroker
         //        reader.Close();
         //    }
         //}
+        //public List<Image> GetImagesForAdvertisement(Guid advertisementId)
+        //{
+        //    SqlCommand command = connection.CreateCommand();
+        //    command.CommandText = $"select * from [Image] where AdvertisementId = '{advertisementId}' ";
+        //    SqlDataReader reader = command.ExecuteReader();
+        //    List<Image> images = new List<Image>();
+        //    try
+        //    {
+
+        //        if (reader.Read() && reader.HasRows)
+        //        {
+        //            while (reader.Read())
+        //            {
+        //                Image image = new Image
+        //                {
+        //                    Id = (Guid)reader["Id"],
+        //                    Path = (string)reader["Path"],
+        //                    AdvertisementId = (Guid)reader["AdvertisementId"],
+        //                    CreatedOn = (DateTime)reader["CreatedOn"]
+        //                };
+
+        //                images.Add(image);
+        //            }
+        //        }
+        //        else
+        //        {
+
+        //            images.Add(PlaceHolderImage.GetPlaceHolderImage());
+        //        }
+        //        return images;
+        //    }
+        //    finally
+        //    {
+        //        reader.Close();
+        //    }
+        //}
 
 
         public Advertisement AddAdvertisement(Advertisement advertisement)
@@ -213,42 +249,6 @@ namespace DBBroker
             return advertisement;
         }
 
-        public List<Image> GetImagesForAdvertisement(Guid advertisementId)
-        {
-            SqlCommand command = connection.CreateCommand();
-            command.CommandText = $"select * from [Image] where AdvertisementId = '{advertisementId}' ";
-            SqlDataReader reader = command.ExecuteReader();
-            List<Image> images = new List<Image>();
-            try
-            {
-
-                if (reader.Read() && reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        Image image = new Image
-                        {
-                            Id = (Guid)reader["Id"],
-                            Path = (string)reader["Path"],
-                            AdvertisementId = (Guid)reader["AdvertisementId"],
-                            CreatedOn = (DateTime)reader["CreatedOn"]
-                        };
-
-                        images.Add(image);
-                    }
-                }
-                else
-                {
-
-                    images.Add(PlaceHolderImage.GetPlaceHolderImage());
-                }
-                return images;
-            }
-            finally
-            {
-                reader.Close();
-            }
-        }
 
         public void RemoveImagesForAdvertisement(Guid advertisementId)
         {

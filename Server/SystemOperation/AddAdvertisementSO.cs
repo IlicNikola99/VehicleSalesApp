@@ -20,7 +20,7 @@ namespace Server.SystemOperation
         protected override void ExecuteConcreteOperation()
         {
 
-            Result = broker.AddAdvertisement(advertisement);
+            Result = (Advertisement)broker.Add(advertisement);
         }
     }
 }

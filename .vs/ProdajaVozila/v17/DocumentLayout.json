@@ -3,20 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A23A8E72-B066-4F33-A698-9AEF70BA4082}|Common\\Common.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\common\\domain\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A23A8E72-B066-4F33-A698-9AEF70BA4082}|Common\\Common.csproj|solutionrelative:common\\domain\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\client\\guicontroller\\homepageguicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\guicontroller\\homepageguicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A8264EC1-0744-48BB-BE8D-DB4FB6207B48}|DBBroker\\DBBroker.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\dbbroker\\broker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A8264EC1-0744-48BB-BE8D-DB4FB6207B48}|DBBroker\\DBBroker.csproj|solutionrelative:dbbroker\\broker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A23A8E72-B066-4F33-A698-9AEF70BA4082}|Common\\Common.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\common\\domain\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A23A8E72-B066-4F33-A698-9AEF70BA4082}|Common\\Common.csproj|solutionrelative:common\\domain\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\client\\guicontroller\\addadvertisementguicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\guicontroller\\addadvertisementguicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\server\\systemoperation\\getallcommentso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|solutionrelative:server\\systemoperation\\getallcommentso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\server\\systemoperation\\getalladvertisementsso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|solutionrelative:server\\systemoperation\\getalladvertisementsso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|c:\\users\\nikola\\documents\\projektovanje softvera\\ps projekat\\server\\systemoperation\\addvehicleso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|solutionrelative:server\\systemoperation\\addvehicleso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|c:\\users\\nikola\\documents\\projektovanje softvera\\ps projekat\\server\\systemoperation\\adduserso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|solutionrelative:server\\systemoperation\\adduserso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\server\\systemoperation\\systemoperationbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|solutionrelative:server\\systemoperation\\systemoperationbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\server\\systemoperation\\loginso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|solutionrelative:server\\systemoperation\\loginso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\client\\guicontroller\\advertisementviewguicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\guicontroller\\advertisementviewguicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\client\\usercontrols\\cards\\cardspanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\usercontrols\\cards\\cardspanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\client\\guicontroller\\homepageguicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\guicontroller\\homepageguicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A23A8E72-B066-4F33-A698-9AEF70BA4082}|Common\\Common.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\common\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,36 +59,12 @@
       "RelativeMoniker": "D:0:0:{A23A8E72-B066-4F33-A698-9AEF70BA4082}|Common\\Common.csproj|solutionrelative:common\\domain\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\client\\guicontroller\\addadvertisementguicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\guicontroller\\addadvertisementguicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\client\\guicontroller\\advertisementviewguicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\guicontroller\\advertisementviewguicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A23A8E72-B066-4F33-A698-9AEF70BA4082}|Common\\Common.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\common\\domain\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A23A8E72-B066-4F33-A698-9AEF70BA4082}|Common\\Common.csproj|solutionrelative:common\\domain\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\server\\clienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|solutionrelative:server\\clienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\server\\systemoperation\\loginso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|solutionrelative:server\\systemoperation\\loginso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A23A8E72-B066-4F33-A698-9AEF70BA4082}|Common\\Common.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\common\\domain\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A23A8E72-B066-4F33-A698-9AEF70BA4082}|Common\\Common.csproj|solutionrelative:common\\domain\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\server\\systemoperation\\systemoperationbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|solutionrelative:server\\systemoperation\\systemoperationbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\server\\systemoperation\\getallcommentso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|solutionrelative:server\\systemoperation\\getallcommentso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\server\\systemoperation\\updatevehicleso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -65,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\server\\systemoperation\\updateadvertisemsentso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5132C70-9C69-4E54-B639-CA8AF727447D}|Server\\Server.csproj|solutionrelative:server\\systemoperation\\updateadvertisemsentso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\client\\usercontrols\\cards\\cardspanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62E57431-362F-446E-A896-927CC2F54C37}|Client\\Client.csproj|solutionrelative:client\\usercontrols\\cards\\cardspanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\Repository\\IRepositoryImpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,11 +90,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 342,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "ClientHandler.cs",
               "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\ClientHandler.cs",
               "RelativeDocumentMoniker": "Server\\ClientHandler.cs",
@@ -104,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 10,
               "Title": "CardsPanel.cs",
               "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\UserControls\\Cards\\CardsPanel.cs",
               "RelativeDocumentMoniker": "Client\\UserControls\\Cards\\CardsPanel.cs",
@@ -113,17 +117,18 @@
               "ViewState": "AQIAABIAAAAAAAAAAAAYwCEAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-01T11:44:25.089Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "AddAdvertisementGuiController.cs",
               "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\GuiController\\AddAdvertisementGuiController.cs",
               "RelativeDocumentMoniker": "Client\\GuiController\\AddAdvertisementGuiController.cs",
               "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\GuiController\\AddAdvertisementGuiController.cs",
               "RelativeToolTip": "Client\\GuiController\\AddAdvertisementGuiController.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAADwvzgAAAA5AAAA",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAewKMAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-11T11:28:40.933Z",
               "IsPinned": true,
@@ -131,13 +136,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Broker.cs",
               "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\DBBroker\\Broker.cs",
               "RelativeDocumentMoniker": "DBBroker\\Broker.cs",
               "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\DBBroker\\Broker.cs",
               "RelativeToolTip": "DBBroker\\Broker.cs",
-              "ViewState": "AQIAAGUBAAAAAAAAAAAtwHIBAAATAAAA",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAUwE4AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-02T13:17:48.882Z",
               "IsPinned": true,
@@ -145,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "AdvertisementViewGuiController.cs",
               "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\GuiController\\AdvertisementViewGuiController.cs",
               "RelativeDocumentMoniker": "Client\\GuiController\\AdvertisementViewGuiController.cs",
@@ -159,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "IEntity.cs",
               "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Common\\Domain\\IEntity.cs",
               "RelativeDocumentMoniker": "Common\\Domain\\IEntity.cs",
@@ -185,7 +190,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
+              "Title": "AddVehicleSO.cs",
+              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\SystemOperation\\AddVehicleSO.cs",
+              "RelativeDocumentMoniker": "Server\\SystemOperation\\AddVehicleSO.cs",
+              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\SystemOperation\\AddVehicleSO.cs",
+              "RelativeToolTip": "Server\\SystemOperation\\AddVehicleSO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T22:19:00.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AddUserSO.cs",
+              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\SystemOperation\\AddUserSO.cs",
+              "RelativeDocumentMoniker": "Server\\SystemOperation\\AddUserSO.cs",
+              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\SystemOperation\\AddUserSO.cs",
+              "RelativeToolTip": "Server\\SystemOperation\\AddUserSO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T22:16:36.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Common\\Domain\\User.cs",
               "RelativeDocumentMoniker": "Common\\Domain\\User.cs",
@@ -198,20 +229,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "GetAllAdvertisementsSO.cs",
               "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\SystemOperation\\GetAllAdvertisementsSO.cs",
               "RelativeDocumentMoniker": "Server\\SystemOperation\\GetAllAdvertisementsSO.cs",
               "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\SystemOperation\\GetAllAdvertisementsSO.cs",
               "RelativeToolTip": "Server\\SystemOperation\\GetAllAdvertisementsSO.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAvwBwAAAAUAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCMAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T16:01:02.12Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "HomepageGuiController.cs",
               "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Client\\GuiController\\HomepageGuiController.cs",
               "RelativeDocumentMoniker": "Client\\GuiController\\HomepageGuiController.cs",
@@ -224,46 +255,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "LoginSO.cs",
               "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\SystemOperation\\LoginSO.cs",
               "RelativeDocumentMoniker": "Server\\SystemOperation\\LoginSO.cs",
               "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\SystemOperation\\LoginSO.cs",
               "RelativeToolTip": "Server\\SystemOperation\\LoginSO.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAgwB4AAAAUAAAA",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAgwAoAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T20:16:11.524Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 7,
               "Title": "SystemOperationBase.cs",
               "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\SystemOperation\\SystemOperationBase.cs",
               "RelativeDocumentMoniker": "Server\\SystemOperation\\SystemOperationBase.cs",
               "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\SystemOperation\\SystemOperationBase.cs",
               "RelativeToolTip": "Server\\SystemOperation\\SystemOperationBase.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAYAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T20:15:01.47Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Advertisement.cs",
-              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Common\\Domain\\Advertisement.cs",
-              "RelativeDocumentMoniker": "Common\\Domain\\Advertisement.cs",
-              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Common\\Domain\\Advertisement.cs",
-              "RelativeToolTip": "Common\\Domain\\Advertisement.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAA5wEsAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:57:02.487Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "Comment.cs",
               "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Common\\Domain\\Comment.cs",
               "RelativeDocumentMoniker": "Common\\Domain\\Comment.cs",
@@ -276,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "IRepository.cs",
               "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\Repository\\IRepository.cs",
               "RelativeDocumentMoniker": "Server\\Repository\\IRepository.cs",
@@ -289,7 +307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "IRepositoryImpl.cs",
               "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\Repository\\IRepositoryImpl.cs",
               "RelativeDocumentMoniker": "Server\\Repository\\IRepositoryImpl.cs",
@@ -302,7 +320,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "UpdateAdvertisemsentSO.cs",
               "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\SystemOperation\\UpdateAdvertisemsentSO.cs",
               "RelativeDocumentMoniker": "Server\\SystemOperation\\UpdateAdvertisemsentSO.cs",
@@ -314,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "UpdateVehicleSO.cs",
               "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\SystemOperation\\UpdateVehicleSO.cs",
               "RelativeDocumentMoniker": "Server\\SystemOperation\\UpdateVehicleSO.cs",
@@ -326,7 +344,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 3,
               "Title": "GetAllCommentSO.cs",
               "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Server\\SystemOperation\\GetAllCommentSO.cs",
               "RelativeDocumentMoniker": "Server\\SystemOperation\\GetAllCommentSO.cs",
@@ -334,7 +352,8 @@
               "RelativeToolTip": "Server\\SystemOperation\\GetAllCommentSO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T14:12:04.088Z"
+              "WhenOpened": "2024-10-28T14:12:04.088Z",
+              "EditorCaption": ""
             }
           ]
         },
@@ -344,15 +363,15 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Image.cs",
-              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Common\\Domain\\Image.cs",
-              "RelativeDocumentMoniker": "Common\\Domain\\Image.cs",
-              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Common\\Domain\\Image.cs*",
-              "RelativeToolTip": "Common\\Domain\\Image.cs*",
-              "ViewState": "AQIAADMAAAAAAAAAAAAUwE4AAAApAAAA",
+              "DocumentIndex": 1,
+              "Title": "Advertisement.cs",
+              "DocumentMoniker": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Common\\Domain\\Advertisement.cs",
+              "RelativeDocumentMoniker": "Common\\Domain\\Advertisement.cs",
+              "ToolTip": "C:\\Users\\Nikola\\Documents\\Projektovanje softvera\\PS Projekat\\Common\\Domain\\Advertisement.cs",
+              "RelativeToolTip": "Common\\Domain\\Advertisement.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAQwCEAAABSAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T16:30:08.646Z",
+              "WhenOpened": "2024-10-30T15:57:02.487Z",
               "EditorCaption": ""
             }
           ]
