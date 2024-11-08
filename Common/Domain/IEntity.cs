@@ -10,11 +10,19 @@ namespace Common.Domain
     public interface IEntity
     {
         string TableName { get; }
-        string Values { get; }
+        string TableAlias { get; }
+        string InsertColumns { get; }
+        string InsertValues { get; }
+        string SelectValues { get; }
+        string UpdateValues { get; }
+        string SearchValues { get; }
 
-        List<IEntity> GetAll(SqlDataReader reader);
-        IEntity GetOne(SqlDataReader reader);
+        string WhereClause { get; }
+        string JoinClause { get; }
+        string SearchWhereClause { get; }
         void GenerateNewId();
+        IEntity ReadObjectRow(SqlDataReader reader);
+        IEntity ReadObjectRowSearch(SqlDataReader reader);
 
     }
 }

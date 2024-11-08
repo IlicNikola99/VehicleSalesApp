@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace Common.Domain
 {
@@ -26,52 +27,56 @@ namespace Common.Domain
 
         public bool Thumbnail { get; set; } = false;
 
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         public string TableName => "[Image]";
 
-        public string Values => $"'{Id}','{Path}', '{AdvertisementId}', '{CreatedOn}', '{Thumbnail}'";
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string InsertValues => $"'{Id}','{Path}', '{AdvertisementId}', '{CreatedOn}', '{Thumbnail}'";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string TableAlias => "";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string InsertColumns => "";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string SelectValues => "*";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string UpdateValues => "";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string WhereClause => "";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string JoinClause => "";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string SearchValues => "*";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string SearchWhereClause => $"advertisementId = '{this.AdvertisementId}'";
 
         public void GenerateNewId()
         {
             this.Id = Guid.NewGuid();
         }
 
-        public List<IEntity> GetAll(SqlDataReader reader)
+        public IEntity ReadObjectRow(SqlDataReader reader)
         {
-            List<IEntity> resultList = new List<IEntity>();
-            try
+            Image image = new Image
             {
-
-                if (reader.Read() && reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        Image image = new Image
-                        {
-                            Id = (Guid)reader["Id"],
-                            Path = (string)reader["Path"],
-                            AdvertisementId = (Guid)reader["AdvertisementId"],
-                            CreatedOn = (DateTime)reader["CreatedOn"]
-                        };
-
-                        resultList.Add(image);
-                    }
-                }
-                else
-                {
-
-                    resultList.Add(PlaceHolderImage.GetPlaceHolderImage());
-                }
-                return resultList;
-            }
-            finally
-            {
-                reader.Close();
-            }
+                Id = (Guid)reader["Id"],
+                Path = (string)reader["Path"],
+                AdvertisementId = (Guid)reader["AdvertisementId"],
+                CreatedOn = (DateTime)reader["CreatedOn"]
+            };
+            return image;   
         }
 
-        public IEntity GetOne(SqlDataReader reader)
+        public IEntity ReadObjectRowSearch(SqlDataReader reader)
         {
-            throw new NotImplementedException();
+            return ReadObjectRow(reader);
         }
     }
 }

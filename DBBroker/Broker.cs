@@ -75,7 +75,7 @@ namespace DBBroker
         {
             SqlCommand cmd = connection.CreateCommand();
             obj.GenerateNewId();
-            cmd.CommandText = $"insert into {obj.TableName} values({obj.Values} )";
+            cmd.CommandText = $"insert into {obj.TableName} values({obj.InsertValues} )";
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             return obj;
@@ -193,15 +193,6 @@ namespace DBBroker
         //    }
         //}
 
-        public List<IEntity> GetAll(IEntity entity)
-        {
-            SqlCommand command = connection.CreateCommand();
-            command.CommandText = $"select * from {entity.TableName}";
-            SqlDataReader reader = command.ExecuteReader();
-            List<IEntity> list = entity.GetAll(reader);
-            command.Dispose();
-            return list;
-        }
 
         public Advertisement AddAdvertisement(Advertisement advertisement)
         {
@@ -246,8 +237,9 @@ namespace DBBroker
                         images.Add(image);
                     }
                 }
-                else {
-                    
+                else
+                {
+
                     images.Add(PlaceHolderImage.GetPlaceHolderImage());
                 }
                 return images;
@@ -294,7 +286,7 @@ namespace DBBroker
             command.Parameters.AddWithValue("@make", vehicle.Make);
             command.Parameters.AddWithValue("@model", vehicle.Model);
             command.Parameters.AddWithValue("@bodyType", vehicle.BodyType.ToString());
-           // command.Parameters.AddWithValue("@year", vehicle.Year.ToString());
+            // command.Parameters.AddWithValue("@year", vehicle.Year.ToString());
             //command.Parameters.AddWithValue("@mileage", vehicle.Mileage.ToString());
             //command.Parameters.AddWithValue("@fuelType", vehicle.FuelType.ToString());
 
@@ -320,19 +312,70 @@ namespace DBBroker
                 comment.Text = reader["Text"].ToString();
                 comment.Username = reader["Username"].ToString();
 
-                result.Add(comment);   
+                result.Add(comment);
             }
             reader.Close();
             return result;
         }
 
-        public IEntity GetById(IEntity entity, Guid id)
+        public IEntity GetOne(IEntity entity)
         {
             SqlCommand command = connection.CreateCommand();
-            command.CommandText = $"select * from {entity.TableName} where id = '{id}'";
+            command.CommandText = $"SELECT * FROM {entity.TableName} WHERE {entity.WhereClause}";
             SqlDataReader reader = command.ExecuteReader();
-            IEntity result = entity.GetOne(reader);
-            command.Dispose();
+            IEntity result = null;
+
+            try
+            {
+                command.Dispose();
+                while (reader.Read())
+                {
+                   result = entity.ReadObjectRow(reader);
+                }
+                return result;
+            }
+            finally
+            {
+                reader.Close();
+            }
+        }
+
+        public List<IEntity> GetAll(IEntity obj)
+        {
+            List<IEntity> result = new List<IEntity>();
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = $"SELECT {obj.SelectValues} FROM {obj.TableName} {obj.TableAlias} {obj.JoinClause}";
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                try
+                {
+                    while (reader.Read())
+                    {
+                        IEntity rowObject = obj.ReadObjectRow(reader);
+                        result.Add(rowObject);
+                    }
+                }
+                finally
+                {
+                    reader.Close();
+                }
+            }
+            return result;
+        }
+
+        public List<IEntity> Search(IEntity obj)
+        {
+            List<IEntity> result = new List<IEntity>();
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = $"SELECT {obj.SearchValues} FROM {obj.TableName} {obj.TableAlias} {obj.JoinClause} WHERE {obj.SearchWhereClause}";
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    IEntity rowObject = obj.ReadObjectRowSearch(reader);
+                    result.Add(rowObject);
+                }
+            }
             return result;
         }
     }

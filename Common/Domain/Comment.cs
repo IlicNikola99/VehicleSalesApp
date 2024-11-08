@@ -22,7 +22,23 @@ namespace Common.Domain
       
         public string TableName => "[Comment]";
 
-        public string Values => $"'{Id}','{UserId}', '{AdvertisementId}','{Text}', '{CreatedOn}'";
+        public string InsertValues => $"'{Id}','{UserId}', '{AdvertisementId}','{Text}', '{CreatedOn}'";
+
+        public string TableAlias => throw new NotImplementedException();
+
+        public string InsertColumns => "";
+
+        public string SelectValues => throw new NotImplementedException();
+
+        public string UpdateValues => throw new NotImplementedException();
+
+        public string WhereClause => throw new NotImplementedException();
+
+        public string JoinClause => throw new NotImplementedException();
+
+        public string SearchValues => throw new NotImplementedException();
+
+        public string SearchWhereClause => throw new NotImplementedException();
 
         public void GenerateNewId()
         {
@@ -35,6 +51,16 @@ namespace Common.Domain
         }
 
         public IEntity GetOne(SqlDataReader reader)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEntity ReadObjectRow(SqlDataReader reader)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEntity ReadObjectRowSearch(SqlDataReader reader)
         {
             throw new NotImplementedException();
         }

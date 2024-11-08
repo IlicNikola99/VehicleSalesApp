@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 
 namespace Common.Domain
@@ -22,9 +24,35 @@ namespace Common.Domain
         public string City { get; set; }
         public string PhoneNumber { get; set; }
 
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         public string TableName => "[User]";
 
-        public string Values => $"'{Id}','{Username}', '{Password}','{FirstName}', '{LastName}', '{Address}', '{City}', '{PhoneNumber}', '{CreatedOn}'";
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string InsertValues => $"'{Id}','{Username}', '{Password}','{FirstName}', '{LastName}', '{Address}', '{City}', '{PhoneNumber}', '{CreatedOn}'";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string TableAlias => "";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string InsertColumns => "";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)] 
+        public string SelectValues => "*";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string UpdateValues => "";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)] 
+        public string WhereClause => $"id = '{this.Id}'";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string JoinClause => "";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string SearchValues => "";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)] 
+        public string SearchWhereClause => "";
 
         public override bool Equals(object obj)
         {
@@ -47,38 +75,26 @@ namespace Common.Domain
             this.Id = Guid.NewGuid();
         }
 
-        public List<IEntity> GetAll(SqlDataReader reader)
+        public IEntity ReadObjectRow(SqlDataReader reader)
         {
-            throw new NotImplementedException();
+            User user = new User
+            {
+                Id = (Guid)reader["id"],
+                Username = (string)reader["username"],
+                Password = (string)reader["password"],
+                FirstName = (string)reader["firstname"],
+                LastName = (string)reader["lastname"],
+                Address = (string)reader["address"],
+                City = (string)reader["city"],
+                PhoneNumber = (string)reader["phonenumber"],
+                CreatedOn = (DateTime)reader["createdon"]
+            };
+            return user;
         }
 
-        public IEntity GetOne(SqlDataReader reader)
+        public IEntity ReadObjectRowSearch(SqlDataReader reader)
         {
-            try
-            {
-
-                if (reader.Read() && reader.HasRows)
-                {
-                    User foundUser = new User
-                    {
-                        Id = (Guid)reader["id"],
-                        Username = (string)reader["username"],
-                        Password = (string)reader["password"],
-                        FirstName = (string)reader["firstname"],
-                        LastName = (string)reader["lastname"],
-                        Address = (string)reader["address"],
-                        City = (string)reader["city"],
-                        PhoneNumber = (string)reader["phonenumber"],
-                        CreatedOn = (DateTime)reader["createdon"]
-                    };
-                    return foundUser;
-                }
-                else { throw new Exception("No user found with the given id!"); }
-            }
-            finally
-            {
-                reader.Close();
-            }
+            throw new NotImplementedException();
         }
     }
 }

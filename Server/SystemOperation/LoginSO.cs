@@ -20,8 +20,17 @@ namespace Server.SystemOperation
 
         protected override void ExecuteConcreteOperation()
         {
-            
-            Result = broker.Login(user);
+
+            List<User> users = broker.GetAll(new User()).OfType<User>().ToList();
+            Result = null;
+
+            foreach (User u in users)
+            {
+                if (u.Username.Equals(user.Username) && u.Password.Equals(user.Password))
+                {
+                    Result = u;
+                }
+            }
         }
     }
 }

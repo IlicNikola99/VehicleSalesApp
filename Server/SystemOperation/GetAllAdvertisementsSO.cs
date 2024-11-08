@@ -22,11 +22,11 @@ namespace Server.SystemOperation
             {
                 if (entity is Advertisement advertisement)
                 {
-                    advertisement.User = (User)broker.GetById(new User(), advertisement.User.Id);
-                    advertisement.Vehicle = (Vehicle)broker.GetById(new Vehicle(), advertisement.Vehicle.Id);
+                    advertisement.User = (User)broker.GetOne(new User() { Id = advertisement.User.Id});
+                    advertisement.Vehicle = (Vehicle)broker.GetOne(new Vehicle() { Id = advertisement.Vehicle.Id });
 
                     // Fetch all Images and filter those that match the Advertisement Id
-                    List<IEntity> foundImages = broker.GetAll(new Image());
+                    List<IEntity> foundImages = broker.Search(new Image() { AdvertisementId = advertisement.Id});
                     List<Image> images = foundImages
                         .OfType<Image>()
                         .Where(image => image.AdvertisementId == advertisement.Id)

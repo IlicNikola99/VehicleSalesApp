@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Net;
 
 
@@ -18,43 +19,58 @@ namespace Common.Domain
         public string Make { get; set; }
         public string Model { get; set; }
         public BodyType BodyType { get; set; }
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         public string TableName => "[Vehicle]";
 
-        public string Values => $"'{Id}','{Make}', '{Model}','{BodyType}','{CreatedOn}'";
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string InsertValues => $"'{Id}','{Make}', '{Model}','{BodyType}','{CreatedOn}'";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string TableAlias => "";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string InsertColumns => "";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string SelectValues => "*";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string UpdateValues => "";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string WhereClause => $"id = '{this.Id}'";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string JoinClause => "";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string SearchValues => "";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string SearchWhereClause => "";
 
         public void GenerateNewId()
         {
             this.Id = Guid.NewGuid();
         }
 
-        public List<IEntity> GetAll(SqlDataReader reader)
+        public IEntity ReadObjectRow(SqlDataReader reader)
         {
-            throw new NotImplementedException();
+            Vehicle v = new Vehicle
+            {
+                Id = (Guid)reader["id"],
+                Make = (string)reader["make"],
+                Model = (string)reader["model"],
+                BodyType = (BodyType)Enum.Parse(typeof(BodyType), (string)reader["bodyType"]),
+                CreatedOn = (DateTime)reader["CreatedOn"]
+            };
+            return v;
         }
 
-        public IEntity GetOne(SqlDataReader reader)
+        public IEntity ReadObjectRowSearch(SqlDataReader reader)
         {
-            try
-            {
-
-                if (reader.Read() && reader.HasRows)
-                {
-                    Vehicle foundVehicle = new Vehicle
-                    {
-                        Id = (Guid)reader["id"],
-                        Make = (string)reader["make"],
-                        Model = (string)reader["model"],
-                        BodyType = (BodyType)Enum.Parse(typeof(BodyType), (string)reader["bodyType"]),
-                        CreatedOn = (DateTime)reader["CreatedOn"]
-                    };
-                    return foundVehicle;
-                }
-                else { throw new Exception("No vehicle found with the given id!"); }
-            }
-            finally
-            {
-                reader.Close();
-            }
+            return ReadObjectRow(reader);   
         }
     }
 }
