@@ -19,6 +19,7 @@ namespace Common.Domain
         string WhereClause { get; }
         string JoinClause { get; }
         string SearchWhereClause { get; }
+        string DeleteWhereClause { get; }
         string OrderByClause { get; }
         void GenerateNewId();
         IEntity ReadObjectRow(SqlDataReader reader);

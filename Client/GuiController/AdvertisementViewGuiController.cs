@@ -32,7 +32,10 @@ namespace Client.GuiController
             viewAdvertisement.labelMileagePlaceholder.Text = advertisement.Mileage.ToString();
             viewAdvertisement.labelFuelPlaceholder.Text = advertisement.FuelType.ToString();
             selectedImageIndex = 0;
-            imagePaths = advertisement.Images.Select(x => x.Path).ToArray();
+            imagePaths = advertisement.Images
+            .OrderByDescending(x => x.Thumbnail) // Thumbnail image will come first if it exists
+            .Select(x => x.Path)
+            .ToArray();
             if (advertisement.Images.Count > 0)
             {
                 viewAdvertisement.pictureBox.Image = System.Drawing.Image.FromFile(imagePaths[selectedImageIndex]);
@@ -65,7 +68,8 @@ namespace Client.GuiController
 
         private void TxtBoxComment_Click(object sender, EventArgs e)
         {
-            if (viewAdvertisement.txtBoxComment.Text.Equals(INSERT_COMMENT_TEXT)) {
+            if (viewAdvertisement.txtBoxComment.Text.Equals(INSERT_COMMENT_TEXT))
+            {
                 viewAdvertisement.txtBoxComment.Text = "";
             }
         }
@@ -84,51 +88,52 @@ namespace Client.GuiController
         private void LoadComments()
         {
             Response response = Communication.Instance.GetAllComments(currentAdvertisement);
-            if (response.Exception != null) {
+            if (response.Exception != null)
+            {
 
                 MessageBox.Show("Error while fetching comments!");
                 return;
             }
 
-            List<CommentView> commentViews = (List<CommentView>) response.Result;
+            List<CommentView> commentViews = (List<CommentView>)response.Result;
 
             List<string> comments = commentViews.Select(cv => $"{cv.Username}: {cv.Text}").ToList();
 
             viewAdvertisement.listBoxComment.DataSource = comments;
         }
 
-    private void PrevImage(object sender, EventArgs e)
-    {
-        if (selectedImageIndex == 0)
+        private void PrevImage(object sender, EventArgs e)
         {
-            selectedImageIndex = imagePaths.Length - 1;
-            ShowImage(selectedImageIndex);
+            if (selectedImageIndex == 0)
+            {
+                selectedImageIndex = imagePaths.Length - 1;
+                ShowImage(selectedImageIndex);
+            }
+            else
+            {
+                selectedImageIndex = selectedImageIndex - 1;
+                ShowImage(selectedImageIndex);
+            }
         }
-        else
+
+        private void NextImage(object sender, EventArgs e)
         {
-            selectedImageIndex = selectedImageIndex - 1;
-            ShowImage(selectedImageIndex);
+            if (selectedImageIndex == imagePaths.Length - 1)
+            {
+                selectedImageIndex = 0;
+                ShowImage(selectedImageIndex);
+            }
+            else
+            {
+                selectedImageIndex++;
+                ShowImage(selectedImageIndex);
+            }
+        }
+
+        private void ShowImage(int imageIndex)
+        {
+            viewAdvertisement.pictureBox.Image = System.Drawing.Image.FromFile(imagePaths[imageIndex]);
+
         }
     }
-
-    private void NextImage(object sender, EventArgs e)
-    {
-        if (selectedImageIndex == imagePaths.Length - 1)
-        {
-            selectedImageIndex = 0;
-            ShowImage(selectedImageIndex);
-        }
-        else
-        {
-            selectedImageIndex++;
-            ShowImage(selectedImageIndex);
-        }
-    }
-
-    private void ShowImage(int imageIndex)
-    {
-        viewAdvertisement.pictureBox.Image = System.Drawing.Image.FromFile(imagePaths[imageIndex]);
-
-    }
-}
 }

@@ -57,6 +57,9 @@ namespace Common.Domain
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         public string SearchWhereClause => $"advertisementId = '{this.AdvertisementId}'";
 
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string DeleteWhereClause => $"advertisementId = '{this.AdvertisementId}'";
+
         public void GenerateNewId()
         {
             this.Id = Guid.NewGuid();
@@ -69,7 +72,8 @@ namespace Common.Domain
                 Id = (Guid)reader["Id"],
                 Path = (string)reader["Path"],
                 AdvertisementId = (Guid)reader["AdvertisementId"],
-                CreatedOn = (DateTime)reader["CreatedOn"]
+                CreatedOn = (DateTime)reader["CreatedOn"],
+                Thumbnail = bool.Parse((string)reader["Thumbnail"])
             };
             return image;   
         }

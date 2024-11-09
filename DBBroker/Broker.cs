@@ -15,38 +15,6 @@ namespace DBBroker
             connection = new DbConnection();
         }
 
-        //public User Login(User user)
-        //{
-        //    SqlCommand command = connection.CreateCommand();
-        //    command.CommandText = $"select * from [user] where username = '{user.Username}' and password = '{user.Password}'";
-        //    SqlDataReader reader = command.ExecuteReader();
-        //    try
-        //    {
-
-        //        if (reader.Read() && reader.HasRows)
-        //        {
-        //            User foundUser = new User
-        //            {
-        //                Id = (Guid)reader["id"],
-        //                Username = (string)reader["username"],
-        //                Password = (string)reader["password"],
-        //                FirstName = (string)reader["firstname"],
-        //                LastName = (string)reader["lastname"],
-        //                Address = (string)reader["address"],
-        //                City = (string)reader["city"],
-        //                PhoneNumber = (string)reader["phonenumber"],
-        //                CreatedOn = (DateTime)reader["createdon"]
-        //            };
-        //            return foundUser;
-        //        }
-        //        else { throw new Exception("No user found with the given credentials!"); }
-        //    }
-        //    finally
-        //    {
-        //        reader.Close();
-        //    }
-        //}
-
         public void Rollback()
         {
             connection.Rollback();
@@ -80,6 +48,7 @@ namespace DBBroker
             cmd.Dispose();
             return obj;
         }
+
         //public void AddUser(User user)
         //{
         //    SqlCommand command = connection.CreateCommand();
@@ -230,24 +199,55 @@ namespace DBBroker
         //}
 
 
-        public Advertisement AddAdvertisement(Advertisement advertisement)
-        {
-            advertisement.Id = Guid.NewGuid();
-            SqlCommand command = connection.CreateCommand();
-            command.CommandText = $"insert into {advertisement.TableName} values (@id, @userId, @vehicleId, @exchange, @price, @desc, @cron)";
-            command.Parameters.Clear();
-            command.Parameters.AddWithValue("@id", advertisement.Id);
-            command.Parameters.AddWithValue("@userId", advertisement.User.Id);
-            command.Parameters.AddWithValue("@vehicleId", advertisement.Vehicle.Id);
-            command.Parameters.AddWithValue("@exchange", advertisement.AcceptsExchange ? "true" : "false");
-            command.Parameters.AddWithValue("@price", advertisement.Price);
-            command.Parameters.AddWithValue("@desc", advertisement.Description);
-            command.Parameters.AddWithValue("@cron", DateTime.Now);
+        //public Advertisement AddAdvertisement(Advertisement advertisement)
+        //{
+        //    advertisement.Id = Guid.NewGuid();
+        //    SqlCommand command = connection.CreateCommand();
+        //    command.CommandText = $"insert into {advertisement.TableName} values (@id, @userId, @vehicleId, @exchange, @price, @desc, @cron)";
+        //    command.Parameters.Clear();
+        //    command.Parameters.AddWithValue("@id", advertisement.Id);
+        //    command.Parameters.AddWithValue("@userId", advertisement.User.Id);
+        //    command.Parameters.AddWithValue("@vehicleId", advertisement.Vehicle.Id);
+        //    command.Parameters.AddWithValue("@exchange", advertisement.AcceptsExchange ? "true" : "false");
+        //    command.Parameters.AddWithValue("@price", advertisement.Price);
+        //    command.Parameters.AddWithValue("@desc", advertisement.Description);
+        //    command.Parameters.AddWithValue("@cron", DateTime.Now);
 
-            command.ExecuteNonQuery();
-            command.Dispose();
-            return advertisement;
-        }
+        //    command.ExecuteNonQuery();
+        //    command.Dispose();
+        //    return advertisement;
+        //}
+        //public User Login(User user)
+        //{
+        //    SqlCommand command = connection.CreateCommand();
+        //    command.CommandText = $"select * from [user] where username = '{user.Username}' and password = '{user.Password}'";
+        //    SqlDataReader reader = command.ExecuteReader();
+        //    try
+        //    {
+
+        //        if (reader.Read() && reader.HasRows)
+        //        {
+        //            User foundUser = new User
+        //            {
+        //                Id = (Guid)reader["id"],
+        //                Username = (string)reader["username"],
+        //                Password = (string)reader["password"],
+        //                FirstName = (string)reader["firstname"],
+        //                LastName = (string)reader["lastname"],
+        //                Address = (string)reader["address"],
+        //                City = (string)reader["city"],
+        //                PhoneNumber = (string)reader["phonenumber"],
+        //                CreatedOn = (DateTime)reader["createdon"]
+        //            };
+        //            return foundUser;
+        //        }
+        //        else { throw new Exception("No user found with the given credentials!"); }
+        //    }
+        //    finally
+        //    {
+        //        reader.Close();
+        //    }
+        //}
 
 
         public void RemoveImagesForAdvertisement(Guid advertisementId)
@@ -280,7 +280,7 @@ namespace DBBroker
         public Vehicle UpdateVehicle(Vehicle vehicle)
         {
             SqlCommand command = connection.CreateCommand();
-            command.CommandText = $"update {vehicle.TableName} set make = @make, model = @model, bodyType = @bodyType, year = @year, mileage = @mileage, fuelType = @fuelType where id = @id";
+            command.CommandText = $"update {vehicle.TableName} set make = @make, model = @model, bodyType = @bodyType where id = @id";
             command.Parameters.Clear();
             command.Parameters.AddWithValue("@id", vehicle.Id);
             command.Parameters.AddWithValue("@make", vehicle.Make);
@@ -377,6 +377,13 @@ namespace DBBroker
                 }
             }
             return result;
+        }
+
+        public void Delete(IEntity obj)
+        {
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = $"DELETE FROM {obj.TableName} WHERE {obj.DeleteWhereClause}";
+            command.ExecuteNonQuery();
         }
     }
 }

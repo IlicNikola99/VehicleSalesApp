@@ -1,4 +1,5 @@
-﻿using DBBroker;
+﻿using Common.Domain;
+using DBBroker;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace Server.SystemOperation
 
         protected override void ExecuteConcreteOperation()
         {
-            broker.RemoveImagesForAdvertisement(advertisementId);
+            broker.Delete(new Image() { AdvertisementId = advertisementId});
         }
     }
 }
