@@ -248,6 +248,46 @@ namespace DBBroker
         //        reader.Close();
         //    }
         //}
+        //public Vehicle UpdateVehicle(Vehicle vehicle)
+        //{
+        //    SqlCommand command = connection.CreateCommand();
+        //    command.CommandText = $"update {vehicle.TableName} set make = @make, model = @model, bodyType = @bodyType where id = @id";
+        //    command.Parameters.Clear();
+        //    command.Parameters.AddWithValue("@id", vehicle.Id);
+        //    command.Parameters.AddWithValue("@make", vehicle.Make);
+        //    command.Parameters.AddWithValue("@model", vehicle.Model);
+        //    command.Parameters.AddWithValue("@bodyType", vehicle.BodyType.ToString());
+        //    // command.Parameters.AddWithValue("@year", vehicle.Year.ToString());
+        //    //command.Parameters.AddWithValue("@mileage", vehicle.Mileage.ToString());
+        //    //command.Parameters.AddWithValue("@fuelType", vehicle.FuelType.ToString());
+
+        //    Console.WriteLine(">>> SQL COMMAND: ");
+        //    Console.WriteLine(command.CommandText);
+        //    command.ExecuteNonQuery();
+        //    command.Dispose();
+        //    return vehicle;
+        //}
+
+        //public List<CommentView> GetAllCommentsForAdvertisement(Guid advertisementId)
+        //{
+
+        //    SqlCommand command = connection.CreateCommand();
+        //    command.CommandText = $"select u.Username, c.Text " +
+        //        $"from [Comment] c join [User] u on c.UserId = u.id  " +
+        //        $"where c.advertisementId = '{advertisementId}'";
+        //    List<CommentView> result = new List<CommentView>();
+        //    SqlDataReader reader = command.ExecuteReader();
+        //    while (reader.Read())
+        //    {
+        //        CommentView comment = new CommentView();
+        //        comment.Text = reader["Text"].ToString();
+        //        comment.Username = reader["Username"].ToString();
+
+        //        result.Add(comment);
+        //    }
+        //    reader.Close();
+        //    return result;
+        //}
 
 
         public void RemoveImagesForAdvertisement(Guid advertisementId)
@@ -277,51 +317,11 @@ namespace DBBroker
             return advertisement;
         }
 
-        public Vehicle UpdateVehicle(Vehicle vehicle)
-        {
-            SqlCommand command = connection.CreateCommand();
-            command.CommandText = $"update {vehicle.TableName} set make = @make, model = @model, bodyType = @bodyType where id = @id";
-            command.Parameters.Clear();
-            command.Parameters.AddWithValue("@id", vehicle.Id);
-            command.Parameters.AddWithValue("@make", vehicle.Make);
-            command.Parameters.AddWithValue("@model", vehicle.Model);
-            command.Parameters.AddWithValue("@bodyType", vehicle.BodyType.ToString());
-            // command.Parameters.AddWithValue("@year", vehicle.Year.ToString());
-            //command.Parameters.AddWithValue("@mileage", vehicle.Mileage.ToString());
-            //command.Parameters.AddWithValue("@fuelType", vehicle.FuelType.ToString());
-
-            Console.WriteLine(">>> SQL COMMAND: ");
-            Console.WriteLine(command.CommandText);
-            command.ExecuteNonQuery();
-            command.Dispose();
-            return vehicle;
-        }
-
-        //public List<CommentView> GetAllCommentsForAdvertisement(Guid advertisementId)
-        //{
-
-        //    SqlCommand command = connection.CreateCommand();
-        //    command.CommandText = $"select u.Username, c.Text " +
-        //        $"from [Comment] c join [User] u on c.UserId = u.id  " +
-        //        $"where c.advertisementId = '{advertisementId}'";
-        //    List<CommentView> result = new List<CommentView>();
-        //    SqlDataReader reader = command.ExecuteReader();
-        //    while (reader.Read())
-        //    {
-        //        CommentView comment = new CommentView();
-        //        comment.Text = reader["Text"].ToString();
-        //        comment.Username = reader["Username"].ToString();
-
-        //        result.Add(comment);
-        //    }
-        //    reader.Close();
-        //    return result;
-        //}
 
         public IEntity GetOne(IEntity obj)
         {
             SqlCommand command = connection.CreateCommand();
-            command.CommandText = $"SELECT * FROM {obj.TableName} WHERE {obj.WhereClause}  {obj.OrderByClause} ";
+            command.CommandText = $"SELECT * FROM {obj.TableName} WHERE {obj.WhereClause}";
             SqlDataReader reader = command.ExecuteReader();
             IEntity result = null;
 
@@ -383,6 +383,13 @@ namespace DBBroker
         {
             SqlCommand command = connection.CreateCommand();
             command.CommandText = $"DELETE FROM {obj.TableName} WHERE {obj.DeleteWhereClause}";
+            command.ExecuteNonQuery();
+        }
+
+        public void Update(IEntity obj)
+        {
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = $"UPDATE {obj.TableName} SET {obj.UpdateValues} WHERE {obj.WhereClause}";
             command.ExecuteNonQuery();
         }
     }

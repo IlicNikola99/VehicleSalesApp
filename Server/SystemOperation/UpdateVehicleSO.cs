@@ -17,7 +17,7 @@ namespace Server.SystemOperation
         }
         protected override void ExecuteConcreteOperation()
         {
-            this.v = broker.UpdateVehicle(v);
+            broker.Update(v);
         }
     }
 }

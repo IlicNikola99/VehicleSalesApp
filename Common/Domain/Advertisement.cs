@@ -43,10 +43,10 @@ namespace Common.Domain
         public string SelectValues => "*";
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        public string UpdateValues => "";
+        public string UpdateValues => $"userId = '{User.Id}', vehicleId = '{Vehicle.Id}', AcceptsExchange = '{AcceptsExchange}', price = '{Price}', description = '{Description}' , year = '{Year}' , mileage = '{Mileage}' , fuelType = '{FuelType}' ";
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        public string WhereClause => "";
+        public string WhereClause => $"id = '{this.Id}' ";
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         public string JoinClause => "";

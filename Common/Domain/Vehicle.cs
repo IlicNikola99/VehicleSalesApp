@@ -36,7 +36,7 @@ namespace Common.Domain
         public string SelectValues => "*";
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        public string UpdateValues => "";
+        public string UpdateValues => $"make = '{Make}', model = '{Model}', bodyType = '{BodyType}' ";
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         public string WhereClause => $"id = '{this.Id}'";
