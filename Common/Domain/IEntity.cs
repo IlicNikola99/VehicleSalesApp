@@ -11,7 +11,6 @@ namespace Common.Domain
     {
         string TableName { get; }
         string TableAlias { get; }
-        string InsertColumns { get; }
         string InsertValues { get; }
         string SelectValues { get; }
         string UpdateValues { get; }
@@ -20,6 +19,7 @@ namespace Common.Domain
         string WhereClause { get; }
         string JoinClause { get; }
         string SearchWhereClause { get; }
+        string OrderByClause { get; }
         void GenerateNewId();
         IEntity ReadObjectRow(SqlDataReader reader);
         IEntity ReadObjectRowSearch(SqlDataReader reader);

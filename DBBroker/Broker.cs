@@ -297,31 +297,31 @@ namespace DBBroker
             return vehicle;
         }
 
-        public List<CommentView> GetAllCommentsForAdvertisement(Guid advertisementId)
+        //public List<CommentView> GetAllCommentsForAdvertisement(Guid advertisementId)
+        //{
+
+        //    SqlCommand command = connection.CreateCommand();
+        //    command.CommandText = $"select u.Username, c.Text " +
+        //        $"from [Comment] c join [User] u on c.UserId = u.id  " +
+        //        $"where c.advertisementId = '{advertisementId}'";
+        //    List<CommentView> result = new List<CommentView>();
+        //    SqlDataReader reader = command.ExecuteReader();
+        //    while (reader.Read())
+        //    {
+        //        CommentView comment = new CommentView();
+        //        comment.Text = reader["Text"].ToString();
+        //        comment.Username = reader["Username"].ToString();
+
+        //        result.Add(comment);
+        //    }
+        //    reader.Close();
+        //    return result;
+        //}
+
+        public IEntity GetOne(IEntity obj)
         {
-
             SqlCommand command = connection.CreateCommand();
-            command.CommandText = $"select u.Username, c.Text " +
-                $"from [Comment] c join [User] u on c.UserId = u.id  " +
-                $"where c.advertisementId = '{advertisementId}'";
-            List<CommentView> result = new List<CommentView>();
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                CommentView comment = new CommentView();
-                comment.Text = reader["Text"].ToString();
-                comment.Username = reader["Username"].ToString();
-
-                result.Add(comment);
-            }
-            reader.Close();
-            return result;
-        }
-
-        public IEntity GetOne(IEntity entity)
-        {
-            SqlCommand command = connection.CreateCommand();
-            command.CommandText = $"SELECT * FROM {entity.TableName} WHERE {entity.WhereClause}";
+            command.CommandText = $"SELECT * FROM {obj.TableName} WHERE {obj.WhereClause}  {obj.OrderByClause} ";
             SqlDataReader reader = command.ExecuteReader();
             IEntity result = null;
 
@@ -330,7 +330,7 @@ namespace DBBroker
                 command.Dispose();
                 while (reader.Read())
                 {
-                   result = entity.ReadObjectRow(reader);
+                   result = obj.ReadObjectRow(reader);
                 }
                 return result;
             }
@@ -344,7 +344,7 @@ namespace DBBroker
         {
             List<IEntity> result = new List<IEntity>();
             SqlCommand command = connection.CreateCommand();
-            command.CommandText = $"SELECT {obj.SelectValues} FROM {obj.TableName} {obj.TableAlias} {obj.JoinClause}";
+            command.CommandText = $"SELECT {obj.SelectValues} FROM {obj.TableName} {obj.TableAlias} {obj.JoinClause}  {obj.OrderByClause} ";
             using (SqlDataReader reader = command.ExecuteReader())
             {
                 try
@@ -367,7 +367,7 @@ namespace DBBroker
         {
             List<IEntity> result = new List<IEntity>();
             SqlCommand command = connection.CreateCommand();
-            command.CommandText = $"SELECT {obj.SearchValues} FROM {obj.TableName} {obj.TableAlias} {obj.JoinClause} WHERE {obj.SearchWhereClause}";
+            command.CommandText = $"SELECT {obj.SearchValues} FROM {obj.TableName} {obj.TableAlias} {obj.JoinClause} WHERE {obj.SearchWhereClause} {obj.OrderByClause} ";
             using (SqlDataReader reader = command.ExecuteReader())
             {
                 while (reader.Read())

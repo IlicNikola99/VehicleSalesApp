@@ -20,7 +20,21 @@ namespace Server.SystemOperation
 
         protected override void ExecuteConcreteOperation()
         {
-            Result = broker.GetAllCommentsForAdvertisement(Advertisement.Id);
+            List<IEntity> foundComments = broker.Search(new Comment() { AdvertisementId = Advertisement.Id });
+            List<CommentView> commentViews = new List<CommentView>();
+
+
+            foundComments.ForEach(comment =>
+            {
+                if (comment is Comment c)
+                {
+                    CommentView commentView = new CommentView() { Username = c.Username, Text = c.Text };
+                    commentViews.Add(commentView);
+                }
+
+            });
+
+            Result = commentViews;
         }
     }
 }

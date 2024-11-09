@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,42 +18,47 @@ namespace Common.Domain
         }
 
         public Guid UserId { get; set; }
+
         public Guid AdvertisementId{ get; set; }
+
         public string Text { get; set; }
-      
+
+        public string Username { get; set; }
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         public string TableName => "[Comment]";
 
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         public string InsertValues => $"'{Id}','{UserId}', '{AdvertisementId}','{Text}', '{CreatedOn}'";
 
-        public string TableAlias => throw new NotImplementedException();
 
-        public string InsertColumns => "";
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string TableAlias => "c";
 
-        public string SelectValues => throw new NotImplementedException();
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string OrderByClause => $"order by {TableAlias}.CreatedOn desc";
 
-        public string UpdateValues => throw new NotImplementedException();
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string SelectValues => "*";
 
-        public string WhereClause => throw new NotImplementedException();
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string UpdateValues => "";
 
-        public string JoinClause => throw new NotImplementedException();
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string WhereClause => "";
 
-        public string SearchValues => throw new NotImplementedException();
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string JoinClause => "join [User] u on c.UserId = u.id";
 
-        public string SearchWhereClause => throw new NotImplementedException();
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string SearchValues => "u.Username, c.Text";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string SearchWhereClause => $"c.advertisementId = '{AdvertisementId}'";
 
         public void GenerateNewId()
         {
             this.Id = Guid.NewGuid();
-        }
-
-        public List<IEntity> GetAll(SqlDataReader reader)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEntity GetOne(SqlDataReader reader)
-        {
-            throw new NotImplementedException();
         }
 
         public IEntity ReadObjectRow(SqlDataReader reader)
@@ -62,7 +68,12 @@ namespace Common.Domain
 
         public IEntity ReadObjectRowSearch(SqlDataReader reader)
         {
-            throw new NotImplementedException();
+            Comment comment = new Comment()
+            {
+                Username = reader["Username"].ToString(),
+                Text = reader["Text"].ToString()
+            };
+            return comment;
         }
     }
 

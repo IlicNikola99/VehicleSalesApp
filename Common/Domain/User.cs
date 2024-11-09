@@ -34,7 +34,7 @@ namespace Common.Domain
         public string TableAlias => "";
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        public string InsertColumns => "";
+        public string OrderByClause => "";
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)] 
         public string SelectValues => "*";
