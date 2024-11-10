@@ -54,6 +54,7 @@
             this.btnUploadImages = new System.Windows.Forms.Button();
             this.btnResetSelection = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.btnRemoveAdvertisement = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -91,7 +92,7 @@
             // txtMake
             // 
             this.txtMake.Location = new System.Drawing.Point(107, 20);
-            this.txtMake.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMake.Margin = new System.Windows.Forms.Padding(2);
             this.txtMake.Name = "txtMake";
             this.txtMake.Size = new System.Drawing.Size(118, 20);
             this.txtMake.TabIndex = 3;
@@ -99,7 +100,7 @@
             // txtModel
             // 
             this.txtModel.Location = new System.Drawing.Point(107, 48);
-            this.txtModel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtModel.Margin = new System.Windows.Forms.Padding(2);
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(118, 20);
             this.txtModel.TabIndex = 4;
@@ -107,7 +108,7 @@
             // txtMileage
             // 
             this.txtMileage.Location = new System.Drawing.Point(107, 134);
-            this.txtMileage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMileage.Margin = new System.Windows.Forms.Padding(2);
             this.txtMileage.Name = "txtMileage";
             this.txtMileage.Size = new System.Drawing.Size(118, 20);
             this.txtMileage.TabIndex = 10;
@@ -116,7 +117,7 @@
             // txtYear
             // 
             this.txtYear.Location = new System.Drawing.Point(107, 106);
-            this.txtYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtYear.Margin = new System.Windows.Forms.Padding(2);
             this.txtYear.Name = "txtYear";
             this.txtYear.Size = new System.Drawing.Size(118, 20);
             this.txtYear.TabIndex = 9;
@@ -146,7 +147,7 @@
             // 
             this.cmbBodyType.FormattingEnabled = true;
             this.cmbBodyType.Location = new System.Drawing.Point(107, 78);
-            this.cmbBodyType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbBodyType.Margin = new System.Windows.Forms.Padding(2);
             this.cmbBodyType.Name = "cmbBodyType";
             this.cmbBodyType.Size = new System.Drawing.Size(118, 21);
             this.cmbBodyType.TabIndex = 12;
@@ -155,7 +156,7 @@
             // 
             this.rbDiesel.AutoSize = true;
             this.rbDiesel.Location = new System.Drawing.Point(112, 166);
-            this.rbDiesel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbDiesel.Margin = new System.Windows.Forms.Padding(2);
             this.rbDiesel.Name = "rbDiesel";
             this.rbDiesel.Size = new System.Drawing.Size(54, 17);
             this.rbDiesel.TabIndex = 13;
@@ -167,7 +168,7 @@
             // 
             this.rbPetrol.AutoSize = true;
             this.rbPetrol.Location = new System.Drawing.Point(168, 166);
-            this.rbPetrol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbPetrol.Margin = new System.Windows.Forms.Padding(2);
             this.rbPetrol.Name = "rbPetrol";
             this.rbPetrol.Size = new System.Drawing.Size(52, 17);
             this.rbPetrol.TabIndex = 14;
@@ -187,8 +188,8 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(374, 443);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubmit.Location = new System.Drawing.Point(376, 482);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(103, 21);
             this.btnSubmit.TabIndex = 16;
@@ -210,7 +211,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(63, 19);
+            this.groupBox1.Location = new System.Drawing.Point(65, 58);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(264, 200);
             this.groupBox1.TabIndex = 17;
@@ -220,7 +221,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(315, 249);
+            this.label4.Location = new System.Drawing.Point(317, 288);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 18;
@@ -228,8 +229,8 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(397, 246);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPrice.Location = new System.Drawing.Point(399, 285);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(118, 20);
             this.txtPrice.TabIndex = 16;
@@ -238,7 +239,7 @@
             // checkBoxExchange
             // 
             this.checkBoxExchange.AutoSize = true;
-            this.checkBoxExchange.Location = new System.Drawing.Point(374, 294);
+            this.checkBoxExchange.Location = new System.Drawing.Point(376, 333);
             this.checkBoxExchange.Name = "checkBoxExchange";
             this.checkBoxExchange.Size = new System.Drawing.Size(123, 17);
             this.checkBoxExchange.TabIndex = 19;
@@ -247,7 +248,7 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(361, 328);
+            this.txtDescription.Location = new System.Drawing.Point(363, 367);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(194, 96);
             this.txtDescription.TabIndex = 20;
@@ -256,7 +257,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(287, 366);
+            this.label8.Location = new System.Drawing.Point(289, 405);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 13);
@@ -275,10 +276,10 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.pnlImages);
-            this.groupBox2.Location = new System.Drawing.Point(374, 19);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Location = new System.Drawing.Point(376, 58);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(453, 166);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
@@ -288,15 +289,15 @@
             // 
             this.pnlImages.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlImages.Location = new System.Drawing.Point(2, 15);
-            this.pnlImages.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlImages.Margin = new System.Windows.Forms.Padding(2);
             this.pnlImages.Name = "pnlImages";
             this.pnlImages.Size = new System.Drawing.Size(449, 149);
             this.pnlImages.TabIndex = 0;
             // 
             // btnUploadImages
             // 
-            this.btnUploadImages.Location = new System.Drawing.Point(489, 195);
-            this.btnUploadImages.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUploadImages.Location = new System.Drawing.Point(491, 234);
+            this.btnUploadImages.Margin = new System.Windows.Forms.Padding(2);
             this.btnUploadImages.Name = "btnUploadImages";
             this.btnUploadImages.Size = new System.Drawing.Size(100, 24);
             this.btnUploadImages.TabIndex = 23;
@@ -305,8 +306,8 @@
             // 
             // btnResetSelection
             // 
-            this.btnResetSelection.Location = new System.Drawing.Point(623, 195);
-            this.btnResetSelection.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnResetSelection.Location = new System.Drawing.Point(625, 234);
+            this.btnResetSelection.Margin = new System.Windows.Forms.Padding(2);
             this.btnResetSelection.Name = "btnResetSelection";
             this.btnResetSelection.Size = new System.Drawing.Size(100, 24);
             this.btnResetSelection.TabIndex = 24;
@@ -316,17 +317,30 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(410, 230);
+            this.label9.Location = new System.Drawing.Point(412, 269);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 13);
             this.label9.TabIndex = 25;
             this.label9.Text = "Description:";
             // 
+            // btnRemoveAdvertisement
+            // 
+            this.btnRemoveAdvertisement.ForeColor = System.Drawing.Color.DarkRed;
+            this.btnRemoveAdvertisement.Location = new System.Drawing.Point(2, 2);
+            this.btnRemoveAdvertisement.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRemoveAdvertisement.Name = "btnRemoveAdvertisement";
+            this.btnRemoveAdvertisement.Size = new System.Drawing.Size(170, 28);
+            this.btnRemoveAdvertisement.TabIndex = 26;
+            this.btnRemoveAdvertisement.Text = "Remove Advertisement";
+            this.btnRemoveAdvertisement.UseVisualStyleBackColor = true;
+            this.btnRemoveAdvertisement.Visible = false;
+            // 
             // UCAddAdvertisement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnRemoveAdvertisement);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnResetSelection);
             this.Controls.Add(this.btnUploadImages);
@@ -339,9 +353,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSubmit);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCAddAdvertisement";
-            this.Size = new System.Drawing.Size(882, 473);
+            this.Size = new System.Drawing.Size(892, 532);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -378,5 +392,6 @@
         public System.Windows.Forms.Panel pnlImages;
         public System.Windows.Forms.Button btnResetSelection;
         public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Button btnRemoveAdvertisement;
     }
 }

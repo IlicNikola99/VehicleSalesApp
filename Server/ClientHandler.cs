@@ -70,6 +70,10 @@ namespace Server
                         AdvertisementController.Instance.UpdateAdvertisement((Advertisement)req.Argument);
                         r.Result = req.Argument;
                         break;
+                    case Operation.RemoveAdvertisement:
+                        AdvertisementController.Instance.RemoveAdvertisement((Advertisement)req.Argument);
+                        r.Result = req.Argument;
+                        break;
                     case Operation.GetAllAdvertisements:
                         r.Result = AdvertisementController.Instance.GetAllAdvertisements();
                         break;

@@ -20,6 +20,7 @@ namespace Common.Communication
         UpdateAdvertisement,
         UpdateVehicle,
         AddComment,
-        GetAllComments
+        GetAllComments,
+        RemoveAdvertisement
     }
 }

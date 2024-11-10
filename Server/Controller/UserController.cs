@@ -48,19 +48,5 @@ namespace Server
             }
             return loggedInUser;
         }
-
-        //internal List<City> GetAllCity()
-        //{
-        //    try
-        //    {
-        //        broker.OpenConnection();
-        //        return broker.GetAllCity();
-        //    }
-        //    finally
-        //    {
-        //        broker.CloseConnection();
-
-        //    }
-        //}
     }
 }

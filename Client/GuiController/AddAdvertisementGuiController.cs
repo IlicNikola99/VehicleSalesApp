@@ -50,6 +50,7 @@ namespace Client.GuiController
             addAdvertisement.btnUploadImages.Click += UploadImages;
             addAdvertisement.btnResetSelection.Text = "Remove Images";
             addAdvertisement.btnResetSelection.Click += RemoveImages;
+            addAdvertisement.btnRemoveAdvertisement.Click += RemoveAdvertisement;
 
             addAdvertisement.txtMake.Text = advertisement.Vehicle.Make;
             addAdvertisement.txtModel.Text = advertisement.Vehicle.Model;
@@ -85,8 +86,25 @@ namespace Client.GuiController
                 addAdvertisement.txtMileage
 
             };
+            addAdvertisement.btnRemoveAdvertisement.Visible = false;
+            if (advertisement.User.Equals(LoginGuiController.Instance.LoggedInUser)) {
+                addAdvertisement.btnRemoveAdvertisement.Visible = true;
+            }
+
 
             return addAdvertisement;
+        }
+
+        private void RemoveAdvertisement(object sender, EventArgs e)
+        {
+            RemoveImages(sender, e);
+            Response response = Communication.Instance.RemoveAdvertisement(currentAdvertisement);
+            if (response.Exception == null)
+            {
+                MessageBox.Show("Advertisement succesfully deleted");
+                MainCoordinator.Instance.ShowHomePanel();
+
+            }
         }
 
         private void UploadImages(object sender, EventArgs e)
@@ -157,6 +175,8 @@ namespace Client.GuiController
                     UploadImages((Advertisement)response.Result);
                     Debug.WriteLine("Advertisement succesfully added!");
                     MessageBox.Show("Advertisement succesfully added!");
+                    MainCoordinator.Instance.ShowHomePanel();
+
                 }
                 else
                 {
@@ -233,7 +253,7 @@ namespace Client.GuiController
                         UploadImages((Advertisement)responseAdvertisement.Result);
                     }
                     Debug.WriteLine("Advertisement succesfully updated!");
-                    MessageBox.Show("Advertisement succesfully updated!");
+                    MessageBox.Show("Advertisement succesfully updated!");                 
                 }
                 else
                 {

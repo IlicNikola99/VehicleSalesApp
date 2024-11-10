@@ -1,4 +1,5 @@
-﻿using Common.Communication;
+﻿using Client.UserControls;
+using Common.Communication;
 using Common.Domain;
 using System;
 using System.Collections.Generic;
@@ -180,6 +181,18 @@ namespace Client
             {
                 Argument = advertisement,
                 Operation = Operation.GetAllComments
+            };
+            sender.Send(request);
+            Response response = (Response)receiver.Receive();
+            return response;
+        }
+
+        internal Response RemoveAdvertisement(Advertisement advertisement)
+        {
+            Request request = new Request
+            {
+                Argument = advertisement,
+                Operation = Operation.RemoveAdvertisement
             };
             sender.Send(request);
             Response response = (Response)receiver.Receive();

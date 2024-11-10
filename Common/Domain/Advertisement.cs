@@ -58,7 +58,7 @@ namespace Common.Domain
         public string SearchWhereClause => "";
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        public string DeleteWhereClause => "";
+        public string DeleteWhereClause => $"id = '{this.Id}' ";
 
 
         public void GenerateNewId()

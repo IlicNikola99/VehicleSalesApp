@@ -23,8 +23,8 @@ namespace Server.Controller
         }
         private AdvertisementController() { broker = new Broker(); }
 
-        
-       
+
+
 
         internal void AddAdvertisement(Advertisement argument)
         {
@@ -57,6 +57,12 @@ namespace Server.Controller
             GetAllCommentSO getAllComment = new GetAllCommentSO(argument);
             getAllComment.ExecuteTemplate();
             return getAllComment.Result;
+        }
+
+        internal void RemoveAdvertisement(Advertisement argument)
+        {
+            RemoveAdvertisementSO removeAdvertisement = new RemoveAdvertisementSO(argument);
+            removeAdvertisement.ExecuteTemplate();
         }
     }
 }
