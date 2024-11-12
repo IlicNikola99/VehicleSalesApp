@@ -7,10 +7,10 @@ using Common.Helpers;
 
 namespace DBBroker
 {
-    public class Broker
+    public class GenericBroker : IBroker
     {
         private DbConnection connection;
-        public Broker()
+        public GenericBroker()
         {
             connection = new DbConnection();
         }

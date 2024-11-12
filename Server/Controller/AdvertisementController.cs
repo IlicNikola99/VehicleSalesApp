@@ -11,7 +11,7 @@ namespace Server.Controller
 {
     public class AdvertisementController
     {
-        private Broker broker;
+        private IBroker broker;
         private static AdvertisementController instance;
         public static AdvertisementController Instance
         {
@@ -21,7 +21,7 @@ namespace Server.Controller
                 return instance;
             }
         }
-        private AdvertisementController() { broker = new Broker(); }
+        private AdvertisementController() { broker = new GenericBroker(); }
 
 
 

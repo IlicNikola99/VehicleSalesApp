@@ -9,11 +9,11 @@ namespace Server.SystemOperation
 {
     public abstract class SystemOperationBase
     {
-        protected Broker broker;
+        protected IBroker broker;
 
         public SystemOperationBase()
         {
-            broker = new Broker();
+            broker = new GenericBroker();
         }
 
 

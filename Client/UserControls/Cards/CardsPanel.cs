@@ -64,5 +64,12 @@ namespace Client.UserControls.Cards
 
             ctl.Location = new Point(xPos, yPos);
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            this.ResumeLayout(false);
+
+        }
     }
 }

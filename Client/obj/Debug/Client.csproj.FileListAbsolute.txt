@@ -66,7 +66,6 @@ C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\obj\Debug\Cl
 C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\obj\Debug\Client.FrmLogin.resources
 C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\obj\Debug\Client.FrmMain.resources
 C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\obj\Debug\Client.Properties.Resources.resources
-C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\obj\Debug\Client.UserControls.UCAddPerson.resources
 C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\obj\Debug\Client.csproj.GenerateResource.cache
 C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
 C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\obj\Debug\Client.exe
@@ -88,3 +87,4 @@ C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\obj\Debug\Cl
 C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\obj\Debug\Client.UserControls.Cards.UCCard.resources
 C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\obj\Debug\Client.UserControls.UCAdvertisement.resources
 C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\obj\Debug\Client.UserControls.UCSearch.resources
+C:\Users\Nikola\Documents\Projektovanje softvera\PS Projekat\Client\obj\Debug\Client.UserControls.Cards.CardsPanel.resources

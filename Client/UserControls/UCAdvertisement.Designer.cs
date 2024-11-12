@@ -57,6 +57,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox1.Controls.Add(this.labelModelPlaceholder);
             this.groupBox1.Controls.Add(this.labelFuelPlaceholder);
             this.groupBox1.Controls.Add(this.labelMileagePlaceholder);
@@ -79,6 +80,7 @@
             // 
             // labelModelPlaceholder
             // 
+            this.labelModelPlaceholder.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelModelPlaceholder.AutoSize = true;
             this.labelModelPlaceholder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelModelPlaceholder.Location = new System.Drawing.Point(109, 50);
@@ -90,6 +92,7 @@
             // 
             // labelFuelPlaceholder
             // 
+            this.labelFuelPlaceholder.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelFuelPlaceholder.AutoSize = true;
             this.labelFuelPlaceholder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFuelPlaceholder.Location = new System.Drawing.Point(109, 168);
@@ -101,6 +104,7 @@
             // 
             // labelMileagePlaceholder
             // 
+            this.labelMileagePlaceholder.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelMileagePlaceholder.AutoSize = true;
             this.labelMileagePlaceholder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMileagePlaceholder.Location = new System.Drawing.Point(109, 136);
@@ -112,6 +116,7 @@
             // 
             // labelYearPlaceholder
             // 
+            this.labelYearPlaceholder.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelYearPlaceholder.AutoSize = true;
             this.labelYearPlaceholder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelYearPlaceholder.Location = new System.Drawing.Point(109, 108);
@@ -123,6 +128,7 @@
             // 
             // labelBodyPlaceholder
             // 
+            this.labelBodyPlaceholder.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelBodyPlaceholder.AutoSize = true;
             this.labelBodyPlaceholder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBodyPlaceholder.Location = new System.Drawing.Point(109, 80);
@@ -134,6 +140,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(109, 50);
@@ -144,6 +151,7 @@
             // 
             // labelMakePlaceholder
             // 
+            this.labelMakePlaceholder.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelMakePlaceholder.AutoSize = true;
             this.labelMakePlaceholder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMakePlaceholder.Location = new System.Drawing.Point(109, 22);
@@ -155,6 +163,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(25, 168);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -165,6 +174,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(25, 136);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -175,6 +185,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(25, 108);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -185,6 +196,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(25, 80);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -195,6 +207,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(25, 50);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -205,6 +218,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(25, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -215,6 +229,7 @@
             // 
             // lblPricePlaceholder
             // 
+            this.lblPricePlaceholder.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblPricePlaceholder.AutoSize = true;
             this.lblPricePlaceholder.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPricePlaceholder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -227,6 +242,7 @@
             // 
             // descriptionPlaceholder
             // 
+            this.descriptionPlaceholder.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.descriptionPlaceholder.BackColor = System.Drawing.SystemColors.ControlLight;
             this.descriptionPlaceholder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.descriptionPlaceholder.Location = new System.Drawing.Point(292, 300);
@@ -238,6 +254,7 @@
             // 
             // pictureBox
             // 
+            this.pictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox.Location = new System.Drawing.Point(208, 3);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(444, 218);
@@ -246,6 +263,7 @@
             // 
             // btnPrevImage
             // 
+            this.btnPrevImage.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnPrevImage.Location = new System.Drawing.Point(60, 98);
             this.btnPrevImage.Name = "btnPrevImage";
             this.btnPrevImage.Size = new System.Drawing.Size(98, 41);
@@ -255,6 +273,7 @@
             // 
             // btnNextImage
             // 
+            this.btnNextImage.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnNextImage.Location = new System.Drawing.Point(730, 98);
             this.btnNextImage.Name = "btnNextImage";
             this.btnNextImage.Size = new System.Drawing.Size(98, 41);
@@ -264,6 +283,7 @@
             // 
             // btnEditAdvertisement
             // 
+            this.btnEditAdvertisement.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnEditAdvertisement.ForeColor = System.Drawing.Color.OliveDrab;
             this.btnEditAdvertisement.Location = new System.Drawing.Point(9, 3);
             this.btnEditAdvertisement.Name = "btnEditAdvertisement";
@@ -275,6 +295,7 @@
             // 
             // btnAddComment
             // 
+            this.btnAddComment.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAddComment.Location = new System.Drawing.Point(730, 477);
             this.btnAddComment.Name = "btnAddComment";
             this.btnAddComment.Size = new System.Drawing.Size(98, 29);
@@ -284,6 +305,7 @@
             // 
             // listBoxComment
             // 
+            this.listBoxComment.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.listBoxComment.BackColor = System.Drawing.SystemColors.ControlLight;
             this.listBoxComment.FormattingEnabled = true;
             this.listBoxComment.Location = new System.Drawing.Point(665, 244);
@@ -294,6 +316,7 @@
             // 
             // txtBoxComment
             // 
+            this.txtBoxComment.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBoxComment.Location = new System.Drawing.Point(665, 451);
             this.txtBoxComment.Multiline = true;
             this.txtBoxComment.Name = "txtBoxComment";

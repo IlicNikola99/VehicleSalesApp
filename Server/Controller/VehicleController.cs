@@ -11,7 +11,7 @@ namespace Server.Controller
 {
     public class VehicleController
     {
-        private Broker broker;
+        private IBroker broker;
 
         private static VehicleController instance;
         public static VehicleController Instance
@@ -22,7 +22,7 @@ namespace Server.Controller
                 return instance;
             }
         }
-        private VehicleController() { broker = new Broker(); }
+        private VehicleController() { broker = new GenericBroker(); }
 
 
         internal Vehicle AddVehicle(Vehicle argument)

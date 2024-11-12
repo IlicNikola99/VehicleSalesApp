@@ -10,7 +10,8 @@ namespace Client
         {
             InitializeComponent();
             itemAddAdvertisement.Click += (s, a) => MainCoordinator.Instance.ShowAddAdvertisementPanel();
-            itemHome.Click += (s, a) => MainCoordinator.Instance.ShowHomePanel();        
+            itemHome.Click += (s, a) => MainCoordinator.Instance.ShowHomePanel();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         public void ChangePanel(Control control)

@@ -89,12 +89,6 @@
     <Compile Include="UserControls\UCAddAdvertisement.Designer.cs">
       <DependentUpon>UCAddAdvertisement.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UCAddPerson.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UCAddPerson.Designer.cs">
-      <DependentUpon>UCAddPerson.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\UCAdvertisement.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,14 +125,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\Cards\CardsPanel.resx">
+      <DependentUpon>CardsPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Cards\UCCard.resx">
       <DependentUpon>UCCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCAddAdvertisement.resx">
       <DependentUpon>UCAddAdvertisement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UCAddPerson.resx">
-      <DependentUpon>UCAddPerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCAdvertisement.resx">
       <DependentUpon>UCAdvertisement.cs</DependentUpon>

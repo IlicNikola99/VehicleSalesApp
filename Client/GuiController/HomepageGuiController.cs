@@ -23,6 +23,8 @@ namespace Client.GuiController
         UCSearch ucSearch;
         ObservableCollection<CardViewModel> cards;
         CardsViewModel VM;
+        int page = 0;
+        const int PAGE_SIZE = 5;
 
         internal Control CreateHomepage()
         {
@@ -35,7 +37,7 @@ namespace Client.GuiController
         public void UCHomepage_Load(object sender, EventArgs e)
         {
             GetAllAdvertisements();
-            homepage.cardsPanel.ViewModel = LoadData();
+            homepage.cardsPanel.ViewModel = LoadPagedData();
             homepage.cardsPanel.DataBind();
             homepage.searchPanel.Controls.Clear();
             List<string> makeNames = allAdvertisements.Select(add => add.Vehicle.Make).Distinct().ToList();
@@ -60,7 +62,54 @@ namespace Client.GuiController
             ucSearch.btnSearch.Click += BtnSearch_Click;
             ucSearch.btnResetSelection.Click += BtnResetSelection_Click;
             homepage.searchPanel.Controls.Add(ucSearch);
+            homepage.btnNextPage.Click += NextPage;
+            homepage.btnPreviousPage.Click += PreviousPage;
 
+        }
+
+        private void NextPage(object sender, EventArgs e)
+        {
+            if ((page + 1) * PAGE_SIZE < allAdvertisements.Count)
+            {
+                page++;
+                homepage.cardsPanel.ViewModel = LoadPagedData();
+                ReloadCards();
+            }
+        }
+
+        private void PreviousPage(object sender, EventArgs e)
+        {
+            if (page > 0)
+            {
+                page--;
+                homepage.cardsPanel.ViewModel = LoadPagedData();
+                ReloadCards();
+            }
+        }
+
+        private CardsViewModel LoadPagedData()
+        {
+            var pagedAdvertisements = allAdvertisements
+                .Skip(page * PAGE_SIZE)
+                .Take(PAGE_SIZE)
+                .Select(advertisement => new CardViewModel()
+                {
+                    MakeModel = advertisement.Vehicle.Make + " " + advertisement.Vehicle.Model,
+                    Year = advertisement.Year.ToString(),
+                    Price = advertisement.Price.ToString() + " €",
+                    Advertisement = advertisement,
+                    ImagePath = advertisement.Images.FirstOrDefault(img => img.Thumbnail)?.Path
+                                ?? advertisement.Images.FirstOrDefault()?.Path
+                                ?? PlaceHolderImage.GetPlaceHolderImage().Path
+                })
+                .ToList();
+
+            cards = new ObservableCollection<CardViewModel>(pagedAdvertisements);
+            VM = new CardsViewModel()
+            {
+                Cards = cards
+            };
+            return VM;
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)
@@ -119,7 +168,7 @@ namespace Client.GuiController
             {
                 allAdvertisements = allAdvertisements.Where(add => add.FuelType.ToString().Equals(fuelType)).ToList();
             }
-            homepage.cardsPanel.ViewModel = LoadData();
+            homepage.cardsPanel.ViewModel = LoadPagedData();
             ReloadCards();
 
         }
@@ -127,7 +176,7 @@ namespace Client.GuiController
         private void BtnResetSelection_Click(object sender, EventArgs e)
         {
             GetAllAdvertisements();
-            homepage.cardsPanel.ViewModel = LoadData();
+            homepage.cardsPanel.ViewModel = LoadPagedData();
             homepage.cardsPanel.DataBind();
 
         }

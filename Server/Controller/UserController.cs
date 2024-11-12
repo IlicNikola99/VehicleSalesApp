@@ -12,7 +12,7 @@ namespace Server
 {
     public class UserController
     {
-        private Broker broker;
+        private IBroker broker;
         private User loggedInUser;
         private static UserController instance;
         public static UserController Instance
@@ -23,7 +23,7 @@ namespace Server
                 return instance;
             }
         }
-        private UserController() { broker = new Broker(); }
+        private UserController() { broker = new GenericBroker(); }
 
         public User Login(User user)
         {

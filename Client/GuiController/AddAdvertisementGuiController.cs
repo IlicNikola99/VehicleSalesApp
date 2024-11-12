@@ -87,7 +87,8 @@ namespace Client.GuiController
 
             };
             addAdvertisement.btnRemoveAdvertisement.Visible = false;
-            if (advertisement.User.Equals(LoginGuiController.Instance.LoggedInUser)) {
+            if (advertisement.User.Equals(LoginGuiController.Instance.LoggedInUser))
+            {
                 addAdvertisement.btnRemoveAdvertisement.Visible = true;
             }
 
@@ -248,12 +249,12 @@ namespace Client.GuiController
                 Response responseAdvertisement = Communication.Instance.UpdateAdvertisement(currentAdvertisement);
                 if (responseAdvertisement.Exception == null)
                 {
-                    if (currentAdvertisement.Images.Count != uploadedImagePaths.Length)
+                    if (uploadedImagePaths != null && currentAdvertisement.Images.Count != uploadedImagePaths.Length)
                     {
                         UploadImages((Advertisement)responseAdvertisement.Result);
                     }
                     Debug.WriteLine("Advertisement succesfully updated!");
-                    MessageBox.Show("Advertisement succesfully updated!");                 
+                    MessageBox.Show("Advertisement succesfully updated!");
                 }
                 else
                 {
@@ -266,7 +267,7 @@ namespace Client.GuiController
                 Debug.WriteLine(">>>>> Error while updating the vehicle info!");
                 throw responseVehicle.Exception;
             }
-           
+
         }
 
         private void RemoveImages(object sender, EventArgs e)
@@ -274,7 +275,7 @@ namespace Client.GuiController
             addAdvertisement.pnlImages.Controls.Clear();
             this.uploadedImagePaths = null;
             Response response = Communication.Instance.RemoveAllImagesForAdvertisement(currentAdvertisement.Id);
-            if(response.Exception != null)
+            if (response.Exception != null)
             {
                 currentAdvertisement.Images = null;
             }

@@ -97,7 +97,11 @@ namespace Client
             this.MaximizeBox = false;
             this.Name = "FrmMain";
             User loggedInUser = LoginGuiController.Instance.LoggedInUser;
-            this.Text = "Welcome " + loggedInUser.FirstName + " "+ loggedInUser.LastName;
+            if (loggedInUser != null)
+            {
+                this.Text = "Welcome " + loggedInUser.FirstName + " " + loggedInUser.LastName;
+            }
+            else this.Text = "Welcome";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.mnMain.ResumeLayout(false);
             this.mnMain.PerformLayout();
