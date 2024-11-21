@@ -82,7 +82,7 @@ namespace Client.GuiController
             comment.UserId = LoginGuiController.Instance.LoggedInUser.Id;
 
             Response response = Communication.Instance.AddComment(comment);
-            if (response != null)
+            if (response.Exception != null)
             {
                 MessageBox.Show("Error when adding new comment");
             } 

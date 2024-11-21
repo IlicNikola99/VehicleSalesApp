@@ -272,6 +272,7 @@ namespace Client.GuiController
             else
             {
                 Debug.WriteLine(">>>>> Error while updating the vehicle info!");
+                MessageBox.Show("Error while updating the vehicle info!");
                 throw responseVehicle.Exception;
             }
 

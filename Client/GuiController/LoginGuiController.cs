@@ -91,7 +91,8 @@ namespace Client.GuiController
             }
             else
             {
-                MessageBox.Show(">>>" + response.Exception.ToString());
+                MessageBox.Show("Error while trying to register, please try again");
+                Console.WriteLine(">>>" + response.Exception.ToString());
             }
         }
 
