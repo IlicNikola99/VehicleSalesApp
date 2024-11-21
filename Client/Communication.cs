@@ -33,11 +33,19 @@ namespace Client
 
         public void Connect()
         {
-            Thread.Sleep(3000);
-            socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            socket.Connect("127.0.0.1", 9999);
-            sender = new Sender(socket);
-            receiver = new Receiver(socket);
+            try
+            {
+                Thread.Sleep(3000);
+                socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                socket.Connect("127.0.0.1", 9999);
+                sender = new Sender(socket);
+                receiver = new Receiver(socket);
+            }
+            catch (SocketException se)
+            {
+                System.Windows.Forms.MessageBox.Show("Server is not started!");
+                throw se;   
+            }
         }
 
         public void Disconnect()

@@ -52,7 +52,12 @@ namespace Server
                         r.Result = req.Argument;
                         break;
                     case Operation.Login:
-                        r.Result = UserController.Instance.Login((User)req.Argument);
+                        UserController.Instance.Login((User)req.Argument);
+                        r.Result = UserController.Instance.GetLoggedInUser();
+                        if (r.Result==null)
+                        {
+                            r.Exception = new SystemException("No user with given credentials found!");
+                        }
                         break;
                     case Operation.CreateVehicle:
                         VehicleController.Instance.AddVehicle((Vehicle)req.Argument);

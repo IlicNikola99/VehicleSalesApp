@@ -182,6 +182,7 @@ namespace Client.GuiController
                 else
                 {
                     Debug.WriteLine(">>>>> Error when adding new advertisement!");
+                    MessageBox.Show("Error when adding new advertisement!");
                     throw response.Exception;
                 }
             }
@@ -226,6 +227,7 @@ namespace Client.GuiController
             else
             {
                 Debug.WriteLine(">>>>> Error when adding new vehicle!");
+                MessageBox.Show("Error when adding vehicle info!");
                 throw response.Exception;
             }
         }
@@ -259,6 +261,7 @@ namespace Client.GuiController
                 else
                 {
                     Debug.WriteLine(">>>>> Error while updating the advertisement!");
+                    MessageBox.Show("Error while updating the advertisement!");
                     throw responseAdvertisement.Exception;
                 }
             }
