@@ -81,8 +81,14 @@ namespace Client.GuiController
             comment.AdvertisementId = currentAdvertisement.Id;
             comment.UserId = LoginGuiController.Instance.LoggedInUser.Id;
 
-            Communication.Instance.AddComment(comment);
+            Response response = Communication.Instance.AddComment(comment);
+            if (response != null)
+            {
+                MessageBox.Show("Error when adding new comment");
+            } 
+            
             LoadComments();
+
         }
 
         private void LoadComments()

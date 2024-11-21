@@ -106,6 +106,10 @@ namespace Client.GuiController
                 MainCoordinator.Instance.ShowHomePanel();
 
             }
+            else {
+                MessageBox.Show("Error when trying to delete the advertisement");
+                return;
+            }
         }
 
         private void UploadImages(object sender, EventArgs e)

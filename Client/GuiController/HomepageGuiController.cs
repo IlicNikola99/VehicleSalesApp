@@ -58,7 +58,7 @@ namespace Client.GuiController
                     .ToList();
             fuelTypes.Insert(0, FUEL_TYPE);
             ucSearch.cmbFuelType.DataSource = fuelTypes;
-            
+
             ucSearch.btnSearch.Click += BtnSearch_Click;
             ucSearch.btnResetSelection.Click += BtnResetSelection_Click;
             homepage.searchPanel.Controls.Add(ucSearch);
@@ -89,6 +89,8 @@ namespace Client.GuiController
 
         private CardsViewModel LoadPagedData()
         {
+            if (allAdvertisements.Count == 0)
+            { MessageBox.Show("No advertisements found!"); }
             var pagedAdvertisements = allAdvertisements
                 .Skip(page * PAGE_SIZE)
                 .Take(PAGE_SIZE)
@@ -159,7 +161,7 @@ namespace Client.GuiController
                 allAdvertisements = allAdvertisements.Where(add => add.Vehicle.Make.Equals(make)).ToList();
             }
 
-            if (!string.IsNullOrEmpty(bodyType) &&  !bodyType.Equals(BODY_TYPE))
+            if (!string.IsNullOrEmpty(bodyType) && !bodyType.Equals(BODY_TYPE))
             {
                 allAdvertisements = allAdvertisements.Where(add => add.Vehicle.BodyType.ToString().Equals(bodyType)).ToList();
             }
@@ -198,7 +200,7 @@ namespace Client.GuiController
                     Advertisement = advertisement
                 };
 
-                if(advertisement.Images.Count > 0 )
+                if (advertisement.Images.Count > 0)
                 {
                     var thumbnailImage = advertisement.Images.FirstOrDefault(img => img.Thumbnail);
                     if (thumbnailImage == null)
