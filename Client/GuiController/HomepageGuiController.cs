@@ -1,5 +1,4 @@
-﻿using Client.Helpers;
-using Client.UserControls;
+﻿using Client.UserControls;
 using Client.UserControls.Cards;
 using Common.Communication;
 using Common.Domain;
@@ -24,7 +23,7 @@ namespace Client.GuiController
         ObservableCollection<CardViewModel> cards;
         CardsViewModel VM;
         int page = 0;
-        const int PAGE_SIZE = 5;
+        int pageSize = 6;
 
         internal Control CreateHomepage()
         {
@@ -64,12 +63,28 @@ namespace Client.GuiController
             homepage.searchPanel.Controls.Add(ucSearch);
             homepage.btnNextPage.Click += NextPage;
             homepage.btnPreviousPage.Click += PreviousPage;
+            ValidatePagingButtons();
 
+        }
+
+        private void ValidatePagingButtons()
+        {
+            if (allAdvertisements.Count <= pageSize)
+            {
+                homepage.btnNextPage.Enabled = false;
+                homepage.btnPreviousPage.Enabled = false;
+                page = 0;
+            }
+            else
+            {
+                homepage.btnNextPage.Enabled = true;
+                homepage.btnPreviousPage.Enabled = true;
+            }
         }
 
         private void NextPage(object sender, EventArgs e)
         {
-            if ((page + 1) * PAGE_SIZE < allAdvertisements.Count)
+            if ((page + 1) * pageSize < allAdvertisements.Count)
             {
                 page++;
                 homepage.cardsPanel.ViewModel = LoadPagedData();
@@ -89,11 +104,20 @@ namespace Client.GuiController
 
         private CardsViewModel LoadPagedData()
         {
+            if (ucSearch.cmbPageSize.SelectedItem != null)
+            {
+                pageSize = Int32.Parse(ucSearch.cmbPageSize.SelectedItem.ToString());
+
+            }
+            else pageSize = 6;
+            ValidatePagingButtons();
             if (allAdvertisements.Count == 0)
-            { MessageBox.Show("No advertisements found!"); }
+            {
+                MessageBox.Show("No advertisements found!");
+            }
             var pagedAdvertisements = allAdvertisements
-                .Skip(page * PAGE_SIZE)
-                .Take(PAGE_SIZE)
+                .Skip(page * pageSize)
+                .Take(pageSize)
                 .Select(advertisement => new CardViewModel()
                 {
                     MakeModel = advertisement.Vehicle.Make + " " + advertisement.Vehicle.Model,
@@ -186,41 +210,6 @@ namespace Client.GuiController
         private void ReloadCards()
         {
             homepage.cardsPanel.DataBind();
-        }
-
-        private CardsViewModel LoadData()
-        {
-            List<CardViewModel> cardViews = allAdvertisements.Select(advertisement =>
-            {
-                CardViewModel cardViewModel = new CardViewModel()
-                {
-                    MakeModel = advertisement.Vehicle.Make + " " + advertisement.Vehicle.Model,
-                    Year = advertisement.Year.ToString(),
-                    Price = advertisement.Price.ToString() + " €",
-                    Advertisement = advertisement
-                };
-
-                if (advertisement.Images.Count > 0)
-                {
-                    var thumbnailImage = advertisement.Images.FirstOrDefault(img => img.Thumbnail);
-                    if (thumbnailImage == null)
-                        thumbnailImage = advertisement.Images.First();
-                    cardViewModel.ImagePath = thumbnailImage?.Path;
-                }
-                else
-                {
-                    cardViewModel.ImagePath = PlaceHolderImage.GetPlaceHolderImage().Path;
-                }
-
-                return cardViewModel;
-            }).ToList();
-
-            cards = new ObservableCollection<CardViewModel>(cardViews);
-            VM = new CardsViewModel()
-            {
-                Cards = cards
-            };
-            return VM;
         }
 
         private void GetAllAdvertisements()

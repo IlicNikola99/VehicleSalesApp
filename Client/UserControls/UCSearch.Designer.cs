@@ -40,6 +40,7 @@
             this.btnResetSelection = new System.Windows.Forms.Button();
             this.txtYearFrom = new System.Windows.Forms.TextBox();
             this.txtMileageFrom = new System.Windows.Forms.TextBox();
+            this.cmbPageSize = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtMileageTo
@@ -105,7 +106,7 @@
             // 
             this.cmbMake.FormattingEnabled = true;
             this.cmbMake.Location = new System.Drawing.Point(22, 21);
-            this.cmbMake.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbMake.Margin = new System.Windows.Forms.Padding(2);
             this.cmbMake.Name = "cmbMake";
             this.cmbMake.Size = new System.Drawing.Size(122, 21);
             this.cmbMake.TabIndex = 20;
@@ -115,7 +116,7 @@
             // 
             this.cmbBodyType.FormattingEnabled = true;
             this.cmbBodyType.Location = new System.Drawing.Point(322, 60);
-            this.cmbBodyType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbBodyType.Margin = new System.Windows.Forms.Padding(2);
             this.cmbBodyType.Name = "cmbBodyType";
             this.cmbBodyType.Size = new System.Drawing.Size(122, 21);
             this.cmbBodyType.TabIndex = 21;
@@ -125,7 +126,7 @@
             // 
             this.cmbFuelType.FormattingEnabled = true;
             this.cmbFuelType.Location = new System.Drawing.Point(481, 60);
-            this.cmbFuelType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbFuelType.Margin = new System.Windows.Forms.Padding(2);
             this.cmbFuelType.Name = "cmbFuelType";
             this.cmbFuelType.Size = new System.Drawing.Size(122, 21);
             this.cmbFuelType.TabIndex = 22;
@@ -161,12 +162,27 @@
             this.txtMileageFrom.Enter += new System.EventHandler(this.EraseText);
             this.txtMileageFrom.Leave += new System.EventHandler(this.ReEnterText);
             // 
+            // cmbPageSize
+            // 
+            this.cmbPageSize.FormattingEnabled = true;
+            this.cmbPageSize.Items.AddRange(new object[] {
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.cmbPageSize.Location = new System.Drawing.Point(22, 96);
+            this.cmbPageSize.Name = "cmbPageSize";
+            this.cmbPageSize.Size = new System.Drawing.Size(122, 21);
+            this.cmbPageSize.TabIndex = 26;
+            this.cmbPageSize.Text = "Page Size";
+            // 
             // UCSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Controls.Add(this.cmbPageSize);
             this.Controls.Add(this.txtMileageFrom);
             this.Controls.Add(this.txtYearFrom);
             this.Controls.Add(this.btnResetSelection);
@@ -199,5 +215,6 @@
         public System.Windows.Forms.Button btnResetSelection;
         public System.Windows.Forms.TextBox txtYearFrom;
         public System.Windows.Forms.TextBox txtMileageFrom;
+        public System.Windows.Forms.ComboBox cmbPageSize;
     }
 }

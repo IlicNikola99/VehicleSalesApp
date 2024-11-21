@@ -1,14 +1,11 @@
-﻿using Client.Helpers;
-using Client.UserControls;
+﻿using Client.UserControls;
 using Common.Communication;
 using Common.Domain;
 using Common.Helpers;
-using Server;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace Client.GuiController
 {
@@ -55,6 +52,7 @@ namespace Client.GuiController
             viewAdvertisement.btnAddComment.Click += AddComment;
             viewAdvertisement.txtBoxComment.Click += TxtBoxComment_Click;
             viewAdvertisement.txtBoxComment.Text = INSERT_COMMENT_TEXT;
+            viewAdvertisement.lblAcceptsExchange.Text = advertisement.AcceptsExchange ? "Yes" : "No";
 
             LoadComments();
 

@@ -51,6 +51,8 @@
             this.btnAddComment = new System.Windows.Forms.Button();
             this.listBoxComment = new System.Windows.Forms.ListBox();
             this.txtBoxComment = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblAcceptsExchange = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -86,7 +88,7 @@
             this.labelModelPlaceholder.Location = new System.Drawing.Point(109, 50);
             this.labelModelPlaceholder.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelModelPlaceholder.Name = "labelModelPlaceholder";
-            this.labelModelPlaceholder.Size = new System.Drawing.Size(91, 16);
+            this.labelModelPlaceholder.Size = new System.Drawing.Size(126, 25);
             this.labelModelPlaceholder.TabIndex = 22;
             this.labelModelPlaceholder.Text = "Placeholder";
             // 
@@ -98,7 +100,7 @@
             this.labelFuelPlaceholder.Location = new System.Drawing.Point(109, 168);
             this.labelFuelPlaceholder.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelFuelPlaceholder.Name = "labelFuelPlaceholder";
-            this.labelFuelPlaceholder.Size = new System.Drawing.Size(91, 16);
+            this.labelFuelPlaceholder.Size = new System.Drawing.Size(126, 25);
             this.labelFuelPlaceholder.TabIndex = 21;
             this.labelFuelPlaceholder.Text = "Placeholder";
             // 
@@ -110,7 +112,7 @@
             this.labelMileagePlaceholder.Location = new System.Drawing.Point(109, 136);
             this.labelMileagePlaceholder.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMileagePlaceholder.Name = "labelMileagePlaceholder";
-            this.labelMileagePlaceholder.Size = new System.Drawing.Size(91, 16);
+            this.labelMileagePlaceholder.Size = new System.Drawing.Size(126, 25);
             this.labelMileagePlaceholder.TabIndex = 20;
             this.labelMileagePlaceholder.Text = "Placeholder";
             // 
@@ -122,7 +124,7 @@
             this.labelYearPlaceholder.Location = new System.Drawing.Point(109, 108);
             this.labelYearPlaceholder.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelYearPlaceholder.Name = "labelYearPlaceholder";
-            this.labelYearPlaceholder.Size = new System.Drawing.Size(91, 16);
+            this.labelYearPlaceholder.Size = new System.Drawing.Size(126, 25);
             this.labelYearPlaceholder.TabIndex = 19;
             this.labelYearPlaceholder.Text = "Placeholder";
             // 
@@ -134,7 +136,7 @@
             this.labelBodyPlaceholder.Location = new System.Drawing.Point(109, 80);
             this.labelBodyPlaceholder.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelBodyPlaceholder.Name = "labelBodyPlaceholder";
-            this.labelBodyPlaceholder.Size = new System.Drawing.Size(91, 16);
+            this.labelBodyPlaceholder.Size = new System.Drawing.Size(126, 25);
             this.labelBodyPlaceholder.TabIndex = 18;
             this.labelBodyPlaceholder.Text = "Placeholder";
             // 
@@ -146,7 +148,7 @@
             this.label8.Location = new System.Drawing.Point(109, 50);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 16);
+            this.label8.Size = new System.Drawing.Size(0, 25);
             this.label8.TabIndex = 17;
             // 
             // labelMakePlaceholder
@@ -157,7 +159,7 @@
             this.labelMakePlaceholder.Location = new System.Drawing.Point(109, 22);
             this.labelMakePlaceholder.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMakePlaceholder.Name = "labelMakePlaceholder";
-            this.labelMakePlaceholder.Size = new System.Drawing.Size(91, 16);
+            this.labelMakePlaceholder.Size = new System.Drawing.Size(126, 25);
             this.labelMakePlaceholder.TabIndex = 16;
             this.labelMakePlaceholder.Text = "Placeholder";
             // 
@@ -233,10 +235,10 @@
             this.lblPricePlaceholder.AutoSize = true;
             this.lblPricePlaceholder.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPricePlaceholder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblPricePlaceholder.Location = new System.Drawing.Point(384, 252);
+            this.lblPricePlaceholder.Location = new System.Drawing.Point(389, 249);
             this.lblPricePlaceholder.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPricePlaceholder.Name = "lblPricePlaceholder";
-            this.lblPricePlaceholder.Size = new System.Drawing.Size(98, 32);
+            this.lblPricePlaceholder.Size = new System.Drawing.Size(146, 48);
             this.lblPricePlaceholder.TabIndex = 23;
             this.lblPricePlaceholder.Text = "12000$";
             // 
@@ -245,7 +247,7 @@
             this.descriptionPlaceholder.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.descriptionPlaceholder.BackColor = System.Drawing.SystemColors.ControlLight;
             this.descriptionPlaceholder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.descriptionPlaceholder.Location = new System.Drawing.Point(292, 300);
+            this.descriptionPlaceholder.Location = new System.Drawing.Point(328, 300);
             this.descriptionPlaceholder.Name = "descriptionPlaceholder";
             this.descriptionPlaceholder.ReadOnly = true;
             this.descriptionPlaceholder.Size = new System.Drawing.Size(289, 143);
@@ -324,10 +326,32 @@
             this.txtBoxComment.TabIndex = 31;
             this.txtBoxComment.Text = "Type comment";
             // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(394, 454);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(150, 20);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "Accepts Exchange:";
+            // 
+            // lblAcceptsExchange
+            // 
+            this.lblAcceptsExchange.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblAcceptsExchange.AutoSize = true;
+            this.lblAcceptsExchange.Location = new System.Drawing.Point(497, 454);
+            this.lblAcceptsExchange.Name = "lblAcceptsExchange";
+            this.lblAcceptsExchange.Size = new System.Drawing.Size(21, 13);
+            this.lblAcceptsExchange.TabIndex = 33;
+            this.lblAcceptsExchange.Text = "No";
+            // 
             // UCAdvertisement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblAcceptsExchange);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtBoxComment);
             this.Controls.Add(this.listBoxComment);
             this.Controls.Add(this.btnAddComment);
@@ -372,5 +396,7 @@
         public System.Windows.Forms.Button btnAddComment;
         public System.Windows.Forms.ListBox listBoxComment;
         public System.Windows.Forms.TextBox txtBoxComment;
+        private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label lblAcceptsExchange;
     }
 }
